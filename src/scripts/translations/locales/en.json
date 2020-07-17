@@ -1,0 +1,125 @@
+{
+  "common": {
+    "solution": "SOLUTION",
+    "blog": "BLOG",
+    "news-and-event": "NEWS & EVENTS",
+    "no-match-articles": "No matching articles found."
+  },
+  "footer": {
+    "mail": "Mail",
+    "phone": "Phone",
+    "address": {
+      "label":  "Address",
+      "content": "15F., No. 46, Ln. 11, Guangfu N. Rd., Songshan Dist., 105 Taipei City, Taiwan"
+    },
+    "privacy-and-cookies-policy": "Privacy & Cookies Policy",
+    "terms-of-service": "Terms of Service"
+  },
+  "index": {
+    "sonar-context": {
+      "title": "An Engine to Hunt down Intruders",
+      "context": "ThreatSonar is an advanced threat hunting and MDR platform with capabilities in compromise assessment, auto-investigation, and orchestration. Equipped with over 100 built-in IoCs and thousands of backdoor indicators, ThreatSonar helps discover threats and execute incident responses remotely in a post-compromised environment."
+    },
+    "vision-context": {
+      "title": "A Portal to See Through the Chaos",
+      "context": "ThreatVision is a customer-engaged threat intelligence platform that provides real-time alerts, technical data, OSINT analysis, and in-depth APT investigation. Our platform prepares multi-levels approach to applying intelligence, from operational actions to strategic planning, which allows implementing precise measures to occurred or hidden threat."
+    }
+  },
+  "legacy": {
+    "contact-us": {
+      "global-support": {
+        "title": "Global Support",
+        "M": "support@teamt5.tw"
+      },
+      "asean": {
+        "M": "asean@teamt5.tw",
+        "title": "ASEAN、ANZ"
+      },
+      "japan": {
+        "M": "jp@teamt5.tw",
+        "title": "Japan"
+      },
+      "page-title": "Contact Us",
+      "taiwan": {
+        "A": "15F., No. 46, Ln. 11, Guangfu N.Rd., Songshan Dist., 105 Taipei City, Taiwan",
+        "M": "sales@teamt5.tw",
+        "T": "+886.2.7706.1299",
+        "title": "Taiwan"
+      }
+    },
+    "browse-by-type": {
+      "title": "Browse by type"
+    },
+    "threatsonar": {
+      "assessment-reports": {
+        "a": "Organizational incident timeline.",
+        "b": "Memory, process, network connections, registry, eventlog, task scheduler, MBR, WMI, etc.",
+        "c": "Expand and pivot to find out hidden infections with similar TTP (tactics techniques procedures).",
+        "d": "Highlighting unique executables, memory attributes, abused system tools or rarely-seen digital certificates.",
+        "title": "ThreatSonar Assessment Reports"
+      },
+      "auto-investigation": {
+        "content": "Discovering related infection origins, lateral-movement traces and data exfiltration through graph visualization.",
+        "title": "ThreatSonar\nAuto-investigation"
+      },
+      "banner": {
+        "slogan": "UNCOVER HIDDEN THREATS",
+        "title": "The Last Line of Your Cyber Defense"
+      },
+      "threatsonar-is-complementary-to-your-existing-endpoint-solutions": {
+        "title": "ThreatSonar is Complementary to\n Your Existing Endpoint Solutions"
+      },
+      "more-strengths": {
+        "strengths": {
+          "auto-investigation": {
+            "list": "<li>Infection Timeline</li> <li>Lateral movement analysis</li>",
+            "title": "Auto Investigation"
+          },
+          "elegant": {
+            "list": "<li>Light-weight with high detection rate</li> <li>Low cost, less efforts</li> <li>Low risk, non-intrusive</li>",
+            "title": "Elegant and Efficient"
+          },
+          "orchestration": {
+            "list": "<li>SIEM Integration</li> <li>HTTP Restful API</li>",
+            "title": "Orchestration"
+          },
+          "premise": {
+            "list": "<li>Risk control</li> <li>Off-line analysis</li>",
+            "title": "On Premise"
+          },
+          "threat-hunting": {
+            "list": "<li>Behavior Modeling</li> <li>Threat Intelligence</li> <li>Outlier</li>",
+            "title": "Threat Hunting"
+          }
+        },
+        "title": "An Elegant Threat Hunting Solution"
+      },
+      "strengths": {
+        "automate": "Automate cyber threat intelligence adoption.",
+        "flexible": "Simple and flexible to be integrated with partner’s solutions.",
+        "powerful": "Powerful threat hunting platform with advanced threat visibility."
+      }
+    },
+    "threatvision": {
+      "banner": {
+        "slogan": "KNOW YOUR ENEMIES",
+        "title": "A Portal to See Through the Chaos"
+      },
+      "intelligence-report": {
+        "list": "<li>Cyber threat newsflash.</li> <li>Comprehensive and in-depth analysis of cyber threat campaigns, groups and actors.</li> <li>Asia-pacific cyberspace event analysis.</li>",
+        "title": "Asia-Pacific Cyber Threat Intelligence Reports"
+      },
+      "threat-analysis": {
+        "list": "<li>Automated Analysis.</li> <li>Malware identification and linkage discovery.</li> <li>Malicious indicators collection.</li> <li>Adversary Identification.</li>",
+        "title": "Threat Analysis"
+      },
+      "strengths": {
+        "a": "Discover and Identify Potential Threats",
+        "b": "Know the Adversary",
+        "c": "Increase Situational Awareness",
+        "d": "Turn Passive to Proactive",
+        "title": "A Cyber Threat Intelligence Platform"
+      }
+    }
+  }
+}

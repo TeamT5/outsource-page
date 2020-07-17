@@ -1,0 +1,38 @@
+@import 'styles/general.scss';
+.root {
+  &.default {
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+  }
+  .label {
+    &.default {
+
+    }
+  }
+
+  .input {
+    box-sizing: border-box;
+    &.default {
+      width: 100%;
+    }
+    // display: none;
+  }
+
+  .error-message {
+    color: $sonar-red;
+    position: relative;
+    margin-top: 2px;
+    > .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    &.default {
+      width: 100%;
+    }
+  }
+}

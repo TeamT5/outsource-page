@@ -1,0 +1,102 @@
+{
+  "common": {
+    "solution": "解決方案",
+    "blog": "部落格",
+    "news-and-event": "最新消息",
+    "no-match-articles": "沒有符合條件的文章"
+  },
+  "footer": {
+    "mail": "電子郵件",
+    "phone": "電話",
+    "address": {
+      "label": "地址",
+      "content": "105 台北市松山區光復北路11巷46號15樓"
+    },
+    "privacy-and-cookies-policy": "隱私權與Cookies使用政策",
+    "terms-of-service": "服務條款"
+  },
+  "index": {
+    "sonar-context": {
+      "title": "An Engine to Hunt down Intruders",
+      "context": "ThreatSonar 是一款獨特的 APT（Advanced Persistent Threats）威脅狩獵工具，具備 AI 智能鑑識、自動調查與自動聯防等特性，內建超過 100 種惡意行為指標與上千種已知後門特徵。我們不只協助企業掌握駭客後續攻擊階段中的入侵軌跡，進行遠端快速資安事件應變，更可持續觀察端點的健康狀況，是資安服務商認同最優異的託管式偵測與回應服務平台（MDR Platform）。"
+    },
+    "vision-context": {
+      "title": "A Portal to See Through the Chaos",
+      "context": "ThreatVision 是一款用戶導向的威脅情資平台，我們提供即時預警、惡意入侵指標、公開情報分析與駭客族群研究等。 此外，平台上的威脅情報涵蓋範圍全方位，讓不論是執行人員、管理者、亦或是決策方都能精準判斷已知以及潛藏的網路威脅。"
+    }
+  },
+  "browse-by-type": {
+    "title": "Browse by type"
+  },
+  "threatsonar": {
+    "assessment-reports": {
+      "a": "Organizational incident timeline.",
+      "b": "Memory, process, network connections, registry, eventlog, task scheduler, MBR, WMI, etc.",
+      "c": "Expand and pivot to find out hidden infections with similar TTP (tactics techniques procedures).",
+      "d": "Highlighting unique executables, memory attributes, abused system tools or rarely-seen digital certificates.",
+      "title": "ThreatSonar Assessment Reports"
+    },
+    "auto-investigation": {
+      "content": "Discovering related infection origins, lateral-movement traces and data exfiltration through graph visualization.",
+      "title": "ThreatSonar\nAuto-investigation"
+    },
+    "banner": {
+      "slogan": "UNCOVER HIDDEN THREATS",
+      "title": "The Last Line of Your Cyber Defense"
+    },
+    "threatsonar-is-complementary-to-your-existing-endpoint-solutions": {
+      "title": "ThreatSonar is Complementary to\n Your Existing Endpoint Solutions"
+    },
+    "more-strengths": {
+      "strengths": {
+        "auto-investigation": {
+          "list": "<li>Infection Timeline</li> <li>Lateral movement analysis</li>",
+          "title": "Auto Investigation"
+        },
+        "elegant": {
+          "list": "<li>Light-weight with high detection rate</li> <li>Low cost, less efforts</li> <li>Low risk, non-intrusive</li>",
+          "title": "Elegant and Efficient"
+        },
+        "orchestration": {
+          "list": "<li>SIEM Integration</li> <li>HTTP Restful API</li>",
+          "title": "Orchestration"
+        },
+        "premise": {
+          "list": "<li>Risk control</li> <li>Off-line analysis</li>",
+          "title": "On Premise"
+        },
+        "threat-hunting": {
+          "list": "<li>Behavior Modeling</li> <li>Threat Intelligence</li> <li>Outlier</li>",
+          "title": "Threat Hunting"
+        }
+      },
+      "title": "An Elegant Threat Hunting Solution"
+    },
+    "strengths": {
+      "automate": "Automate cyber threat intelligence adoption.",
+      "flexible": "Simple and flexible to be integrated with partner’s solutions.",
+      "powerful": "Powerful threat hunting platform with advanced threat visibility."
+    }
+  },
+  "threatvision": {
+    "banner": {
+      "slogan": "KNOW YOUR ENEMIES",
+      "title": "A Portal to See Through the Chaos"
+    },
+    "intelligence-report": {
+      "list": "<li>Cyber threat newsflash.</li> <li>Comprehensive and in-depth analysis of cyber threat campaigns, groups and actors.</li> <li>Asia-pacific cyberspace event analysis.</li>",
+      "title": "Asia-Pacific Cyber Threat Intelligence Reports"
+    },
+    "threat-analysis": {
+      "list": "<li>Automated Analysis.</li> <li>Malware identification and linkage discovery.</li> <li>Malicious indicators collection.</li> <li>Adversary Identification.</li>",
+      "title": "Threat Analysis"
+    },
+    "strengths": {
+      "a": "Discover and Identify Potential Threats",
+      "b": "Know the Adversary",
+      "c": "Increase Situational Awareness",
+      "d": "Turn Passive to Proactive",
+      "title": "A Cyber Threat Intelligence Platform"
+    }
+  }
+}

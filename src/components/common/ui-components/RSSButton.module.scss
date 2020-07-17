@@ -1,0 +1,38 @@
+@import 'styles/general.scss';
+
+.rss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 0;
+  color: white;
+  font-weight: 900;
+  font-size: 12px;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: $dark;
+  border: 1px solid #a09a94;
+  cursor: pointer;
+
+  &.hide {
+    display: none;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $white;
+      border-color: #faf8f4;
+      color: $dark;
+    }
+  }
+
+  &:active {
+    background-color: $news;
+    border-color: #c2bcb6;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

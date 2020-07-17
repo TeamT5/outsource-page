@@ -1,0 +1,277 @@
+@import 'styles/general.scss';
+
+.bg-text {
+  position: absolute;
+  white-space: nowrap;
+  top: -182px;
+  left: -190px;
+  font-size: 200px;
+  font-weight: 900;
+  color: #ece8e0;
+}
+
+.empty-articles {
+  height: 219px;
+  width: 100%;
+  margin-bottom: 120px;
+  background-color: $news;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-container {
+  padding: 333px 0 0 0;
+  box-sizing: border-box;
+}
+
+.post-content-wrap {
+  width: calc(100% + (100vw - 100%) / 2);
+  margin-left: auto;
+
+}
+
+.bg-container {
+  margin: 333px 0 0 0;
+  padding-left: 35px;
+}
+
+.bg-padding-block {
+  height: 50%;
+  max-height: 315px;
+}
+
+.hr {
+  width: 100%;
+  border: 0;
+  border-top: 2px solid;
+  margin: 30px 0 0 0;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.header-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  z-index: 5;
+
+  h1 {
+    margin: 0;
+    line-height: 1;
+    font-size: 36px;
+    font-weight: 900;
+    color: $dark;
+  }
+
+  button {
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+  }
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.topics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  margin: -10px auto -10px -10px;
+}
+
+.news-and-events-article {
+  height: 240px;
+  border-bottom: 2px solid $line2;
+  width: 100%;
+  background-color: white;
+  // transition: opacity 2s, transform 1.5s;
+  // transform: translateX(100%);
+  // opacity: 0;
+  // &.animated {
+  //   transform: translateX(0%);
+  //   opacity: 1;
+  // }
+}
+
+.article {
+  height: 100%;
+  width: 100%;
+}
+
+.article-content {
+  flex: 1 0;
+  padding: 68px 0 0 3.5%;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-weight: 500;
+
+  span {
+    font-size: 12px;
+    border-bottom: 2px solid $line2;
+    padding: 3px 0 7px 0;
+    width: 80px;
+  }
+
+  h2 {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 0;
+    font-weight: 500;
+  }
+}
+
+.article-container {
+  height: 240px;
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.article-category {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: $news;
+  color: $white;
+  width: 160px;
+  height: 28px;
+}
+
+.article-img-block {
+  width: 35.1%;
+  height: 100%;
+  background-size: cover;
+
+}
+
+.paginator {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  margin-bottom: 122px;
+}
+
+.topic-size {
+  width: 120px;
+  height: 50px;
+  margin: 10px 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1440px ) {
+  .article-container {
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1280px ) {
+  .article-container {
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .paginator {
+    padding-right: 112px;
+  }
+
+  .topic-size {
+    width: 80px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bg-text {
+    display: none;
+  }
+
+  .post-container {
+    padding: 244px 0 0 0;
+  }
+
+  .bg-container {
+    margin: 244px 0 0 0;
+    padding-left: calc(10px - (100vw - 100%)/2);
+  }
+
+  .bg-padding-block {
+    height: 192px;
+    max-height: unset;
+  }
+
+  .header-layout {
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  .hr {
+    margin: 20px 0 0 0;
+  }
+
+  .news-and-events-article {
+    height: 227px;
+  }
+
+  .article {
+    height: 100%;
+  }
+
+  .article-img-block {
+    display: none;
+  }
+
+  .article-content {
+    padding: 62px 0 0 5.5%;
+  }
+
+  .paginator {
+    padding-right: calc(66px + 100vw * (44/393));
+  }
+
+  .topic-size {
+    width: 80px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .post-content-wrap {
+    width: 355px;
+    margin-left: 20px;
+  }
+
+  .bg-container {
+    padding-left: 10px;
+  }
+}

@@ -1,0 +1,36 @@
+@import 'styles/general.scss';
+
+.arrow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    path {
+      stroke: none;
+      fill: $t5-red;
+    }
+
+    .rotation-group.angle-left {
+      transform-origin: center;
+      transform: rotateZ(0deg);
+    }
+
+    .rotation-group.angle-top {
+      transform-origin: center;
+      transform: rotateZ(90deg);
+    }
+
+    .rotation-group.angle-right {
+      transform-origin: center;
+      transform: rotateZ(180deg);
+    }
+
+    .rotation-group.angle-bottom {
+      transform-origin: center;
+      transform: rotateZ(270deg);
+    }
+  }
+}

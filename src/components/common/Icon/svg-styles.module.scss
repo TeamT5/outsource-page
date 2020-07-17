@@ -1,0 +1,40 @@
+@import 'styles/general.scss';
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    .light {
+      fill: $white;
+    }
+    .dark {
+      fill: $dark;
+    }
+  }
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        .light {
+          fill: rgba($color: $white, $alpha: 0.4);
+        }
+
+        .dark {
+          fill: $line2;
+        }
+      }
+    }
+  }
+
+  &:active {
+    svg {
+      .light {
+        fill: $t5-red;
+      }
+
+      .dark {
+        fill: $news;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,600,900&subset=chinese-traditional,japanese');
+
+.invisible {
+  visibility: hidden;
+}
+
+body {
+  &:not(.loaded) {
+    background-color: #4C433F;
+  }
+  font-size: 12px;
+}
+
+body,
+button {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans CJK TC', 'Noto Sans TC', 'Lato', sans-serif;
+  background-color: #f5f2e9;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}

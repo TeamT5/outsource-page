@@ -1,0 +1,28 @@
+{
+  "common": {
+    "solution": "ソリューション",
+    "blog": "ブログ",
+    "news-and-event": "最新情報",
+    "no-match-articles": "ご指定した文章は見つかりません"
+  },
+  "footer": {
+    "mail": "メールアドレス",
+    "phone": "電話番号",
+    "address": {
+      "label": "住所",
+      "content": "15F., No. 46, Ln. 11, Guangfu N. Rd., Songshan Dist., 105 Taipei City, Taiwan"
+    },
+    "privacy-and-cookies-policy": "プライバシー&クッキーポリシー",
+    "terms-of-service": "サービス利用規約"
+  },
+  "index": {
+    "sonar-context": {
+      "title": "An Engine to Hunt down Intruders",
+      "context": "ThreatSonar は、侵害評価、自動調査、オーケストレーションの機能を備えた先進的な脅威ハンティング＆ MDR プラットフォームです。100 種類以上の内蔵 IOC と数千種ものバックドアインジケータを備えた ThreatSonar は侵害後の環境で脅威を発見し、インシデント対応をリモートで実施するのに役立ちます。"
+    },
+    "vision-context": {
+      "title": "A Portal to See Through the Chaos",
+      "context": "ThreatVision は、リアルタイム警告、技術データ、OSINT 分析、精密 APT 調査を提供する顧客参加型の脅威情報のプラットホームです。当社のプラットフォームは、作戦行動から戦略計画まで、脅威情報を適用するための多段階のアプローチを用意しており、既知のサイバー脅威や潜在的なサイバー脅威を正確に判断することができます。"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import 'styles/general.scss';
+.base-button-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  font-size: 14px;
+  border-radius: 2px;
+  color: $dark;
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 1px $dark;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $white;
+      background-color: $dark;
+    }
+  }
+
+  &:active {
+    color: $white;
+    background-color: $news;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.default {
+    width: 240px;
+    height: 60px;
+  }
+}
+
+
+.button-root {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  font-size: 14px;
+  border-radius: 2px;
+  color: $dark;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  position: relative;
+  overflow: hidden;
+
+  &.default {
+    width: 200px;
+    height: 60px;
+  }
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.25s;
+    position: absolute;
+    transform: translateX(-100%);
+    background-color: $dark;
+    z-index: 2;
+  }
+
+  .text {
+    z-index: 3;
+  }
+
+  .read-more-stroke {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border: solid 1px $dark;
+    border-radius: 2px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: $white;
+      .bg {
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  &:active {
+    .bg {
+      opacity: 0;
+    }
+    color: $white;
+    background-color: $news;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

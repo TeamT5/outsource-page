@@ -1,0 +1,320 @@
+@import 'styles/general.scss';
+
+.form-container {
+  margin: 24px auto 36px auto;
+  height: 525px;
+  width: 760px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 50px 40px;
+  background-color: $bg-color2;
+
+  .form-title {
+    font-size: 36px;
+    color: $dark;
+    font-weight: 900;
+  }
+  .line {
+    margin: 0;
+    border: none;
+    border-bottom: $line2 2px solid;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0;
+  }
+}
+
+.fields {
+  display: grid;
+  grid-gap: 20px 40px;
+  grid-template-columns: auto auto;
+  flex: 1 0;
+}
+
+.submit-button {
+  width: 360px;
+  height: 60px;
+  margin: 30px auto 0px auto;
+}
+
+.form-input-root {
+  display: flex ;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 112px;
+  width: 320px;
+}
+
+.form-input-error-message {
+  width: 100%;
+}
+
+.form-input-input {
+  border: 1px solid #908883;
+  border-radius: 2px;
+  padding: 22px 20px;
+  height: 60px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  &::placeholder {
+    color: $line2;
+  }
+
+  &:focus {
+    border: 2px solid $dark;
+    // width: calc(100% - 19px);
+    color: #4C433F;
+    outline: none;
+
+    + .form-input-error-message {
+      // width: calc(100% - 19px);
+    }
+  }
+}
+
+.form-input-label {
+  color: $dark;
+}
+
+
+.submit {
+  width: 100%;
+  height: 100%;
+  background-color: #4c433f;
+  transition: background-color 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  stroke-dasharray: 170;
+  stroke-dashoffset: 170;
+
+  svg {
+    padding-top: 140px;
+    .circle-group {
+      transform-origin: center center;
+    }
+    path {
+      opacity: 0;
+      transform: translateY(5px);
+      fill: white;
+    }
+    circle {
+      fill: none;
+      transform-origin: center center;
+      transform: rotate(-90deg);
+
+      &.bg {
+        stroke: $news;
+        stroke-dashoffset: 0;
+      }
+
+      &.progress {
+        stroke: $bg-color2;
+      }
+    }
+  }
+
+  .text {
+    margin-top: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+
+  &.progressing {
+    @keyframes progress {
+      from {
+        stroke-dashoffset: 150;
+        transform: rotate(-110deg) scaleY(1);
+      }
+      50% {
+        stroke-dashoffset: 29.5;
+        transform: rotate(-38.5deg) scaleY(1);
+      }
+      50.005% {
+        transform: rotate(-90deg) scaleY(-1);
+      }
+      to {
+        stroke-dashoffset: 150;
+        transform: rotate(-65deg) scaleY(-1);
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    svg {
+      padding-top: 140px;
+      .circle-group {
+        animation: rotate 7s linear infinite;
+        transform-origin: center center;
+      }
+      circle {
+        fill: none;
+        stroke-width: 7.83px;
+        transform-origin: center center;
+        transform: rotate(0deg);
+
+        &.bg {
+          stroke: $news;
+          stroke-dashoffset: 0;
+        }
+
+        &.progress {
+          stroke: $bg-color2;
+          stroke-dashoffset: 130;
+          animation: progress 4.5s ease infinite;
+        }
+      }
+    }
+
+    .text {
+      margin-top: 100px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+
+      @keyframes ellipsis {
+        to {
+          width: 1.25em;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        animation: ellipsis steps(4, end) 2s infinite;
+        width: 0px;
+        content: "\2026";
+      }
+    }
+  }
+
+  // &.progress-complete {
+  //   @keyframes progress {
+  //     to {
+  //       stroke-dashoffset: 170;
+  //     }
+  //   }
+
+  //   @keyframes rotate {
+  //     to {
+  //       transform: rotate(360deg);
+  //     }
+  //   }
+
+  //   svg {
+  //     padding-top: 140px;
+  //     .circle-group {
+  //       animation: rotate 7s linear infinite;
+  //     }
+  //     circle {
+
+  //       &.progress {
+  //         animation: progress 4.5s ease infinite;
+  //       }
+  //     }
+  //   }
+  // }
+
+  &.success {
+    @keyframes progress1 {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes rotate1 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    svg {
+      padding-top: 140px;
+      // .circle-group {
+      //   animation: rotate1 1s linear infinite;
+      // }
+      circle {
+        stroke-dasharray: 200px;
+        transition: all 0.5s;
+        &.progress {
+          animation: progress1 1s ease forwards;
+        }
+      }
+      path {
+        transition: all 1s;
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+    background-color: #64cda2;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .form-container {
+    width: 620px;
+  }
+
+  .form-content {
+    padding: 30px 20px;
+  }
+
+  .form-input-root {
+    width: 281px;
+  }
+
+  .fields {
+    display: grid;
+    grid-gap: 20px 18px;
+    grid-template-columns: auto auto;
+    flex: 1 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 100%;
+  }
+
+  .form-input-root {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+    margin: 10px auto 0px auto;
+  }
+
+  .form-content {
+    padding: 30px 20px;
+  }
+  .form-container {
+    height: 667px;
+  }
+
+  .fields {
+    display: grid;
+    grid-gap: 10px 40px;
+    grid-template-columns: auto;
+    flex: 1 0;
+  }
+}

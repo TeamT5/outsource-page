@@ -1,0 +1,94 @@
+@import 'styles/general.scss';
+
+.top-container {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  @mixin hover-mix-hover {
+    mix-blend-mode: multiply;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.375);
+  }
+
+  &.is-active {
+    .hover-mix {
+      &.touch {
+        @include hover-mix-hover;
+      }
+    }
+    @media (hover: hover) {
+      &:hover {
+        .hover-mix {
+          @include hover-mix-hover;
+        }
+      }
+    }
+  }
+
+  &:not(.is-active) {
+    .hover-mix {
+      visibility: hidden;
+    }
+  }
+}
+
+.topic-label {
+  position: absolute;
+  z-index: 3;
+  font-weight: 600;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: solid 2px rgba(0,0,0,0.36);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  user-select: none;
+
+  &:not(.active) {
+    color: $news;
+    &.touch {
+      border: solid 2px #404040;
+    }
+    @media (hover: hover) {
+      &:hover {
+        border: solid 2px #404040;
+      }
+    }
+  }
+
+  &.active {
+    &.touch {
+      color: #fff;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.default-size {
+  min-width: 174px;
+  height: 40px;
+}
+
+.mix-block {
+  mix-blend-mode: multiply;
+  border-radius: 25px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}

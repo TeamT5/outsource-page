@@ -1,0 +1,50 @@
+@import 'styles/general.scss';
+
+.navbar-burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  position: relative;
+  transition: all .5s ease-in-out;
+  width: 30px;
+
+  svg {
+    position: relative;
+    rect {
+      transition: all .5s ease-in-out;
+    }
+  }
+  &.active svg rect:nth-child(1) {
+    transform: translate(8px, -1.5px) rotate(45deg);
+  }
+
+  &.active svg rect:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.active svg rect:nth-child(3) {
+    transform-origin: center;
+    transform: translate(-4px, -3.5px) rotate(-45deg);
+  }
+  .svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.dark {
+      svg {
+        rect {
+          fill: $dark
+        }
+      }
+    }
+    &.light {
+      svg {
+        rect {
+          fill: $white
+        }
+      }
+    }
+  }
+}

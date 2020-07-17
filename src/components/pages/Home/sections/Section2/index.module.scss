@@ -1,0 +1,146 @@
+@import 'styles/general.scss';
+@import '../../home.module.scss';
+$content-width: $content-width-l;
+$section2-height: 1324px;
+$header-padding: calc((100% - #{$content-width}) / 2);
+
+.section2 {
+  width: 100%;
+  position: relative;
+
+  .top {
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  article {
+    height: 100%;
+    height: fit-content;
+    background-color: $bg-color2;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      line-height: 1;
+      font-size: 40px;
+      font-weight: 900;
+      margin: 80px 0 30px 0;
+      color: $dark;
+    }
+    .line {
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        $dark,
+        $dark 38%,
+        $line2 38%,
+        $line2
+      );
+    }
+    > header {
+      width: $content-width;
+      padding: 0 $header-padding;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px ) {
+  $content-width: $content-width-l;
+  $section2-height: 1324px;
+  $header-padding: calc((100% - #{$content-width}) / 2);
+  .section2 {
+    height: $section2-height;
+    article {
+      height: 100%;
+      background-color: $bg-color2;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px ) {
+  $content-width: $content-width-m;
+  $header-padding: calc((100% - #{$content-width}) / 2);
+  .section2 {
+    article {
+      > header {
+        width: $content-width;
+        padding: 0 $header-padding;
+      }
+      .line {
+        background: linear-gradient(
+          to right,
+          $dark,
+          $dark 47.5%,
+          $line2 47.5%,
+          $line2
+        );
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  $content-width: $content-width-s;
+  $header-padding: calc((100% - #{$content-width}) / 2);
+
+  .section2 {
+    height: fit-content;
+    article {
+      h2 {
+        font-size: 32px;
+        margin: 80px 0 16px 0;
+      }
+      .line {
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          $dark,
+          $dark 35%,
+          $line2 35%,
+          $line2
+        );
+      }
+      > header {
+        width: $content-width;
+        padding: 0 $header-padding;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  $content-width: $content-width-xs;
+  $header-padding: calc((100% - #{$content-width}) / 2);
+
+  .section2 {
+    article {
+      .line {
+        width: 100vw;
+        background: linear-gradient(
+          to right,
+          $dark,
+          $dark 50%,
+          $line2 50%,
+          $line2
+        );
+      }
+      h2 {
+        font-size: 24px;
+        margin: 30px 0 10px 0;
+      }
+      > header {
+        width: $content-width;
+        padding: 0 $header-padding;
+      }
+    }
+  }
+}

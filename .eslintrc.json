@@ -1,0 +1,139 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "commonjs": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "lit"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": [
+      2,
+      {
+        "ignore": [
+          "children"
+        ]
+      }
+    ],
+    "quotes": ["error", "single"],
+    "no-unused-vars": "error",
+    "eqeqeq": ["error", "always"],
+    "space-infix-ops": ["error", { "int32Hint": false }],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "curly": "error",
+    "handle-callback-err": "error",
+    "no-undef": "error",
+    "no-multiple-empty-lines": "error",
+    "operator-linebreak": ["error", "before"],
+    "no-cond-assign": ["error", "always"],
+    "block-spacing": "error",
+    "camelcase": "error",
+    "comma-style": ["error", "last"],
+    "dot-location": ["error", "property"],
+    "eol-last": ["error", "always"],
+    "func-call-spacing": ["error", "never"],
+    "key-spacing": ["error", { "beforeColon": false }],
+    "new-cap": ["error", { "newIsCap": true }],
+    "new-parens": "error",
+    "accessor-pairs": "error",
+    "constructor-super": "error",
+    "no-array-constructor": "error",
+    "no-class-assign": "error",
+    "no-duplicate-imports": "error",
+    "no-eval": "error",
+    "no-extend-native": "error",
+    "no-extra-bind": "error",
+    "no-extra-boolean-cast": "error",
+    "no-floating-decimal": "error",
+    "no-label-var": "error",
+    "no-multi-spaces": "error",
+    "no-multi-str": "error",
+    "no-new-func": "error",
+    "no-new-object": "error",
+    "no-new-require": "error",
+    "no-new-symbol": "error",
+    "no-new-wrappers": "error",
+    "no-path-concat": "error",
+    "no-proto": "error",
+    "no-return-assign": "error",
+    "no-self-compare": "error",
+    "no-sequences": "error",
+    "no-tabs": "error",
+    "no-template-curly-in-string": "error",
+    "no-this-before-super": "error",
+    "no-throw-literal": "error",
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "no-undef-init": "error",
+    "no-unneeded-ternary": "error",
+    "no-useless-call": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-constructor": "error",
+    "no-useless-rename": "error",
+    "no-whitespace-before-property": "error",
+    "padded-blocks": ["error", "never"],
+    "rest-spread-spacing": ["error", "never"],
+    "semi-spacing": "error",
+    "space-before-blocks": "error",
+    "space-in-parens": ["error", "never"],
+    "space-unary-ops": "error",
+    "spaced-comment": ["error", "always"],
+    "wrap-iife": ["error", "outside"],
+    "yield-star-spacing": ["error", "both"],
+    "yoda": ["error", "never", { "exceptRange": true }],
+    "semi": ["error", "never"],
+
+    "prefer-const": "error",
+    "no-var": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "object-shorthand": "error",
+    "quote-props": ["error", "consistent-as-needed"],
+
+    "template-curly-spacing": "off",
+    "indent": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "./src/web-components/**/*.js"
+      ],
+      "rules": {
+        "lit/attribute-value-entities": "error",
+        "lit/binding-positions": "error",
+        "lit/no-duplicate-template-bindings": "error",
+        "lit/no-invalid-escape-sequences": "error",
+        "lit/no-invalid-html": "error",
+        "lit/no-legacy-template-syntax": "error",
+        "lit/no-private-properties": "error",
+        "lit/no-property-change-update": "error",
+        "lit/no-value-attribute": "error",
+        "indent": ["error", 2, { "ignoredNodes": ["TemplateLiteral *"], "SwitchCase": 1}]
+      }
+    }
+  ]
+}

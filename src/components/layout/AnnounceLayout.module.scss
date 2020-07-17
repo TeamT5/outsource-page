@@ -1,0 +1,98 @@
+@import 'styles/general.scss';
+.post-container {
+  margin: 333px 0 0 0;
+  padding-bottom: 120px;
+}
+
+.bg-container {
+  padding-left: 35px;
+}
+
+.bg-padding-block {
+  height: 68px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  line-height: 1;
+
+  h1 {
+    margin: 0;
+    padding-bottom: 30px;
+    font-size: 36px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid $dark;
+  }
+}
+
+.context {
+  position: relative;
+  padding-bottom: 120px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.markdown-container {
+  position: relative;
+  overflow: auto;
+  margin: 0 calc((100% - 1000px) / 2);
+  padding: 0 120px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1440px ) {
+
+}
+
+@media screen and (max-width: 1280px ) {
+  .markdown-container {
+    margin: 0 calc((100% - 800px) / 2);
+    padding: 0 97px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .markdown-container {
+    margin: 0 calc((100% - 620px) / 2);
+    padding: 0 39px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .post-container {
+    margin: 244px 0 0 0;
+  }
+
+  .bg-container {
+    padding-left: calc(10px - (100vw - 100%)/2);
+  }
+
+  .bg-padding-block {
+    height: 46px;
+  }
+
+  .header {
+    h1 {
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .markdown-container {
+    margin: 0 calc( 74px + (100vw - 768px) * 54 / 393);
+    padding: 0 10px;
+  }
+}
+
+
+@media screen and (max-width: 375px) {
+  .bg-container {
+    padding-left: 10px;
+  }
+}

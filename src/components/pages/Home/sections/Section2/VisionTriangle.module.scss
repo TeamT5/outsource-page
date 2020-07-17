@@ -1,0 +1,60 @@
+@import 'styles/general.scss';
+
+.vision-triangle-container {
+  width: 100%;
+
+  .triangle-wrap {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  svg {
+    width: 1350px;
+
+    g {
+      transition: transform 0.5s;
+
+      &.origin {
+        transform: translate(0, 100%);
+      }
+
+      &.finished {
+        transform: translate(0, 0);
+      }
+    }
+
+    .triangle {
+      stroke: none;
+      fill: $vision-yello;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px ), screen and (min-width: 1440px) {
+  .vision-triangle-container {
+    svg {
+      transform: translate(calc(73px - 50%), 3px);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .vision-triangle-container {
+    svg {
+      // transform: translate(calc(-50% - 113px), 3px);
+      transform: translate(calc(-50% - 160px), 3px);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vision-triangle-container {
+    svg {
+      // transform: translate(calc(-50% - 358px), 3px);
+      transform: translate(calc(50vw - 100% + 258px / 2), 3px);
+    }
+  }
+}

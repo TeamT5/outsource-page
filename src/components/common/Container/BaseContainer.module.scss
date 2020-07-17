@@ -1,0 +1,98 @@
+@import 'styles/general.scss';
+
+.root {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  &.default {
+    padding: 0;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  &.default {
+    // overflow: auto;
+    width: 1000px;
+    margin: auto;
+  }
+}
+
+.bg-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  &.default {
+    padding-left: 35px;
+  }
+}
+
+.bg-padding-block {
+  &.default {
+    padding-top: 0px;
+  }
+}
+
+.bg {
+  position: relative;
+  width: 100%;
+  flex: 1 0;
+  box-sizing: border-box;
+  background-color: white;
+  &.default {
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@media screen and (max-width: 1440px ) {
+
+}
+
+@media screen and (max-width: 1280px ) {
+  .content {
+    &.default {
+      width: 800px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    &.default {
+      width: 620px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    &.default {
+      width: calc(596px + (100vw - 768px) * 261/393);
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .root {
+    width: 375px;
+  }
+  .content {
+    &.default {
+      width: 335px;
+    }
+  }
+}

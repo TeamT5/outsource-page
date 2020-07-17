@@ -1,0 +1,38 @@
+@import 'styles/general.scss';
+
+.layout-header {
+  color: $white;
+  height: 140px;
+  transition: height 0.3s;
+}
+
+.layout-header-scroll-active {
+  color: $dark;
+  height: 80px;
+}
+
+.layout-background {
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.3s;
+  background-color: $white;
+  opacity: 0;
+}
+
+.layout-background-scroll-active-background {
+  opacity: 1;
+}
+
+.home-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-header {
+    height: 80px;
+  }
+  .layout-header-scroll-active {
+    height: 50px;
+  }
+}
