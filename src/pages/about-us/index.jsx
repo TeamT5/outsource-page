@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import LocaleRedirecter from 'src/components/common/LocaleRedirecter'
 
-const ContactUsPage = () => {
+const AboutUsPage = () => {
   return (
     <LocaleRedirecter>
       <Head>
@@ -12,4 +12,4 @@ const ContactUsPage = () => {
   )
 }
 
-export default ContactUsPage
+export default AboutUsPage

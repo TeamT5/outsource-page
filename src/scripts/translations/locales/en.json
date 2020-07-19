@@ -25,101 +25,25 @@
       "context": "ThreatVision is a customer-engaged threat intelligence platform that provides real-time alerts, technical data, OSINT analysis, and in-depth APT investigation. Our platform prepares multi-levels approach to applying intelligence, from operational actions to strategic planning, which allows implementing precise measures to occurred or hidden threat."
     }
   },
-  "legacy": {
-    "contact-us": {
-      "global-support": {
-        "title": "Global Support",
-        "M": "support@teamt5.tw"
-      },
-      "asean": {
-        "M": "asean@teamt5.tw",
-        "title": "ASEAN、ANZ"
-      },
-      "japan": {
-        "M": "jp@teamt5.tw",
-        "title": "Japan"
-      },
-      "page-title": "Contact Us",
-      "taiwan": {
-        "A": "15F., No. 46, Ln. 11, Guangfu N.Rd., Songshan Dist., 105 Taipei City, Taiwan",
-        "M": "sales@teamt5.tw",
-        "T": "+886.2.7706.1299",
-        "title": "Taiwan"
+  "about-us": {
+    "title": "About Us",
+    "our-leadership": {
+      "title": "Our Leadership",
+      "content": {
+        "title": "Sung-ting Tsai (TT)",
+        "context": "As the founder and CEO of TeamT5, Sung-ting Tsai (TT) has more than 16 years of experience in the security industry. With solid technical background and strong understanding of cyber threats, TT has been leading the team to develop unique and effective threat hunting technologies and solutions.<p>With great passion for cyber security, TT has also volunteered himself as a core member in the HITCON community, and was one of the founding members and the first chairman of HITCON. Moreover, TT is an internationally recognized expert on cyber threat intelligence and advanced information security technology. He frequently publishes his latest research at the world’s top information security conferences, including Black Hat, Code Blue, Kaspersky Security Analyst Summit, etc."
       }
     },
-    "browse-by-type": {
-      "title": "Browse by type"
-    },
-    "threatsonar": {
-      "assessment-reports": {
-        "a": "Organizational incident timeline.",
-        "b": "Memory, process, network connections, registry, eventlog, task scheduler, MBR, WMI, etc.",
-        "c": "Expand and pivot to find out hidden infections with similar TTP (tactics techniques procedures).",
-        "d": "Highlighting unique executables, memory attributes, abused system tools or rarely-seen digital certificates.",
-        "title": "ThreatSonar Assessment Reports"
-      },
-      "auto-investigation": {
-        "content": "Discovering related infection origins, lateral-movement traces and data exfiltration through graph visualization.",
-        "title": "ThreatSonar\nAuto-investigation"
-      },
-      "banner": {
-        "slogan": "UNCOVER HIDDEN THREATS",
-        "title": "The Last Line of Your Cyber Defense"
-      },
-      "threatsonar-is-complementary-to-your-existing-endpoint-solutions": {
-        "title": "ThreatSonar is Complementary to\n Your Existing Endpoint Solutions"
-      },
-      "more-strengths": {
-        "strengths": {
-          "auto-investigation": {
-            "list": "<li>Infection Timeline</li> <li>Lateral movement analysis</li>",
-            "title": "Auto Investigation"
-          },
-          "elegant": {
-            "list": "<li>Light-weight with high detection rate</li> <li>Low cost, less efforts</li> <li>Low risk, non-intrusive</li>",
-            "title": "Elegant and Efficient"
-          },
-          "orchestration": {
-            "list": "<li>SIEM Integration</li> <li>HTTP Restful API</li>",
-            "title": "Orchestration"
-          },
-          "premise": {
-            "list": "<li>Risk control</li> <li>Off-line analysis</li>",
-            "title": "On Premise"
-          },
-          "threat-hunting": {
-            "list": "<li>Behavior Modeling</li> <li>Threat Intelligence</li> <li>Outlier</li>",
-            "title": "Threat Hunting"
-          }
-        },
-        "title": "An Elegant Threat Hunting Solution"
-      },
-      "strengths": {
-        "automate": "Automate cyber threat intelligence adoption.",
-        "flexible": "Simple and flexible to be integrated with partner’s solutions.",
-        "powerful": "Powerful threat hunting platform with advanced threat visibility."
-      }
-    },
-    "threatvision": {
-      "banner": {
-        "slogan": "KNOW YOUR ENEMIES",
-        "title": "A Portal to See Through the Chaos"
-      },
-      "intelligence-report": {
-        "list": "<li>Cyber threat newsflash.</li> <li>Comprehensive and in-depth analysis of cyber threat campaigns, groups and actors.</li> <li>Asia-pacific cyberspace event analysis.</li>",
-        "title": "Asia-Pacific Cyber Threat Intelligence Reports"
-      },
-      "threat-analysis": {
-        "list": "<li>Automated Analysis.</li> <li>Malware identification and linkage discovery.</li> <li>Malicious indicators collection.</li> <li>Adversary Identification.</li>",
-        "title": "Threat Analysis"
-      },
-      "strengths": {
-        "a": "Discover and Identify Potential Threats",
-        "b": "Know the Adversary",
-        "c": "Increase Situational Awareness",
-        "d": "Turn Passive to Proactive",
-        "title": "A Cyber Threat Intelligence Platform"
-      }
+    "our-cyber-threat-experts": {
+      "title": "Our Cyber Threat Experts",
+      "analyst-title": "Cyber Threat Intelligence Analysts",
+      "analyst-context": "Our threat intelligence analysts have been dedicated to malware research and APT investigation for more than 10 years. With language and cultural advantages, we possess specific expertise in cyber espionage in the Asia-Pacific region. We are also frequent speakers in the world’s top security conferences, including Code Blue/AVTokyo, Troopers, Hack In The Box, FIRST, and etc.",
+      "engine-lab-title": "Engine Lab",
+      "engine-lab-context": "We have top tech talents specializing in reverse engineering, low-layer operating system analysis and kernel hacking. With advanced techniques, Engine Lab is key to the development of our proactive threat hunting tool - ThreatSonar. We aim to develop stable and effective threat hunting solutions, and keep enhancing the detection quality of our products.",
+      "d39-title": "D39",
+      "d39-context": "D39 focuses on vulnerability research and has identified several critical security flaws, dedicating to Common Vulnerabilities and Exposures (CVE) and Samsung Vulnerabilities and Exposures (SVE). D39 is also a frequent speaker in the world’s top security conferences, including Black Hat, HITCON, and Power of Community (POC). As a team member of HITCON, D39 joined forces to win second place in DEFCON CTF both 2014 and 2019.",
+      "ir-team-title": "Incident Response Team",
+      "ir-team-context": "With solid technical background and frontline expertise, our IR professionals provide an in-depth investigation and response to real-world cyber-attacks. We identify and research the intruder attacks, the impact and technical cause of the incidents, and recommend solutions or workarounds to assist our clients in recovery and remediation."
     }
   }
 }

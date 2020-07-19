@@ -25,78 +25,25 @@
       "context": "ThreatVision 是一款用戶導向的威脅情資平台，我們提供即時預警、惡意入侵指標、公開情報分析與駭客族群研究等。 此外，平台上的威脅情報涵蓋範圍全方位，讓不論是執行人員、管理者、亦或是決策方都能精準判斷已知以及潛藏的網路威脅。"
     }
   },
-  "browse-by-type": {
-    "title": "Browse by type"
-  },
-  "threatsonar": {
-    "assessment-reports": {
-      "a": "Organizational incident timeline.",
-      "b": "Memory, process, network connections, registry, eventlog, task scheduler, MBR, WMI, etc.",
-      "c": "Expand and pivot to find out hidden infections with similar TTP (tactics techniques procedures).",
-      "d": "Highlighting unique executables, memory attributes, abused system tools or rarely-seen digital certificates.",
-      "title": "ThreatSonar Assessment Reports"
+  "about-us": {
+    "title": "TeamT5 團隊",
+    "our-leadership": {
+      "title": "TeamT5 創辦人兼執行長",
+      "content": {
+        "title": "蔡松廷 Sung-ting Tsai（TT）",
+        "context": "蔡松廷（TT）為 TeamT5 杜浦數位安全有限公司創辦人兼執行長，耕耘資安領域超過 16 年，擁有資深威脅情資研究與資安產品開發經驗。TT 同時身為台灣駭客協會創始成員及首任理事長，目前擔任 HITCON 理事，帶領 TeamT5 團隊致力協助政府與企業，共同對抗來自網路間諜團體的持續性進階威脅（APT）。TT 亦常於世界頂尖資安會議，如 Black Hat、Code Blue 及 Kaspersky Security Analyst Summit（SAS）等，發表最新網路間諜與安全漏洞研究成果，為國際公認的威脅情資與資訊安全專家。"
+      }
     },
-    "auto-investigation": {
-      "content": "Discovering related infection origins, lateral-movement traces and data exfiltration through graph visualization.",
-      "title": "ThreatSonar\nAuto-investigation"
-    },
-    "banner": {
-      "slogan": "UNCOVER HIDDEN THREATS",
-      "title": "The Last Line of Your Cyber Defense"
-    },
-    "threatsonar-is-complementary-to-your-existing-endpoint-solutions": {
-      "title": "ThreatSonar is Complementary to\n Your Existing Endpoint Solutions"
-    },
-    "more-strengths": {
-      "strengths": {
-        "auto-investigation": {
-          "list": "<li>Infection Timeline</li> <li>Lateral movement analysis</li>",
-          "title": "Auto Investigation"
-        },
-        "elegant": {
-          "list": "<li>Light-weight with high detection rate</li> <li>Low cost, less efforts</li> <li>Low risk, non-intrusive</li>",
-          "title": "Elegant and Efficient"
-        },
-        "orchestration": {
-          "list": "<li>SIEM Integration</li> <li>HTTP Restful API</li>",
-          "title": "Orchestration"
-        },
-        "premise": {
-          "list": "<li>Risk control</li> <li>Off-line analysis</li>",
-          "title": "On Premise"
-        },
-        "threat-hunting": {
-          "list": "<li>Behavior Modeling</li> <li>Threat Intelligence</li> <li>Outlier</li>",
-          "title": "Threat Hunting"
-        }
-      },
-      "title": "An Elegant Threat Hunting Solution"
-    },
-    "strengths": {
-      "automate": "Automate cyber threat intelligence adoption.",
-      "flexible": "Simple and flexible to be integrated with partner’s solutions.",
-      "powerful": "Powerful threat hunting platform with advanced threat visibility."
-    }
-  },
-  "threatvision": {
-    "banner": {
-      "slogan": "KNOW YOUR ENEMIES",
-      "title": "A Portal to See Through the Chaos"
-    },
-    "intelligence-report": {
-      "list": "<li>Cyber threat newsflash.</li> <li>Comprehensive and in-depth analysis of cyber threat campaigns, groups and actors.</li> <li>Asia-pacific cyberspace event analysis.</li>",
-      "title": "Asia-Pacific Cyber Threat Intelligence Reports"
-    },
-    "threat-analysis": {
-      "list": "<li>Automated Analysis.</li> <li>Malware identification and linkage discovery.</li> <li>Malicious indicators collection.</li> <li>Adversary Identification.</li>",
-      "title": "Threat Analysis"
-    },
-    "strengths": {
-      "a": "Discover and Identify Potential Threats",
-      "b": "Know the Adversary",
-      "c": "Increase Situational Awareness",
-      "d": "Turn Passive to Proactive",
-      "title": "A Cyber Threat Intelligence Platform"
+    "our-cyber-threat-experts": {
+      "title": "網路威脅專家",
+      "analyst-title": "威脅情資分析團隊",
+      "analyst-context": "擁有十年以上惡意程式與 APT 研究經歷，加上台灣的語言及文化優勢，我們對亞太地區的 APT 駭客族群有深入瞭解與研究。尤其針對中國的 APT 攻擊，我們掌握更多作案細節與手法，具備事件後續追查的優勢。我們也經常受邀參加世界級演講，包括 Code Blue/ AVTokyo、Troopers、Hack In The Box 與 FIRST 等。",
+      "engine-lab-title": "核心技術團隊",
+      "engine-lab-context": "Engine Lab 精通底層作業系統分析、深度逆向分析與先進安全技術，是我們主動式威脅獵捕工具－ThreatSonar 的核心研發團隊。因為具備高深技術與研究能力，Engine Lab 積極研發最新的偵測方式，設計穩定且可有效偵測攻擊者的威脅狩獵方案。",
+      "d39-title": "漏洞研究專家",
+      "d39-context": "D39 專注於弱點與漏洞研究，至今已挖掘出多項重大安全漏洞，包括行動裝置、IoT 設備以及 Linux、Windows 作業系統漏洞等，成立至今已取得數十項國際通用漏洞揭露編號（CVE）與三星漏洞揭露編號（SVE）。D39 經常擔任國際資安大會講師，包括 Black Hat、HITCON 與 Power of Community（POC）等，更兩度以 HITCON 團隊核心成員身份，參加 DEFCON CTF 世界駭客大賽，獲得第二名的佳績（DEFCON CTF 22 & 27）。",
+      "ir-team-title": "IR鑑識團隊",
+      "ir-team-context": "我們的鑑識專家具備豐富第一線國內外資安事件處理經驗，長期研究與解析駭客族群入侵行為。資安事件發生時，我們可快速完成受駭現場與歷史軌跡的綜整分析，發掘攻擊者的入侵過程與手法，提供事件處理的深入分析及建議，協助您復原與改善。"
     }
   }
 }
