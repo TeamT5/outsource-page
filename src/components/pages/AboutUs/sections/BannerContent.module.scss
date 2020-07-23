@@ -5,176 +5,70 @@ $content-width: $content-width-l;
 
 .container {
   position:relative;
-  max-width:1440px;
+  width:100%;
   box-sizing: border-box;
+  border:1px solid green;
 }
 
-.banner-container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  position: relative;
-  height: 100%;
-  width: $content-width;
-  z-index: 1;
+.title-wrap{
+  position:absolute;
+  width:616px;
+  height:200px;
+  bottom:50px;
+  right:105px;
+  z-index:1;
+  text-align:center;
+  padding-bottom:50px;
+  .title{
+    position:relative;
+    bottom:-80px;
+    font-size:100px;
+    z-index:1;
+    margin:0;
+  }
+  .title-lightheight{
+    width:616px;
+    height:100px;
+    background:rgba(76, 67, 63, 0.85);
+  }
 }
 
-.top {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-
-}
-
-.banner-img {
-  width: 100%;
-  flex: 1;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-
-  .mask {
-    width: calc(100% + 2px);
-    height: 100%;
-    position: absolute;
-    z-index: 2;
-    transition: clip-path 1s;
-    clip-path: polygon(0% 0%, 0% 100%,100% 100%,100% 0%);
-    background-color: white;
+.img-wrap{
+  position:relative;
+  width:1440px;
+  height:810px;
+  .mask{
+    position:absolute;
+    z-index:0;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.35);
   }
-
-  &.show {
-    .mask {
-      clip-path: polygon(100% 0%, 100% 100%,100% 100%,100% 0%);
-    }
-  }
-
-  .img-wrap-container {
-    position: relative;
-  }
-
-  .img-wrap {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 25%;
-    box-sizing: border-box;
-  }
-
-  .image-source{
+  .img{
+    position:absolute;
+     z-index:-1;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
   }
 }
+
 
 @media screen and (max-width: 1440px ) {
-  .banner-img {
-    width:100%;
-    height:100%;
-  }
-
-  .top {
-    .rect2 {
-      width: 216px;
-    }
-  }
+  
 }
 
 @media screen and (max-width: 1280px ) {
-  .container {
-    margin: 0;
-  }
-  .banner-img {
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-  .top {
-    .rect2 {
-      display: none;
-    }
-  }
+  
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
-    margin-top: 60px;
-    height: fit-content;
-  }
-
-  .banner-img {
-    width: fit-content;
-    height: fit-content;
-    .context {
-      width: $content-width;
-    }
-  }
-
-  .top {
-    margin-top: 20px;
-    position: relative;
-    height: 520px;
-    .rect3 {
-      left: 35px;
-      bottom: 0;
-    }
-  }
-
-  .banner-img {
-    margin-top: 20px;
-    top: 0;
-    width: 598px;
-    left: calc((100% - 578px) / 2);
-  }
+  
 }
 
 @media screen and (max-width: 768px) {
-  $content-width: $content-width-xs;
-  .container {
-    margin-top: 20px;
-    // height: 745px;
-  }
-
-  .top {
-    height: 336px;
-    .rect3 {
-      left: -20px;
-      bottom: 20px;
-    }
-  }
-
-  .banner-img {
-    width: 100%;
-    width: unset;
-    justify-content: center;
-    .context {
-      flex: 1;
-      margin: 0 30px;
-
-      h3 {
-        font-size: 16px;
-        color: $dark;
-      }
-
-      img {
-        width: 234px;
-      }
-    }
-  }
-
-  .banner-img {
-    margin-top: 12px;
-    width: 361px;
-    left: unset;
-    right: calc((100% - 319px) / 2);
-
-    img {
-      box-shadow:-12px -12px rgba(255, 255, 255, 0.5);
-    }
-  }
+  
 }

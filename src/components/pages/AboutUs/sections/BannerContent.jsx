@@ -7,25 +7,19 @@ import useTranslation from 'src/scripts/translations/useTranslation'
 const BannerContent = (props) => {
   const { t } = useTranslation()
 
-  const visionTriAnimated = true
-
   return (
     <div className={styles['container']}>
-      <div className={styles['top']}>
-        <div className={`${(visionTriAnimated) ? styles['show'] : ''} ${styles['banner-img']}`}>
-          <div className={styles['img-wrap']}>
-            <div className={styles['img-wrap-container']}>
-              <div className={styles['mask']}></div>
-              <img className={styles['image-source']} src="/images/about_us/about_cover.jpg"/>
-            </div>
+          <div className={styles['title-wrap']}>
+              <h1 className={styles['title']}>About Us</h1>
+              <div className={styles['title-lightheight']}></div>
           </div>
-        </div>
-      </div>
+          <div className={styles['img-wrap']}>
+              <div className={styles['mask']}></div>
+              <img className={styles['img']} src="/images/about_us/about_cover.jpg"/>
+          </div>
     </div>
   )
 }
-BannerContent.propTypes = {
-  visionTriAnimated: PropTypes.bool,
-}
+
 
 export default BannerContent
