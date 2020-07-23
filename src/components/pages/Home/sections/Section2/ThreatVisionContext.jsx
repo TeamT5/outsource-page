@@ -16,7 +16,7 @@ const ThreatVisionContext = (props) => {
   return (
     <div className={styles['container']}>
       <div className={styles['threat-vision-context-container']}>
-        <div className={styles['context']}>
+        {/* <div className={styles['context']}>
           <img src="/images/threat_vision_logo.svg"/>
           <h3>
             {title}
@@ -24,7 +24,7 @@ const ThreatVisionContext = (props) => {
           <p>
             {visionContext}
           </p>
-        </div>
+        </div> */}
       </div>
       <div className={styles['top']}>
         <div className={`${(visionTriAnimated) ? styles['show'] : ''} ${styles['threat-vision-product-img']}`}>

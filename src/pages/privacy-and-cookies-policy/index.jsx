@@ -1,6 +1,6 @@
-import React from 'react'
-import Head from 'next/head'
-import LocaleRedirecter from 'src/components/common/LocaleRedirecter'
+import React from 'src/pages/privacy-and-cookies-policy/react'
+import Head from 'src/pages/privacy-and-cookies-policy/next/head'
+import LocaleRedirecter from 'src/pages/privacy-and-cookies-policy/src/components/common/LocaleRedirecter'
 
 const PrivacyAndCookiesPolicyPage = () => {
   return (
