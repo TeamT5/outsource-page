@@ -6,19 +6,17 @@ import useTranslation from 'src/scripts/translations/useTranslation'
 
 const BannerContent = (props) => {
   const { t } = useTranslation()
-  const title = t('index.vision-context.title')
-  const visionContext = t('index.vision-context.context')
 
-  const visionTriAnimated = props.visionTriAnimated
+  const visionTriAnimated = true
 
   return (
     <div className={styles['container']}>
       <div className={styles['top']}>
-        <div className={`${(visionTriAnimated) ? styles['show'] : ''} ${styles['threat-vision-product-img']}`}>
+        <div className={`${(visionTriAnimated) ? styles['show'] : ''} ${styles['banner-img']}`}>
           <div className={styles['img-wrap']}>
             <div className={styles['img-wrap-container']}>
               <div className={styles['mask']}></div>
-              <img src="/images/about_us/about_cover.jpg"/>
+              <img className={styles['image-source']} src="/images/about_us/about_cover.jpg"/>
             </div>
           </div>
         </div>
