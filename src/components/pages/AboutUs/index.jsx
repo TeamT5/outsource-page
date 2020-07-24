@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import BaseLayout from '../../layout/BaseLayout'
-import { Section1} from './sections'
+import { Section1,Section2} from './sections'
 import useTranslation from 'src/scripts/translations/useTranslation'
 import styles from './index.module.scss'
 import Head from 'next/head'
@@ -44,6 +44,7 @@ const AboutUs = () => {
             setSection1Loaded(true)
           }}
         />
+        <Section2/>
       </div>
         </BaseLayout>
     )

@@ -1,13 +1,13 @@
 @import '../../HOME/home.module.scss';
 @import 'styles/general.scss';
 
-$content-width: $content-width-l;
+$title-font:100px;
+
 
 .container {
   position:relative;
   width:100%;
   box-sizing: border-box;
-  border:1px solid green;
 }
 
 .title-wrap{
@@ -22,7 +22,7 @@ $content-width: $content-width-l;
   .title{
     position:relative;
     bottom:-80px;
-    font-size:100px;
+    font-size:$title-font;
     z-index:1;
     margin:0;
   }

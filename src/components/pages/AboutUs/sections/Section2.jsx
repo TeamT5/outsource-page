@@ -5,46 +5,76 @@ import useTranslation from 'src/scripts/translations/useTranslation'
 
 
 const CardWithPhoto = (props)=>(
-  <div>
-    <div className={styles['LeftSide']}>
-      {props.leadership && <p>{props.leadership}</p>}
+  <div className={styles['card-with-photo-container']}>
+    <div className={styles['left-side']}>
+      {props.leadership && <h5 className={styles['leadership-text']}>{props.leadership}</h5>}
     </div>
-    <div className={styles['RightSide']}>
-      <img src='/images/og-image.jpg' />
-       {leadershipTitle && 
-       <h4>
-       props.about-us.our-leadership.content.title
-      </h4>
+    <div className={styles['right-side']}>
+      <img src='/images/about_us/CEO_TT.jpg' />
+       {props.leadershipTitle && 
+       <p className={styles['leadership-head']}>{props.leadershipTitle}</p>
+       }
+       {props.leadershipContext && 
+       <p>
+         {props.leadershipContext}
+       </p>
        }
     </div>
   </div>
 )
 
-const Card = (props)=>(
+const Card = (props)=>{
   const { t } = useTranslation()
-  <div>
-    <div className={styles['LeftSide']}>
-      {props.leadership && <p>{props.leadership}</p>}
+  return( 
+    <div className={styles['card-container']}>
+      <div className={styles['left-side']}>
+      {props.title && <h4>{t(props.title)}</h4>}
+      </div>
+      <div className={styles['right-side']}>
+      {props.content && props.content.map(card=>(
+      <>
+      <h5>
+       {t(card.title)}
+      </h5>
+      <p>
+       {t(card.context)}
+      </p>
+      </>
+      ))}
+      </div>
     </div>
-    <div className={styles['RightSide']}>
-      <img src='/images/og-image.jpg' />
-       {leadershipTitle && 
-       <h4>
-       props.about-us.our-leadership.content.title
-      </h4>
-       }
-    </div>
-  </div>
-)
+)}
 
-const Section2 = (props) => {
+
+
+export const Section2 = (props) => {
+  const { t } = useTranslation()
+   const cybers ={
+     title:'about-us.our-cyber-threat-experts.title',
+     content:[
+       {title:'about-us.our-cyber-threat-experts.analyst-title',
+        ontext:'about-us.our-cyber-threat-experts.analyst-context'},
+       {
+        title:'about-us.our-cyber-threat-experts.engine-lab-title',
+        context:'about-us.our-cyber-threat-experts.engine-lab-context'
+       },{
+        title:'about-us.our-cyber-threat-experts.d39-title',
+        context:'about-us.our-cyber-threat-experts.d39-context'
+       },{
+         title:'about-us.our-cyber-threat-experts.ir-team-title',
+         context:'about-us.our-cyber-threat-experts.ir-team-context'
+       }]
+   }
+
    return(
+     <div className={styles['container']}>
      <CardWithPhoto  
      leadership={t('about-us.our-leadership.title') } 
      leadershipTitle={t('about-us.our-leadership.content.title') }
      leadershipContext={t('about-us.our-leadership.content.context')}
      />
-     <Card isTitle=''/>
+     <Card {...cybers}/>
+     </div>
    )
    
 }
