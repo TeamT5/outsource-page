@@ -1,18 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React from 'react'
 import styles from './Section1.module.scss'
-import PropTypes from 'prop-types'
 import BannerContent from './BannerContent'
 
-export const Section1 = (props) => {
-
+export const Section1 = () => {
   return (
     <section className={styles['section1']}>
-      <BannerContent/>
+      <BannerContent />
     </section>
   )
 }
 
-Section1.propTypes = {
-  onLoaded: PropTypes.func,
-}
 export default Section1

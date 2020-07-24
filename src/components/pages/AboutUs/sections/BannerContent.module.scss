@@ -5,6 +5,7 @@ $title-font:100px;
 
 
 .container {
+  font-family: Helvetica;
   position:relative;
   width:100%;
   box-sizing: border-box;
@@ -22,14 +23,15 @@ $title-font:100px;
   .title{
     position:relative;
     bottom:-80px;
-    font-size:$title-font;
     z-index:1;
     margin:0;
+    font-size: 120px;
+    color: #FFFFFF;
   }
   .title-lightheight{
     width:616px;
     height:100px;
-    background:rgba(76, 67, 63, 0.85);
+    background: rgba(76,67,63,0.85);
   }
 }
 
