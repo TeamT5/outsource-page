@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import styles from './Section2.module.scss'
+import styles from './ContentSection.module.scss'
 import PropTypes from 'prop-types'
 import useTranslation from 'src/scripts/translations/useTranslation'
 
@@ -19,7 +19,7 @@ const CardWithPhoto = props =>{
       {leadershipTitle && (
         <p className={styles['leadership-head']}>{leadershipTitle}</p>
       )}
-      {leadershipContext && <p className={styles['aritle-context']}>{leadershipContext}</p>}
+      {leadershipContext && <p className={styles['article-context']}>{leadershipContext}</p>}
     </div>
   </div>
 )
@@ -44,7 +44,7 @@ const Card = props => {
           && content.map((card, index) => (
             <Fragment key={index}>
               <p className={styles['leadership-head']}>{t(card.title)}</p>
-              <p className={styles['artitle-context']}>{t(card.context)}</p>
+              <p className={styles['article-context']}>{t(card.context)}</p>
             </Fragment>
           ))}
       </div>
@@ -57,7 +57,7 @@ Card.propTypes = {
   content: PropTypes.array,
 }
 
- const Section2 = () => {
+ const ContentSection = () => {
   const { t } = useTranslation()
   const cybers = {
     title: 'about-us.our-cyber-threat-experts.title',
@@ -94,4 +94,4 @@ Card.propTypes = {
 }
 
 
-export default Section2
+export default ContentSection

@@ -1,3 +1,2 @@
-export {default as Section1} from './Section1'
-
-export {default as Section2} from './Section2'
+export {default as BannerContent} from './BannerContent'
+export {default as ContentSection} from './ContentSection'

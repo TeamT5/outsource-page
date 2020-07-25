@@ -1,3 +1,35 @@
 .context {
-  // padding: 200px 50px;
+  width:1440px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 1440px) {
+  .context {
+    width:1440px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .context {
+    width:1280px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .context {
+    width:1024px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .context {
+    width:768px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .context {
+    width:375px;
+  }
 }
