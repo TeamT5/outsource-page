@@ -1,67 +1,84 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import styles from './Section2.module.scss'
 import PropTypes from 'prop-types'
 import useTranslation from 'src/scripts/translations/useTranslation'
 
-const CardWithPhoto = props => (
+const CardWithPhoto = props =>{
+  const leadership = props.leadership
+  const leadershipTitle = props.leadershipTitle
+  const leadershipContext = props.leadershipContext
+  return(
   <div className={styles['card-with-photo-container']}>
     <div className={styles['left-side']}>
-      {props.leadership && (
-        <h5 className={styles['leadership-text']}>{props.leadership}</h5>
+      {leadership && (
+        <h5 className={styles['leadership-text']}>{leadership}</h5>
       )}
     </div>
     <div className={styles['right-side']}>
       <img src='/images/about_us/CEO_TT.jpg' />
-      {props.leadershipTitle && (
-        <p className={styles['leadership-head']}>{props.leadershipTitle}</p>
+      {leadershipTitle && (
+        <p className={styles['leadership-head']}>{leadershipTitle}</p>
       )}
-      {props.leadershipContext && <p className={styles['aritle-context']}>{props.leadershipContext}</p>}
+      {leadershipContext && <p className={styles['aritle-context']}>{leadershipContext}</p>}
     </div>
   </div>
 )
+}
+
+CardWithPhoto.propTypes = {
+  leadership: PropTypes.string,
+  leadershipTitle: PropTypes.string,
+  leadershipContext: PropTypes.leadershipContext,
+}
 
 const Card = props => {
   const { t } = useTranslation()
+  const {title, content} = props
   return (
     <div className={styles['card-container']}>
       <div className={styles['left-side']}>
-        {props.title && <h5 className={styles['leadership-text']}>{t(props.title)}</h5>}
+        {title && <h5 className={styles['leadership-text']}>{t(title)}</h5>}
       </div>
       <div className={styles['right-side']}>
-        {props.content &&
-          props.content.map(card => (
-            <>
+        {content
+          && content.map((card, index) => (
+            <Fragment key={index}>
               <p className={styles['leadership-head']}>{t(card.title)}</p>
-              <p className={styles['aritle-context']}>{t(card.context)}</p>
-            </>
+              <p className={styles['artitle-context']}>{t(card.context)}</p>
+            </Fragment>
           ))}
       </div>
     </div>
   )
 }
 
-export const Section2 = () => {
+Card.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.array,
+}
+
+ const Section2 = () => {
   const { t } = useTranslation()
   const cybers = {
     title: 'about-us.our-cyber-threat-experts.title',
     content: [
       {
         title: 'about-us.our-cyber-threat-experts.analyst-title',
-        context: 'about-us.our-cyber-threat-experts.analyst-context'
+        context: 'about-us.our-cyber-threat-experts.analyst-context',
       },
       {
         title: 'about-us.our-cyber-threat-experts.engine-lab-title',
-        context: 'about-us.our-cyber-threat-experts.engine-lab-context'
+        context: 'about-us.our-cyber-threat-experts.engine-lab-context',
       },
       {
         title: 'about-us.our-cyber-threat-experts.d39-title',
-        context: 'about-us.our-cyber-threat-experts.d39-context'
+        context: 'about-us.our-cyber-threat-experts.d39-context',
       },
       {
         title: 'about-us.our-cyber-threat-experts.ir-team-title',
-        context: 'about-us.our-cyber-threat-experts.ir-team-context'
-      }
-    ]
+        context: 'about-us.our-cyber-threat-experts.ir-team-context',
+      },
+    ],
   }
 
   return (
@@ -75,3 +92,6 @@ export const Section2 = () => {
     </div>
   )
 }
+
+
+export default Section2

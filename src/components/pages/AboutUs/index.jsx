@@ -1,6 +1,6 @@
-import React,{useState,useContext} from 'react'
+import React, {useState, useContext} from 'react'
 import BaseLayout from '../../layout/BaseLayout'
-import { Section1,Section2} from './sections'
+import { Section1, Section2} from './sections'
 import useTranslation from 'src/scripts/translations/useTranslation'
 import { LocaleContext } from 'src/scripts/translations/LocaleContext'
 import styles from './index.module.scss'
@@ -34,13 +34,13 @@ const AboutUs = () => {
         <meta property="og:image" content="/images/og-image.jpg" />
       </Head>
       <div className={styles['context']}>
-         <Section1
+      <Section1
           className={styles['hero-img']}
           onLoaded={() => {
             setSection1Loaded(true)
           }}
         />
-        <Section2/>
+      <Section2/>
       </div>
         </BaseLayout>
     )

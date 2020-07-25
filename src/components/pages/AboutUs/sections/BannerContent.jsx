@@ -1,12 +1,8 @@
 
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './BannerContent.module.scss'
-import useTranslation from 'src/scripts/translations/useTranslation'
 
-const BannerContent = (props) => {
-  const { t } = useTranslation()
-
+const BannerContent = () => {
   return (
     <div className={styles['container']}>
           <div className={styles['title-wrap']}>

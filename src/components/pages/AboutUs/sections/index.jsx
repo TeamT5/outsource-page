@@ -1,5 +1,3 @@
-// import Section1 from './Section1'
+export {default as Section1} from './Section1'
 
-export {Section1} from './Section1'
-
-export {Section2} from './Section2'
+export {default as Section2} from './Section2'
