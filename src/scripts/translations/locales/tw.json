@@ -45,5 +45,88 @@
       "ir-team-title": "IR鑑識團隊",
       "ir-team-context": "我們的鑑識專家具備豐富第一線國內外資安事件處理經驗，長期研究與解析駭客族群入侵行為。資安事件發生時，我們可快速完成受駭現場與歷史軌跡的綜整分析，發掘攻擊者的入侵過程與手法，提供事件處理的深入分析及建議，協助您復原與改善。"
     }
+  },
+  "solution": {
+    "sonar": {
+      "title": {
+        "title": "An Engine to Hunt down Intruders",
+        "context": "洞察敵人，超前部署<br>最有效的 APT 狩獵解決方案與最優異的 MDR 服務平台"
+      },
+      "intro": {
+        "context": "面對日趨複雜與氾濫的 APT 攻擊，該如何識別這些寂靜無聲的入侵者？<p>ThreatSonar 提供進階的威脅獵捕方案，幫助您發現環境中的可疑威脅。"
+      },
+      "function": {
+        "ca-title": "入侵威脅評估",
+        "ca-context": "結合數位鑑識與行為模型技術，ThreatSonar 可快速偵測與鎖定異常行為，辨識環境中的入侵威脅，以圖形視覺化方式呈現威脅事件，更有效幫助您進行資安事件追蹤與關聯。",
+        "ir-title": "威脅事件回應",
+        "ir-context": "ThreatSonar 具備情資驅動特性與自動調查功能，主動發現符合駭客族群常用 TTPs 的隱藏威脅，提升資安事件調查效率。",
+        "mdr-title": "託管式偵測與回應服務平台",
+        "mdr-context": "ThreatSonar 可持續觀察端點的風險狀況，由我們的專家團隊協助您進行入侵威脅通報、抑制與回應處理，強化企業的資安事件應變能力。"
+      },
+
+      "why": {
+        "title": "為何選擇 ThreatSonar？",
+        "slogan": {
+          "title": "讓敵人無所遁形",
+          "context": "大部份資安產品從預防角度出發，但仍抵擋不住攻擊者，企業依然持續遭受入侵威脅。<br> ThreatSonar 以 TeamT5 團隊長期研究的威脅情資為核心進行研發，內建超過 100 種惡意行為指標與上千種已知後門特徵，協助企業掌握攻擊者在受駭階段中的入侵軌跡。"
+        },
+        "intel": {
+          "correlation": {
+            "title": "關聯威脅情資",
+            "trait-1": "未知威脅偵測技術",
+            "trait-2": "支援 Yara 偵測規則",
+          }
+        },
+        "cross-platform": {
+          "title": "跨平台支援",
+          "trait-1": "Windows XP 至 Windows 10 各式作業系統",
+          "trait-2": "支援 Windows、Linux 與 Mac 作業系統"
+        },
+        "multi-scenarios": {
+          "title": "多樣情境適用",
+          "trait-1": "託管式偵測與回應服務平台",
+          "trait-2": "定期入侵威脅健診",
+          "trait-3": "惡意威脅溯源分析",
+          "trait-4": "視覺化網路拓樸分析"
+        },
+        "forensic-analysis": {
+          "title": "威脅鑑識分析",
+          "trait-1": "發掘潛伏未知威脅",
+          "trait-2": "掌握抵禦未來威脅"
+        }
+      },
+      "contact-us": {
+        "btn": "Contact Us",
+        "form-title": "獲得更多產品資訊",
+        "form-first-name": "名",
+        "form-last-name": "姓",
+        "form-company-name": "公司名稱",
+        "form-industry-category": {
+          "label": "產業別",
+          "gov": "政府機關",
+          "financial": "金融產業",
+          "hightech": "高科技製造業",
+          "telecom": "電信產業",
+          "electric": "電機製造業",
+          "gtc": "國際貿易商（綜合商社）",
+          "mssp": "資安監控服務商（MSSP）",
+          "consultancy": "顧問服務業",
+          "others": "其他"
+        },
+        "form-company-size": {
+          "label": "您公司有多少員工",
+          "100-less": "少於 100 人",
+          "100-500": "100 - 500 人",
+          "501-1000": "501 - 1000 人",
+          "1000-more": "超過 1000 人"
+        },
+        "form-job-title": "職稱",
+        "form-phone": "電話",
+        "form-email": "電子郵件",
+        "form-country": "國家",
+        "form-inquiry": "您的需求或問題",
+        "form-submit": "送出"
+      }
+    }
   }
 }

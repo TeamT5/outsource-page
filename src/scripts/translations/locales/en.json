@@ -9,7 +9,7 @@
     "mail": "Mail",
     "phone": "Phone",
     "address": {
-      "label":  "Address",
+      "label": "Address",
       "content": "15F., No. 46, Ln. 11, Guangfu N. Rd., Songshan Dist., 105 Taipei City, Taiwan"
     },
     "privacy-and-cookies-policy": "Privacy & Cookies Policy",
@@ -44,6 +44,91 @@
       "d39-context": "D39 focuses on vulnerability research and has identified several critical security flaws, dedicating to Common Vulnerabilities and Exposures (CVE) and Samsung Vulnerabilities and Exposures (SVE). D39 is also a frequent speaker in the world’s top security conferences, including Black Hat, HITCON, and Power of Community (POC). As a team member of HITCON, D39 joined forces to win second place in DEFCON CTF both 2014 and 2019.",
       "ir-team-title": "Incident Response Team",
       "ir-team-context": "With solid technical background and frontline expertise, our IR professionals provide an in-depth investigation and response to real-world cyber-attacks. We identify and research the intruder attacks, the impact and technical cause of the incidents, and recommend solutions or workarounds to assist our clients in recovery and remediation."
+    }
+  },
+
+  "solution": {
+    "sonar": {
+      "title": {
+        "title": "An Engine to Hunt down Intruders",
+        "context": "Get ahead of your adversaries with the most effective APT hunting solution and MDR platform.",
+      },
+      "intro": {
+        "context": "APT attacks are far more prevalent and sophisticated than ever. <br> But, how can you recognize a silent and unnoticed sneak attack?<p>ThreatSonar provides an advanced threat hunting solution to help discover threats in a post-compromised environment.",
+      },
+      "function": {
+        "ca-title": "Compromise Assessment",
+        "ca-context": "Combining digital forensics and behavior-modeling techniques, ThreatSonar can do fast triage and hunt for outliers. The graph visualization also helps incident tracking and correlation.",
+        "ir-title": "Incident Response",
+        "ir-context": "Intelligence-driven and auto-investigation to find out hidden infections with similar TTPs, ThreatSonar is an effective tool designed for incident response execution.",
+        "mdr-title": "MDR platform",
+        "mdr-context": "Conducting regular risk assessment for endpoints with ThreatSonar, our frontline expertise provides you with greater detection and response capabilities.",
+
+      },
+      "why": {
+        "title": "Why ThrearSonar?",
+        "slogan": {
+          "title": "We See the Invisibles",
+          "context": "Most security solutions are based on prevention, yet attackers still breach in. Empowered by our in-depth threat intelligence with up-to-date knowledge of more than 100+ adversaries, ThreatSonar connects the dots to identify and analyze intruders in a breached environment."
+        },
+        "intel": {
+          "correlation": {
+            "title": "Intelligence Correlation",
+            "trait-1": "Heuristic techniques for the unknown",
+            "trait-2": "Yara rules for hidden threats",
+          }
+        },
+        "cross-platform": {
+          "title": "Cross-platform Operation",
+          "trait-1": "from XP to Win 10, both 32/64bit",
+          "trait-2": "Windows, Linux, and MacOS included"
+        },
+        "multi-scenarios": {
+          "title": "Multi-Scenarios & Approach Assistance",
+          "trait-1": "A MDR",
+          "trait-2": "A regular check-up",
+          "trait-3": "Time machine",
+          "trait-4": "Internet topology",
+        },
+        "forensic-analysis": {
+          "title": "Forensic Analysis",
+          "trait-1": "Identify the past",
+          "trait-2": "Secure the future"
+        }
+      },
+      "contact-us": {
+        "btn": "Contact Us",
+        "form-title": "I’m interested",
+        "form-first-name": "First Name",
+        "form-last-name": "Last Name",
+        "form-company-name": "Company Name",
+        "form-industry-category": {
+          "label": "Industry Category",
+          "gov": "Government",
+          "financial": "Financial Business",
+          "hightech": "High-tech Manufacturing",
+          "telecom": "Telecommunication",
+          "electric": "Electric Manufacturing",
+          "gtc": "General Trading Company",
+          "mssp": "Managed Security Service Provider (MSSP)",
+          "consultancy": "Consultancy",
+          "others": "Others"
+        },
+        "form-company-size": {
+          "label": "Company Size",
+          "100-less": "Less than 100 employees",
+          "100-500": "100-500 employees",
+          "501-1000": "501-1000 employees",
+          "1000-more": "More than 1000 employees"
+        },
+        "form-job-title": "Job Title",
+        "form-phone": "Phone Number",
+        "form-email": "Email Address",
+        "form-country": "Country",
+        "form-inquiry": "Your Inquiry",
+        "form-submit": "form-submit"
+      }
+
     }
   }
 }
