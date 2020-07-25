@@ -28,7 +28,7 @@ const CardWithPhoto = props =>{
 CardWithPhoto.propTypes = {
   leadership: PropTypes.string,
   leadershipTitle: PropTypes.string,
-  leadershipContext: PropTypes.leadershipContext,
+  leadershipContext: PropTypes.string,
 }
 
 const Card = props => {
