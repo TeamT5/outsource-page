@@ -4,6 +4,7 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 40px;
+  padding-bottom: 120px;
   font-family: Helvetica;
   font-size: 16px;
   color: #4C433F;
@@ -11,11 +12,11 @@
 
 .card-with-photo-container {
   display: flex;
-  width: 100%;
+  width: 1000px;
   margin: 0 auto;
 
   .left-side {
-    flex: 1 3 0;
+    flex: 1.2 3 0;
 
     .leadership-text {
       margin: 0;
@@ -24,7 +25,7 @@
   }
 
   .right-side {
-    flex: 3 1 0;
+    flex: 3 1.2 0;
 
     .leadership-head {
       font-weight: bold;
@@ -52,11 +53,14 @@
 
 .card-container {
   display: flex;
-  width: 100%;
+  width: 1000px;
   margin: 0 auto;
+  & :not(:last-child) {
+    margin-bottom: 60px
+  }
 
   .left-side {
-    flex: 1 3 0;
+    flex: 1.2 3 0;
 
     .leadership-text {
       margin: 0;
@@ -66,7 +70,7 @@
   }
 
   .right-side {
-    flex: 3 1 0;
+    flex: 3 1.2 0;
 
     .leadership-head {
       font-size: 16px;
@@ -95,33 +99,11 @@
   .container {
     padding-bottom: 120px;
   }
-  
-
-  .card-with-photo-container,
-  .card-container {
-    width: calc(100% - (140px * 2));
-  }
-
-  .card-with-photo-container{
-    margin-bottom: 80px;
-  }
-
-  .card-container {
-    & :not(:last-child) {
-      margin-bottom: 60px
-    }
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .container {
-    padding-bottom: 120px;
-  }
 
 
   .card-with-photo-container,
   .card-container {
-    width: calc(100% - (140px * 2));
+    width: 1000px;
   }
 
   .card-with-photo-container {
@@ -134,10 +116,9 @@
       margin-bottom: 60px
     }
   }
-
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .container {
     padding-top: 30px;
     padding-bottom: 120px;
@@ -145,7 +126,7 @@
 
   .card-with-photo-container,
   .card-container {
-    width: calc(100% - (114px * 2));
+    width: 800px;
 
     & :not(:last-child) {
       margin-bottom: 60px
@@ -178,16 +159,17 @@
       flex: 12.5 1 0;
     }
   }
+
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .container {
     padding-bottom: 100px;
   }
 
   .card-with-photo-container,
   .card-container {
-    width: calc(100% - (74px * 2));
+    width: 620px;
   }
 
   .card-with-photo-container{
@@ -206,18 +188,17 @@
       flex: 12.5 1 0;
     }
   }
-
-
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
+  
   .container {
     padding-bottom: 100px;
   }
 
   .card-with-photo-container,
   .card-container {
-    width: calc(100% - (20px * 2));
+    width: 335px;
     
   }
 
@@ -240,4 +221,5 @@
       }
     }
   }
+
 }

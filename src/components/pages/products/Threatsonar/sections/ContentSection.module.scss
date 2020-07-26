@@ -20,8 +20,11 @@
 
         &::after {
             content: '';
+            display: block;
             position: absolute;
+            z-index: 10;
             top: 650px;
+            background: red;
             right: 0;
             width: 0;
             height: 0;
