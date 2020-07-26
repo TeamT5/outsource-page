@@ -1,0 +1,117 @@
+@import 'styles/general.scss';
+
+$title-font:100px;
+
+
+.container {
+  font-family: Helvetica;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 800px;
+  box-sizing: border-box;
+  background-image: url('/images/ThreatSonar/soanr_hero_bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+
+  .title-wrap {
+    position: absolute;
+    z-index: 2;
+    left: 345px;
+    top: 170px;
+
+    .title-img {
+      width: 580px;
+      height: auto;
+      margin-bottom: 58px;
+    }
+
+    .title-box {
+      width: 516px;
+      text-align: center;
+      padding-left: 64px;
+
+      .title {
+        position: relative;
+        z-index: 1;
+        font-size: 28px;
+        margin: 0;
+      }
+
+      .light-height {
+        position: relative;
+        bottom: 14px;
+        width: 100%;
+        height: 21px;
+        background-color: #AE1E34;
+      }
+
+      .subtitle {
+        font-size: 20px;
+        color: #FFFFFF;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .img-wrap {
+    .left-hero {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 345px;
+      height: auto;
+    }
+
+    .right-hero {
+      top: 0;
+      right: 0;
+      position: absolute;
+      max-width: 837px;
+      height: auto;
+    }
+
+    .mask{
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .35);
+    }
+  }
+
+
+  .bubble{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right:0;
+    bottom: 20px;
+    width:40px;
+    height:130px;
+    border-radius: 4px 0 0 4px;
+    background-color: $sonar-red;
+    color: white;
+    z-index: 3;
+    p{
+      transform: rotate(-90deg);
+      white-space: nowrap;
+      font-size: 20px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 375px) {}

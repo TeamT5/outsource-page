@@ -34,15 +34,15 @@ const AboutUs = () => {
         <meta property="og:image" content="/images/og-image.jpg" />
       </Head>
       <div className={styles['context']}>
-      <BannerContent
+        <BannerContent
           className={styles['hero-img']}
           onLoaded={() => {
             setSection1Loaded(true)
           }}
         />
-      <ContentSection/>
+        <ContentSection/>
       </div>
-        </BaseLayout>
+      </BaseLayout>
     )
 }
 

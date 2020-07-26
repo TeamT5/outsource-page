@@ -1,7 +1,8 @@
 import React, {useContext} from 'react'
 import BaseLayout from '../../../layout/BaseLayout'
 import Head from 'next/head'
-
+import {BannerContent} from './sections'
+import styles from './index.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
 import { LocaleContext } from 'src/scripts/translations/LocaleContext'
 
@@ -32,6 +33,11 @@ const Threatsonar = () => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/images/og-image.jpg" />
       </Head>
+      <div className={styles['context']}>
+        <BannerContent
+          className={styles['hero-img']}
+        />
+      </div>
     </BaseLayout>
   )
 }

@@ -51,10 +51,10 @@
     "sonar": {
       "title": {
         "title": "An Engine to Hunt down Intruders",
-        "context": "Get ahead of your adversaries with the most effective APT hunting solution and MDR platform.",
+        "context": "Get ahead of your adversaries with the most effective APT hunting solution and MDR platform."
       },
       "intro": {
-        "context": "APT attacks are far more prevalent and sophisticated than ever. <br> But, how can you recognize a silent and unnoticed sneak attack?<p>ThreatSonar provides an advanced threat hunting solution to help discover threats in a post-compromised environment.",
+        "context": "APT attacks are far more prevalent and sophisticated than ever. <br> But, how can you recognize a silent and unnoticed sneak attack?<p>ThreatSonar provides an advanced threat hunting solution to help discover threats in a post-compromised environment."
       },
       "function": {
         "ca-title": "Compromise Assessment",
@@ -62,7 +62,7 @@
         "ir-title": "Incident Response",
         "ir-context": "Intelligence-driven and auto-investigation to find out hidden infections with similar TTPs, ThreatSonar is an effective tool designed for incident response execution.",
         "mdr-title": "MDR platform",
-        "mdr-context": "Conducting regular risk assessment for endpoints with ThreatSonar, our frontline expertise provides you with greater detection and response capabilities.",
+        "mdr-context": "Conducting regular risk assessment for endpoints with ThreatSonar, our frontline expertise provides you with greater detection and response capabilities."
 
       },
       "why": {
@@ -75,7 +75,7 @@
           "correlation": {
             "title": "Intelligence Correlation",
             "trait-1": "Heuristic techniques for the unknown",
-            "trait-2": "Yara rules for hidden threats",
+            "trait-2": "Yara rules for hidden threats"
           }
         },
         "cross-platform": {
@@ -88,7 +88,7 @@
           "trait-1": "A MDR",
           "trait-2": "A regular check-up",
           "trait-3": "Time machine",
-          "trait-4": "Internet topology",
+          "trait-4": "Internet topology"
         },
         "forensic-analysis": {
           "title": "Forensic Analysis",

@@ -63,7 +63,6 @@
         "mdr-title": "託管式偵測與回應服務平台",
         "mdr-context": "ThreatSonar 可持續觀察端點的風險狀況，由我們的專家團隊協助您進行入侵威脅通報、抑制與回應處理，強化企業的資安事件應變能力。"
       },
-
       "why": {
         "title": "為何選擇 ThreatSonar？",
         "slogan": {
@@ -74,7 +73,7 @@
           "correlation": {
             "title": "關聯威脅情資",
             "trait-1": "未知威脅偵測技術",
-            "trait-2": "支援 Yara 偵測規則",
+            "trait-2": "支援 Yara 偵測規則"
           }
         },
         "cross-platform": {
