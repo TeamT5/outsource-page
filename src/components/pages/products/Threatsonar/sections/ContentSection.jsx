@@ -3,59 +3,59 @@ import styles from './ContentSection.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
 
  const functions = [
-    {articleWrap: {context: 'solution.sonar.intro.context'}},
-    { articleWrapSecond:
-        { title: 'solution.sonar.function.ca-title',
-         context: 'solution.sonar.function.ca-context'}},
+    { articleWrap: {
+        context: 'solution.sonar.intro.context',
+        img: '/images/ThreatSonar/what_is_sonar.svg',
+        reverse: true },
+    },
+    { articleWrapSecond: {
+        title: 'solution.sonar.function.ca-title',
+        context: 'solution.sonar.function.ca-context',
+        img: '/images/ThreatSonar/CompromiseAssessment.svg',
+        reverse: false,
+    }},
     {
-        articleWrapThird:
-        {title: 'solution.sonar.funtion.ir-title',
-        context: 'solution.sonar.funtion.ir-context'}},
+      articleWrapThird: {
+        title: 'solution.sonar.funtion.ir-title',
+        context: 'solution.sonar.function.ir-context',
+        img: '/images/ThreatSonar/IncidentResponse.svg',
+        reverse: true,
+    }},
     {
-    articleWrapFourth: {
-            title: 'solution.sonar.funtion.mdr-title',
-            context: 'solution.sonar.funtion.mdr-context',
+      articleWrapFourth: {
+          title: 'solution.sonar.funtion.mdr-title',
+          context: 'solution.sonar.function.mdr-context',
+          img: '/images/ThreatSonar/MDRplatform.svg',
+          reverse: false,
         },
     },
     ]
 
  const ContentSection = () => {
   const { t } = useTranslation()
+
   
   return (
     <div className={styles['container']}>
-      <div className={styles['article-wrap']}>
-        <div className={styles['card']}>
-          <img src='/images/ThreatSonar/what_is_sonar.svg'/>
-          <div className={styles['content']}>
-            
-          </div>
-        </div>
-      </div>
-      <div className={styles['article-wrap-second']}>
-        <div className={styles['card']}>
-          <img src='/images/ThreatSonar/CompromiseAssessment.svg'/>
-          <div className={styles['content']}>
-            
-          </div>
-        </div>
-      </div>
-      <div className={styles['article-wrap-third']}>
-        <div className={styles['card']}>
-          <img src='/images/ThreatSonar/IncidentResponse.svg'/>
-          <div className={styles['content']}>
-            
-          </div>
-        </div>
-      </div>
-      <div className={styles['article-wrap-fourth']}>
-        <div className={styles['card']}>
-          <img src='/images/ThreatSonar/MDRplatform.svg'/>
-          <div className={styles['content']}>
-            
-          </div>
-        </div>
-      </div>
+       {functions && functions.map((functionItem, index)=> {
+             const getItem = Object.values(functionItem)[0] ? Object.values(functionItem)[0] : null
+             
+             return (<div key={index} className={getItem.reverse ? styles['card-reverse'] : styles['card']}>
+              <img src={getItem && getItem.img ? (Object.values(functionItem)[0]).img : '' }/>
+              <div className={styles['content']}>
+                    {getItem && getItem.title
+                    && <h4 className={styles['title']}>
+                      {t(Object.values(functionItem)[0].title)}
+                    </h4>}
+                    {getItem && getItem.context
+                    && <p className={styles['text']}>
+                    {t(getItem.context)}
+                    </p>}
+
+              </div>
+            </div>)
+          },
+       )}
     </div>
   )
 }

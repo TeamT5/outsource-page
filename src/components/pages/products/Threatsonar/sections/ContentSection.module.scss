@@ -17,23 +17,6 @@
         height: 650px;
         background: $bg-color2;
         padding-top: 58px;
-
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            z-index: 10;
-            top: 650px;
-            background: red;
-            right: 0;
-            width: 0;
-            height: 0;
-            border-width: 0px 0 156px 500px;
-            border-color: transparent transparent transparent red;
-            border-style: solid;
-            transform: rotate(180deg);
-            border: 1px solid red;
-        }
     }
 
     .article-wrap-second {
@@ -57,33 +40,12 @@
         padding-top: 36px;
     }
 
-    .card {
-        display: flex;
-
-        img {
-            max-width: 480px;
-            height: auto;
-        }
-
-        .content {
-            .title {
-                font-size: 32px;
-                color: #24231F;
-                line-height: 48px;
-            }
-
-            .text {
-                font-size: 20px;
-                color: #24231F;
-                line-height: 28px;
-            }
-        }
-
-    }
-
+    .card,
     .card-reverse {
         display: flex;
-        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 1000px;
+        margin: 0 auto;
 
         img {
             max-width: 480px;
@@ -91,10 +53,14 @@
         }
 
         .content {
+            padding-top: 90px;
+            width: 420px;
+
             .title {
                 font-size: 32px;
                 color: #24231F;
                 line-height: 48px;
+                margin-bottom: 36px;
             }
 
             .text {
@@ -103,6 +69,9 @@
                 line-height: 28px;
             }
         }
+    }
+    .card-reverse {
+        flex-direction: row-reverse;
     }
 }
 
