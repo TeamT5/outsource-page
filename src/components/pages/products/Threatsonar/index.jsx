@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import BaseLayout from '../../../layout/BaseLayout'
 import Head from 'next/head'
-import {BannerContent, ContentSection} from './sections'
+import {BannerContent, ContentSection, PlanSection} from './sections'
 import styles from './index.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
 import { LocaleContext } from 'src/scripts/translations/LocaleContext'
@@ -38,6 +38,7 @@ const Threatsonar = () => {
           className={styles['hero-img']}
         />
         <ContentSection/>
+        <PlanSection/>
       </div>
     </BaseLayout>
   )

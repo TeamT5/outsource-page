@@ -16,14 +16,14 @@ import useTranslation from 'src/scripts/translations/useTranslation'
     }},
     {
       articleWrapThird: {
-        title: 'solution.sonar.funtion.ir-title',
+        title: 'solution.sonar.function.ir-title',
         context: 'solution.sonar.function.ir-context',
         img: '/images/ThreatSonar/IncidentResponse.svg',
         reverse: true,
     }},
     {
       articleWrapFourth: {
-          title: 'solution.sonar.funtion.mdr-title',
+          title: 'solution.sonar.function.mdr-title',
           context: 'solution.sonar.function.mdr-context',
           img: '/images/ThreatSonar/MDRplatform.svg',
           reverse: false,
@@ -33,8 +33,6 @@ import useTranslation from 'src/scripts/translations/useTranslation'
 
  const ContentSection = () => {
   const { t } = useTranslation()
-
-  
   return (
     <div className={styles['container']}>
        {functions && functions.map((functionItem, index)=> {

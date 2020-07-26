@@ -1,5 +1,8 @@
 @import 'styles/general.scss';
 
+.container, .container > * {
+    box-sizing: border-box;
+  }
 
 .container {
     width: 100%;

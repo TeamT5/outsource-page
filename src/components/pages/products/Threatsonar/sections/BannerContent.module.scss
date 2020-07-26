@@ -2,6 +2,9 @@
 
 $title-font:100px;
 
+.container, .container > * {
+  box-sizing: border-box;
+}
 
 .container {
   font-family: Helvetica;

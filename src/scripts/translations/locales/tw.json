@@ -69,12 +69,10 @@
           "title": "讓敵人無所遁形",
           "context": "大部份資安產品從預防角度出發，但仍抵擋不住攻擊者，企業依然持續遭受入侵威脅。<br> ThreatSonar 以 TeamT5 團隊長期研究的威脅情資為核心進行研發，內建超過 100 種惡意行為指標與上千種已知後門特徵，協助企業掌握攻擊者在受駭階段中的入侵軌跡。"
         },
-        "intel": {
-          "correlation": {
+        "intel-correlation": {
             "title": "關聯威脅情資",
             "trait-1": "未知威脅偵測技術",
             "trait-2": "支援 Yara 偵測規則"
-          }
         },
         "cross-platform": {
           "title": "跨平台支援",
