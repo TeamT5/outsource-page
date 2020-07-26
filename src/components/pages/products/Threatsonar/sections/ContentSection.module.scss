@@ -1,53 +1,40 @@
 @import 'styles/general.scss';
 
-.container, .container > * {
+.container,
+.container>* {
     box-sizing: border-box;
-  }
+}
 
 .container {
     width: 100%;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 58px;
+    padding-bottom: 174px;
     font-family: Helvetica;
     font-size: 16px;
     color: #4C433F;
     position: relative;
     background-color: #FFF;
 
-    .article-wrap {
-        position: relative;
-        width: 100%;
-        height: 650px;
-        background: $bg-color2;
-        padding-top: 58px;
+    .card-reverse:nth-of-type(1) {
+        margin-bottom: 185px
     }
 
-    .article-wrap-second {
-        width: 100%;
-        height: 345px;
-        background: #FFF;
-        padding-top: 36px;
+    .card:nth-of-type(2) {
+        margin-bottom: 228px;
     }
 
-    .article-wrap-third {
-        width: 100%;
-        height: 650px;
-        background: $bg-color2;
-        padding-top: 188px;
-    }
-
-    .article-wrap-fourth {
-        width: 100%;
-        height: 608px;
-        background: #FFF;
-        padding-top: 36px;
+    .card-reverse:nth-of-type(3) {
+        margin-bottom: 207px;
     }
 
     .card,
     .card-reverse {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 1000px;
+        height: 400px;
         margin: 0 auto;
 
         img {
@@ -56,23 +43,24 @@
         }
 
         .content {
-            padding-top: 90px;
             width: 420px;
 
             .title {
                 font-size: 32px;
                 color: #24231F;
                 line-height: 48px;
-                margin-bottom: 36px;
+                margin-bottom: 0 0 36px 0;
             }
 
             .text {
                 font-size: 20px;
                 color: #24231F;
                 line-height: 28px;
+                margin:0;
             }
         }
     }
+
     .card-reverse {
         flex-direction: row-reverse;
     }
@@ -80,12 +68,109 @@
 
 
 
-@media screen and (max-width: 1440px) {}
 
-@media screen and (max-width: 1280px) {}
+@media screen and (max-width: 1280px) {
+    .container {
+        padding-top: 58px;
+        padding-bottom: 94px;
 
-@media screen and (max-width: 1024px) {}
+        .card-reverse:nth-of-type(1) {
+            margin-bottom: 249px
+        }
 
-@media screen and (max-width: 768px) {}
+        .card:nth-of-type(2) {
+            margin-bottom: 262px;
+        }
 
-@media screen and (max-width: 375px) {}
+        .card-reverse:nth-of-type(3) {
+            margin-bottom: 230px;
+        }
+
+        .card,
+        .card-reverse {
+            width: 800px;
+
+            img {
+                max-width: 360px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding-top: 60px;
+        padding-bottom: 61px;
+
+        .card-reverse:nth-of-type(1) {
+            margin-bottom: 174px
+        }
+
+        .card:nth-of-type(2) {
+            margin-bottom: 166px;
+        }
+
+        .card-reverse:nth-of-type(3) {
+            margin-bottom: 152px;
+        }
+
+        .card,
+        .card-reverse {
+            width: 620px;
+
+            img {
+                max-width: 276px;
+            }
+
+            .content {
+                width: 314px;
+                .title {
+                    font-size: 24px;
+                }
+
+                .text {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-top: 31px;
+        padding-bottom: 38px;
+        .card-reverse:nth-of-type(1) {
+            margin-bottom: 135px
+        }
+
+        .card:nth-of-type(2) {
+            margin-bottom: 93px;
+        }
+
+        .card-reverse:nth-of-type(3) {
+            margin-bottom: 128px;
+        }
+        .card,
+        .card-reverse {
+            width: 315px;
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            img {
+                max-width: 276px;
+            }
+
+            .content {
+                width: 314px;
+                margin-bottom: 20px;
+                .title {
+                    font-size: 22px;
+                }
+
+                .text {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
