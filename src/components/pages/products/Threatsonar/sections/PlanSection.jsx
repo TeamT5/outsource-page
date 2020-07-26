@@ -18,10 +18,11 @@ const whys = [
                                 'solution.sonar.why.multi-scenarios.trait-3',
                                 'solution.sonar.why.multi-scenarios.trait-4'],
                         img: '/images/ThreatSonar/why_Multi-Scenarios.svg'}},
-    {forensicAnalysis: {title: 'solution.sonar.why.forensic-analysis.title'},
+
+    {forensicAnalysis: {title: 'solution.sonar.why.forensic-analysis.title',
                         traits: [ 'solution.sonar.why.forensic-analysis.trait-1',
                             'solution.sonar.why.forensic-analysis.trait-2'],
-                        img: '/images/ThreatSonar/why_ForensicAnalysis.svg',
+                        img: '/images/ThreatSonar/why_ForensicAnalysis.svg'},
                         }]
 
 
