@@ -1,28 +1,28 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 import styles from './ContentSection.module.scss'
 import PropTypes from 'prop-types'
 import useTranslation from 'src/scripts/translations/useTranslation'
 
-const CardWithPhoto = props =>{
+const CardWithPhoto = props => {
   const leadership = props.leadership
   const leadershipTitle = props.leadershipTitle
   const leadershipContext = props.leadershipContext
-  return(
-  <div className={styles['card-with-photo-container']}>
-    <div className={styles['left-side']}>
-      {leadership && (
-        <h5 className={styles['leadership-text']}>{leadership}</h5>
-      )}
+  return (
+    <div className={styles['card-with-photo-container']}>
+      <div className={styles['left-side']}>
+        {leadership && (
+          <h5 className={styles['leadership-text']}>{leadership}</h5>
+        )}
+      </div>
+      <div className={styles['right-side']}>
+        <img src='/images/about_us/CEO_TT.jpg' />
+        {leadershipTitle && (
+          <p className={styles['leadership-head']}>{leadershipTitle}</p>
+        )}
+        {leadershipContext && <p className={styles['article-context']}>{leadershipContext}</p>}
+      </div>
     </div>
-    <div className={styles['right-side']}>
-      <img src='/images/about_us/CEO_TT.jpg' />
-      {leadershipTitle && (
-        <p className={styles['leadership-head']}>{leadershipTitle}</p>
-      )}
-      {leadershipContext && <p className={styles['article-context']}>{leadershipContext}</p>}
-    </div>
-  </div>
-)
+  )
 }
 
 CardWithPhoto.propTypes = {
@@ -33,7 +33,7 @@ CardWithPhoto.propTypes = {
 
 const Card = props => {
   const { t } = useTranslation()
-  const {title, content} = props
+  const { title, content } = props
   return (
     <div className={styles['card-container']}>
       <div className={styles['left-side']}>
@@ -57,7 +57,7 @@ Card.propTypes = {
   content: PropTypes.array,
 }
 
- const ContentSection = () => {
+const ContentSection = () => {
   const { t } = useTranslation()
   const cybers = {
     title: 'about-us.our-cyber-threat-experts.title',

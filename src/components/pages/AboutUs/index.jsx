@@ -1,17 +1,17 @@
-import React, {useState, useContext} from 'react'
+import React, { useState, useContext } from 'react'
 import BaseLayout from '../../layout/BaseLayout'
-import { BannerContent, ContentSection} from './sections'
+import { BannerContent, ContentSection } from './sections'
 import useTranslation from 'src/scripts/translations/useTranslation'
 import { LocaleContext } from 'src/scripts/translations/LocaleContext'
 import styles from './index.module.scss'
 import Head from 'next/head'
 
 const AboutUs = () => {
-    const { t } = useTranslation()
-    const [section1Loaded, setSection1Loaded] = useState(false)
-    const localContext = useContext(LocaleContext)
-    return (
-      <BaseLayout loadFinished={true}>
+  const { t } = useTranslation()
+  const [section1Loaded, setSection1Loaded] = useState(false)
+  const localContext = useContext(LocaleContext)
+  return (
+    <BaseLayout loadFinished={true}>
       <Head>
         <title>{'TeamT5 - Persistent Cyber Threat Hunters'}</title>
         <meta
@@ -40,10 +40,10 @@ const AboutUs = () => {
             setSection1Loaded(true)
           }}
         />
-        <ContentSection/>
+        <ContentSection />
       </div>
-      </BaseLayout>
-    )
+    </BaseLayout>
+  )
 }
 
 export default AboutUs

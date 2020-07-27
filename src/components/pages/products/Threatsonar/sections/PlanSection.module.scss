@@ -13,6 +13,7 @@
     color: #FFF;
     background-color: #24231F;
     position: relative;
+
     .top {
         width: 730px;
         margin: 0 auto 144px auto;
@@ -219,6 +220,7 @@
 
         .top {
             width: 600px;
+
             .title {
                 margin-bottom: 110px;
                 font-size: 40px;
@@ -272,20 +274,24 @@
         .top {
             width: 295px;
             margin-bottom: 100px;
+
             .title {
-                margin-bottom:90px;
+                margin-bottom: 90px;
                 font-size: 30px;
             }
+
             .slogan-title-wrap {
                 .slogan-title {
                     font-size: 24px;
                 }
-                .slogan-title-highlight{
+
+                .slogan-title-highlight {
                     width: 275px;
                     height: 20px;
                 }
-                
+
             }
+
             .slogan-context {
                 font-size: 16px;
             }
@@ -304,8 +310,9 @@
                 flex-direction: column;
                 width: 315px;
                 height: auto;
-                padding:15px 15px 20px 15px;
+                padding: 15px 15px 20px 15px;
                 align-items: center;
+
                 .img-wrap {
                     width: 100px;
                     height: 100px;
@@ -314,13 +321,14 @@
                 .context {
                     width: 100%;
                     margin-left: 0;
+
                     .title {
                         font-size: 18px;
                         margin-bottom: 7px;
                         text-align: center;
                     }
 
-                    .lists{
+                    .lists {
                         width: 220px;
                         padding-left: 20%;
                         list-style: inside;

@@ -1,10 +1,11 @@
-.context, .context > * {
+.context,
+.context>* {
   box-sizing: border-box;
 }
 
 .context {
-  width:100%;
+  width: 100%;
   overflow: hidden;
   background-color: #ffffff;
-  color:#ffffff;
+  color: #ffffff;
 }

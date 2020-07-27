@@ -2,7 +2,8 @@
 
 $title-font:100px;
 
-.container, .container > * {
+.container,
+.container>* {
   box-sizing: border-box;
 }
 
@@ -78,7 +79,7 @@ $title-font:100px;
       height: auto;
     }
 
-    .mask{
+    .mask {
       position: absolute;
       z-index: 2;
       top: 0;
@@ -90,20 +91,21 @@ $title-font:100px;
   }
 
 
-  .bubble{
+  .bubble {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right:0;
+    right: 0;
     bottom: 20px;
-    width:40px;
-    height:130px;
+    width: 40px;
+    height: 130px;
     border-radius: 4px 0 0 4px;
     background-color: $sonar-red;
     color: white;
     z-index: 3;
-    p{
+
+    p {
       transform: rotate(-90deg);
       white-space: nowrap;
       font-size: 20px;
@@ -112,10 +114,10 @@ $title-font:100px;
   }
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
   .container {
     .title-wrap {
-      left:143px;
+      left: 143px;
     }
   }
 }
@@ -123,14 +125,16 @@ $title-font:100px;
 @media screen and (max-width: 1280px) {
   .container {
     .title-wrap {
-      left:112px;
+      left: 112px;
       top: 276px;
+
       .title-img {
         width: 480px;
         margin-bottom: 20px;
       }
+
       .title-box {
-        padding-left:24px;
+        padding-left: 24px;
       }
     }
   }
@@ -139,14 +143,16 @@ $title-font:100px;
 @media screen and (max-width: 1024px) {
   .container {
     .title-wrap {
-      left:126px;
+      left: 126px;
       top: 276px;
+
       .title-img {
         width: 480px;
         margin-bottom: 20px;
       }
+
       .title-box {
-        padding-left:0;
+        padding-left: 0;
       }
     }
   }
@@ -155,20 +161,23 @@ $title-font:100px;
 @media screen and (max-width: 768px) {
   .container {
     .title-wrap {
-      left:48px;
+      left: 48px;
       top: 285px;
+
       .title-img {
-        width:280px;
+        width: 280px;
         margin-bottom: 9px;
       }
+
       .title-box {
-        padding-left:0;
+        padding-left: 0;
         width: 296px;
-        .title{
+
+        .title {
           font-size: 16px;
         }
 
-        .subtitle{
+        .subtitle {
           font-size: 14px;
         }
       }

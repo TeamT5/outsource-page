@@ -13,23 +13,29 @@
     font-size: 16px;
     color: #4C433F;
     position: relative;
-    .card-reverse:nth-of-type(1),.card-reverse:nth-of-type(3){
+
+    .card-reverse:nth-of-type(1),
+    .card-reverse:nth-of-type(3) {
         &::before {
-        background-color: #F0EFF0;
-        position: absolute;
-        content: '';
-        right: 0;
-        left: 0;
-        height: 755px;
+            background-color: #F0EFF0;
+            position: absolute;
+            content: '';
+            right: 0;
+            left: 0;
+            height: 755px;
         }
     }
+
     .card-reverse:nth-of-type(1) {
         &::before {
+            background: #F0EFF0;
             clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
         }
     }
+
     .card-reverse:nth-of-type(3) {
         &::before {
+            background: #F0EFF0;
             clip-path: polygon(0 0, 100% 25%, 100% 79%, 0% 100%);
         }
     }
@@ -52,6 +58,7 @@
         .content {
             width: 420px;
             z-index: 1;
+
             .title {
                 font-size: 32px;
                 color: #24231F;
@@ -63,7 +70,7 @@
                 font-size: 20px;
                 color: #24231F;
                 line-height: 28px;
-                margin:0;
+                margin: 0;
             }
         }
     }
@@ -80,8 +87,10 @@
     .container {
         padding-top: 0;
         padding-bottom: 0;
-        .card-reverse:nth-of-type(1),.card-reverse:nth-of-type(3) {
-            &::before{
+
+        .card-reverse:nth-of-type(1),
+        .card-reverse:nth-of-type(3) {
+            &::before {
                 height: 675px;
             }
         }
@@ -100,21 +109,26 @@
 
 @media screen and (max-width: 1024px) {
     .container {
-        .card-reverse:nth-of-type(1),.card-reverse:nth-of-type(3) {
-            &::before{
+
+        .card-reverse:nth-of-type(1),
+        .card-reverse:nth-of-type(3) {
+            &::before {
                 height: 570px;
             }
         }
+
         .card,
         .card-reverse {
             width: 620px;
             margin-bottom: 90px;
+
             img {
                 max-width: 276px;
             }
 
             .content {
                 width: 314px;
+
                 .title {
                     font-size: 24px;
                 }
@@ -129,23 +143,29 @@
 
 @media screen and (max-width: 768px) {
     .container {
-        .card-reverse:nth-of-type(1),.card-reverse:nth-of-type(3) {
-            &::before{
+
+        .card-reverse:nth-of-type(1),
+        .card-reverse:nth-of-type(3) {
+            &::before {
                 height: 580px;
             }
         }
+
         .card,
         .card-reverse {
             width: 315px;
             margin-bottom: 60px;
             flex-direction: column-reverse;
             justify-content: flex-start;
+
             img {
                 max-width: 276px;
             }
+
             .content {
                 width: 314px;
                 margin-bottom: 20px;
+
                 .title {
                     font-size: 22px;
                 }
