@@ -51,7 +51,7 @@ const ContentSection = () => {
               key={index}
               className={
                 getItem.reverse
-                  ? styles[styles['card-reverse'], styles['card']].join(' ')
+                  ? [styles['card-reverse'], styles['card']].join(' ')
                   : styles['card']
               }
             >
