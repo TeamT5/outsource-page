@@ -70,9 +70,9 @@
           "context": "大部份資安產品從預防角度出發，但仍抵擋不住攻擊者，企業依然持續遭受入侵威脅。<br> ThreatSonar 以 TeamT5 團隊長期研究的威脅情資為核心進行研發，內建超過 100 種惡意行為指標與上千種已知後門特徵，協助企業掌握攻擊者在受駭階段中的入侵軌跡。"
         },
         "intel-correlation": {
-            "title": "關聯威脅情資",
-            "trait-1": "未知威脅偵測技術",
-            "trait-2": "支援 Yara 偵測規則"
+          "title": "關聯威脅情資",
+          "trait-1": "未知威脅偵測技術",
+          "trait-2": "支援 Yara 偵測規則"
         },
         "cross-platform": {
           "title": "跨平台支援",
@@ -116,6 +116,70 @@
           "100-500": "100 - 500 人",
           "501-1000": "501 - 1000 人",
           "1000-more": "超過 1000 人"
+        },
+        "form-job-title": "職稱",
+        "form-phone": "電話",
+        "form-email": "電子郵件",
+        "form-country": "國家",
+        "form-inquiry": "您的需求或問題",
+        "form-submit": "送出"
+      }
+    },
+    "vision": {
+      "title": "A Portal to See Through the Chaos",
+      "advantage": {
+        "ce-title": "雙向互動平台",
+        "ce-context": "介面直觀、易操作的強大情資資料庫，協助企業洞悉駭客活動，提升企業威脅防禦能量。您亦可透過平台，獲取我們情資專家針對特殊個案的獨特分析報告。",
+        "ce-trait-1": "沙箱動態分析",
+        "ce-trait-2": "關鍵字搜尋",
+        "ce-trait-3": "APT 威脅情資庫",
+        "ce-trait-4": "自動化 API",
+        "apac-title": "聚焦亞太的全球駭客追蹤調查",
+        "apac-context": "長期追蹤 APT 駭客族群，以及豐富的開源威脅情資分析經歷，我們致力幫助企業降低威脅風險。",
+        "apac-trait-1": "2000+ 樣本/日",
+        "apac-trait-2": "700+ 惡意程式家族",
+        "apac-trait-3": "100+ 攻擊者族群",
+      },
+      "newswall": {
+        "title": "您有沒有聽過…",
+        "news-1": "醫療保險龍頭遭駭，上千萬個資外洩",
+        "news-2": "資料外洩處理費高達 392 萬美元，但要花超過 200 天才能找出威脅來源",
+        "news-3": "台灣某銀行 SWIFT 系統遭駭盜轉 18 億台幣",
+        "news-4": "孟加拉央行慘遭網路勒索洗劫 81 萬美元",
+        "news-5": "機密資訊遭竊，暴露個人或企業於危險之中",
+        "news-6": "平均每日發生兩千多起駭客攻擊事件"
+      },
+      "category": {
+        "enterprises-title": "企業",
+        "enterprises-trait-1": "互動式平台，威脅情資線上專人諮詢回應 ",
+        "enterprises-trait-2": "威脅情資與樣本關鍵字搜尋，滿足企業威脅風險調查需求",
+        "enterprises-tags": "#promptanalysis #proactivehunting #getridofrisks",
+        "financial-service-title": "金融服務業",
+        "financial-service-trait-1": "長期追蹤以金融產業為目標的 APT 駭客族群",
+        "financial-service-trait-2": "聚焦亞太地區的全球駭客追蹤調查",
+        "financial-service-tags": "#justintimealert #financialgains #longtermthreat",
+        "public-sectors-title": "公共部門",
+        "public-sectors-trait-1": "定期發佈各式威脅特徵（IoC），可匯入各式資安設備，立即阻擋威脅",
+        "public-sectors-trait-2": "完整揭露駭客攻擊手法，提升企業自我防禦能力",
+        "public-sectors-tags": "#justintimealert #financialgains #longtermthreat"
+      },
+      "contact-us": {
+        "btn": "Contact Us",
+        "form-title": "獲得更多產品資訊",
+        "form-first-name": "名",
+        "form-last-name": "姓",
+        "form-company-name": "公司名稱",
+        "form-industry-cat": {
+          "category": "產業別",
+          "gov": "政府機關",
+          "financial": "金融產業",
+          "hightech": "高科技製造業",
+          "telecom": "電信產業",
+          "electric": "電機製造業",
+          "gtc": "國際貿易商（綜合商社）",
+          "mssp": "資安監控服務商（MSSP）",
+          "consultancy": "顧問服務業",
+          "others": "其他"
         },
         "form-job-title": "職稱",
         "form-phone": "電話",
