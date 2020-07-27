@@ -9,23 +9,29 @@
     width: 100%;
     margin: 0 auto;
     padding-top: 58px;
-    padding-bottom: 174px;
     font-family: Helvetica;
     font-size: 16px;
     color: #4C433F;
     position: relative;
-    background-color: #FFF;
-
+    .card-reverse:nth-of-type(1),.card-reverse:nth-of-type(3){
+        &::before {
+        background-color: #F0EFF0;
+        position: absolute;
+        content: '';
+        right: 0;
+        left: 0;
+        height: 755px;
+        }
+    }
     .card-reverse:nth-of-type(1) {
-        margin-bottom: 185px
+        &::before {
+            clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
+        }
     }
-
-    .card:nth-of-type(2) {
-        margin-bottom: 228px;
-    }
-
     .card-reverse:nth-of-type(3) {
-        margin-bottom: 207px;
+        &::before {
+            clip-path: polygon(0 0, 100% 25%, 100% 79%, 0% 100%);
+        }
     }
 
     .card,
@@ -35,16 +41,17 @@
         align-items: center;
         width: 1000px;
         height: 400px;
-        margin: 0 auto;
+        margin: 0 auto 200px;
 
         img {
             max-width: 480px;
             height: auto;
+            z-index: 1;
         }
 
         .content {
             width: 420px;
-
+            z-index: 1;
             .title {
                 font-size: 32px;
                 color: #24231F;
@@ -71,24 +78,18 @@
 
 @media screen and (max-width: 1280px) {
     .container {
-        padding-top: 58px;
-        padding-bottom: 94px;
-
-        .card-reverse:nth-of-type(1) {
-            margin-bottom: 249px
-        }
-
-        .card:nth-of-type(2) {
-            margin-bottom: 262px;
-        }
-
-        .card-reverse:nth-of-type(3) {
-            margin-bottom: 230px;
+        padding-top: 0;
+        padding-bottom: 0;
+        .card-reverse:nth-of-type(1),.card-reverse:nth-of-type(3) {
+            &::before{
+                height: 675px;
+            }
         }
 
         .card,
         .card-reverse {
             width: 800px;
+            margin-bottom: 110px;
 
             img {
                 max-width: 360px;
@@ -99,25 +100,15 @@
 
 @media screen and (max-width: 1024px) {
     .container {
-        padding-top: 60px;
-        padding-bottom: 61px;
-
-        .card-reverse:nth-of-type(1) {
-            margin-bottom: 174px
+        .card-reverse:nth-of-type(1),.card-reverse:nth-of-type(3) {
+            &::before{
+                height: 570px;
+            }
         }
-
-        .card:nth-of-type(2) {
-            margin-bottom: 166px;
-        }
-
-        .card-reverse:nth-of-type(3) {
-            margin-bottom: 152px;
-        }
-
         .card,
         .card-reverse {
             width: 620px;
-
+            margin-bottom: 90px;
             img {
                 max-width: 276px;
             }
@@ -138,28 +129,20 @@
 
 @media screen and (max-width: 768px) {
     .container {
-        padding-top: 31px;
-        padding-bottom: 38px;
-        .card-reverse:nth-of-type(1) {
-            margin-bottom: 135px
-        }
-
-        .card:nth-of-type(2) {
-            margin-bottom: 93px;
-        }
-
-        .card-reverse:nth-of-type(3) {
-            margin-bottom: 128px;
+        .card-reverse:nth-of-type(1),.card-reverse:nth-of-type(3) {
+            &::before{
+                height: 580px;
+            }
         }
         .card,
         .card-reverse {
             width: 315px;
+            margin-bottom: 60px;
             flex-direction: column-reverse;
             justify-content: flex-start;
             img {
                 max-width: 276px;
             }
-
             .content {
                 width: 314px;
                 margin-bottom: 20px;
