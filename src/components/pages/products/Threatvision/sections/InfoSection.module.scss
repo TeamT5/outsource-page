@@ -1,0 +1,99 @@
+@import 'styles/general.scss';
+
+.container,
+.container>* {
+  box-sizing: border-box;
+}
+
+.tab-wrap {
+  width: 840px;
+  display: flex;
+  justify-content: space-between;
+
+  .tab {
+    width: 349px;
+    height: 70px;
+    background: #C8BDB8;
+    border-style: none;
+    border-radius: 12px 12px 0 0;
+    font-family: Helvetica;
+    text-align: center;
+    line-height: 70px;
+    font-size: 24px;
+    color: #4C433F;
+    letter-spacing: 0;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.active {
+      background-color: #F5F2E9;
+    }
+  }
+
+  .tab-long {
+    width: 486px;
+  }
+}
+
+.container {
+  font-family: Helvetica;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  color: white;
+  background-color: #F5F2E9;
+  font-size: 16px;
+  color: #4C433F;
+
+  .tab-box {
+    width: 1000px;
+    position: absolute;
+    top: -70px;
+    left: calc((100% - 1000px) / 2);
+    z-index: 5;
+  }
+}
+
+
+// .bubble {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: absolute;
+//   right: 0;
+//   bottom: 20px;
+//   width: 40px;
+//   height: 130px;
+//   border-radius: 4px 0 0 4px;
+//   background-color: $sonar-red;
+//   color: white;
+//   z-index: 3;
+
+//   p {
+//     transform: rotate(-90deg);
+//     white-space: nowrap;
+//     font-size: 20px;
+//     color: #FFFFFF;
+//   }
+// }
+// }
+
+@media screen and (max-width: 1440px) {
+  .container {}
+}
+
+@media screen and (max-width: 1280px) {
+  .container {}
+}
+
+@media screen and (max-width: 1024px) {
+  .container {}
+}
+
+@media screen and (max-width: 768px) {
+  .container {}
+}
