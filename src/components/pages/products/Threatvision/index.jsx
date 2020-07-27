@@ -4,6 +4,7 @@ import Head from 'next/head'
 import styles from './index.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
 import { LocaleContext } from 'src/scripts/translations/LocaleContext'
+import { BannerContent } from './sections'
 
 const Threatvision = () => {
   const { t } = useTranslation()
@@ -32,7 +33,7 @@ const Threatvision = () => {
         <meta property="og:image" content="/images/og-image.jpg" />
       </Head>
       <div className={styles['context']}>
-
+        <BannerContent />
       </div>
     </BaseLayout>
   )
