@@ -34,7 +34,7 @@ const Threatvision = () => {
       </Head>
       <div className={styles['context']}>
         <BannerContent />
-        <InfoSection/>
+        <InfoSection />
       </div>
     </BaseLayout>
   )

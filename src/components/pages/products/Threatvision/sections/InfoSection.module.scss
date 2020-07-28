@@ -1,42 +1,118 @@
 @import 'styles/general.scss';
 
-.container,
-.container>* {
+
+
+
+.tab-container {
+  width: 100%;
   box-sizing: border-box;
-}
+  overflow: hidden;
 
-.tab-wrap {
-  width: 840px;
-  display: flex;
-  justify-content: space-between;
+  .tab-wrap {
+    width: 840px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
 
-  .tab {
-    width: 349px;
-    height: 70px;
-    background: #C8BDB8;
-    border-style: none;
-    border-radius: 12px 12px 0 0;
-    font-family: Helvetica;
-    text-align: center;
-    line-height: 70px;
-    font-size: 24px;
-    color: #4C433F;
-    letter-spacing: 0;
-    cursor: pointer;
+    .tab {
+      width: 349px;
+      height: 70px;
+      box-sizing: border-box;
+      background: #C8BDB8;
+      border-style: none;
+      border-radius: 12px 12px 0 0;
+      font-family: Helvetica;
+      text-align: center;
+      line-height: 70px;
+      font-size: 24px;
+      color: #4C433F;
+      letter-spacing: 0;
+      cursor: pointer;
 
-    &:focus {
-      outline: none;
+      &:focus {
+        outline: none;
+      }
+
+      &.active {
+
+        background-color: #F5F2E9;
+      }
     }
 
-    &.active {
-      background-color: #F5F2E9;
+    .tab-long {
+      width: 486px;
     }
   }
 
-  .tab-long {
-    width: 486px;
+  .tab-content-ce,
+  .tab-content-apac {
+    width: 100%;
+
+    .title {
+      box-sizing: border-box;
+      padding: 23px 220px 17px 20px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #4C433F;
+    }
+
+    .context {
+      display: flex;
+      justify-content: space-between;
+
+      .img-box {
+        background: #FFFFFF;
+        border-radius: 6px;
+        width: 242px;
+        height: 300px;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 30px;
+
+        .card-title {
+          font-size: 20px;
+          color: #4C433F;
+          text-align: center;
+          line-height: 32px;
+        }
+
+        img {
+          max-width: 180px;
+          height: auto;
+        }
+      }
+
+    }
+  }
+
+  .tab-content-ce {
+    .context {
+      display: flex;
+      justify-content: space-between;
+
+      .img-box {
+        width: 242px;
+        height: 300px;
+        padding: 30px;
+      }
+    }
+  }
+
+  .tab-content-apac {
+    .context {
+      display: flex;
+      justify-content: space-between;
+
+      .img-box {
+        width: 320px;
+        height: 300px;
+        padding: 30px 70px;
+      }
+    }
   }
 }
+
+
 
 .container {
   font-family: Helvetica;

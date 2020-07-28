@@ -7,7 +7,7 @@ const BannerContent = () => {
       <div className={styles['title-wrap']}>
         <img className={styles['title-img']} src="/images/ThreatVision/tv_logo.svg" />
         <div className={styles['title-box']}>
-          <p className={styles['title']}>A Portal to See Through the Chaos</p>
+          <p dangerouslySetInnerHTML={{ __html: `${t('solution.vision.title')}` }} className={styles['title']} />
           <div className={styles['light-height']}></div>
         </div>
       </div>
