@@ -21,10 +21,17 @@
         text-align: center;
 
         .title {
-            margin-bottom: 123px;
+            // margin-bottom: 123px;
             font-size: 60px;
         }
-
+        .border{
+            height: 123px;
+            border-style: solid;
+            border-width: 0px 3px 0px 0px;
+            border-image: url('/images/white-border.svg') 6 4 11 3 repeat round;
+            width: 0;
+            margin: 0 auto;
+        }
         .slogan-title-wrap {
             text-align: center;
             position: relative;
@@ -178,8 +185,11 @@
         .top {
             margin: 0 auto 130px auto;
 
-            .title {
-                margin-bottom: 119px;
+            // .title {
+                // margin-bottom: 119px;
+            // }
+            .border{
+                height: 119px;
             }
         }
 
@@ -222,10 +232,12 @@
             width: 600px;
 
             .title {
-                margin-bottom: 110px;
+                // margin-bottom: 110px;
                 font-size: 40px;
             }
-
+            .border{
+                height: 110px;
+            }
             .slogan-context {
                 font-size: 18px;
             }
@@ -276,10 +288,12 @@
             margin-bottom: 100px;
 
             .title {
-                margin-bottom: 90px;
+                // margin-bottom: 90px;
                 font-size: 30px;
             }
-
+            .border{
+                height: 90px;
+            }
             .slogan-title-wrap {
                 .slogan-title {
                     font-size: 24px;
