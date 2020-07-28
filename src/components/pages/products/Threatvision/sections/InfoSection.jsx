@@ -17,7 +17,8 @@ const tabConfig = {
 const imagesConfig = {
   ce: [{
     title: 'solution.vision.advantage.ce-trait-1',
-    img: '/images/ThreatVision/Customer Engagement_API.svg',
+    img: '/images/ThreatVision/Customer Engagement_online_sandbox.svg',
+
   },
   {
     title: 'solution.vision.advantage.ce-trait-2',
@@ -25,11 +26,11 @@ const imagesConfig = {
   },
   {
     title: 'solution.vision.advantage.ce-trait-3',
-    img: '/images/ThreatVision/Customer Engagement_online_sandbox.svg',
+    img: '/images/ThreatVision/Customer Engagement_Technical_data.svg',
   },
   {
     title: 'solution.vision.advantage.ce-trait-4',
-    img: '/images/ThreatVision/Customer Engagement_Technical_data.svg',
+    img: '/images/ThreatVision/Customer Engagement_API.svg',
   }],
   apac: [{
     title: 'solution.vision.advantage.apac-trait-1',

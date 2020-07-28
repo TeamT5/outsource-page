@@ -2,10 +2,6 @@
 
 $title-font:100px;
 
-.container,
-.container>* {
-  box-sizing: border-box;
-}
 
 .container {
   font-family: Helvetica;
@@ -25,7 +21,7 @@ $title-font:100px;
   .title-wrap {
     position: absolute;
     z-index: 3;
-    right: 459px;
+    right: 280px;
     top: 269px;
 
     .title-img {
@@ -74,10 +70,10 @@ $title-font:100px;
     }
 
     .right-down-hero {
-      right: -152px;
-      bottom: -46px;
+      right: -100px;
+      bottom: -116px;
       position: absolute;
-      max-width: 596px;
+      max-width: 442px;
       height: auto;
     }
 
