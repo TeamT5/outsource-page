@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './BannerContent.module.scss'
+import useTranslation from 'src/scripts/translations/useTranslation'
 
 const BannerContent = () => {
+  const { t } = useTranslation(useContext)
   return (
     <div className={styles['container']}>
       <div className={styles['title-wrap']}>
