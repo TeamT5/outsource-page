@@ -134,7 +134,7 @@ $info-section-height:3030px;
 
   .newswall-container {
     position: absolute;
-    z-index: 5;
+    z-index: 2;
     margin: 0 calc((100% - 1000px) / 2);
     top: 474px;
     width: 1000px;
@@ -142,11 +142,10 @@ $info-section-height:3030px;
 
   .category-container {
     position: absolute;
-    width: 1000px;
-    z-index: 5;
-    margin: 0 calc((100% - 1000px) / 2);
+    width: 100%;
     top: 1524px;
     padding-top: 42px;
+    z-index: 1;
   }
 
   .xgrid-container-left {

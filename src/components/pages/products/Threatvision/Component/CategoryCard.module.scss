@@ -1,28 +1,69 @@
 .container {
+  width: 100%;
   box-sizing: border-box;
   width: 100%;
   font-family: Helvetica;
 
-  &>div:nth-of-type(1),
-  &>div:nth-of-type(3) {
-    flex-direction: row-reverse
+  .card:nth-of-type(1),
+  .card:nth-of-type(3) {
+    flex-direction: row-reverse;
+
+    &::before {
+      background-color: #f0eff0;
+      position: absolute;
+      z-index: -2;
+      content: '';
+      right: 0;
+      left: 0;
+      height: 755px;
+    }
   }
 
-  &>div:nth-of-type(1) .context {
-    padding-top: 78px
+  .card:nth-of-type(1) {
+    &::before {
+      background: #ECE8E0;
+      clip-path: polygon(0 0, 100% 0, 100% 51%, 0% 75%);
+    }
   }
 
-  &>div:nth-of-type(2) .context {
-    padding-top: 35px
+  .card:nth-of-type(3) {
+    &::before {
+      background: #645A53;
+      clip-path: polygon(0 0, 100% 25%, 100% 79%, 0% 100%);
+    }
   }
 
-  &>div:nth-of-type(3) .context {
-    padding-top: 9px
+
+  .card:nth-of-type(1) .context {
+    padding-top: 78px;
+    margin-bottom: 173px;
+  }
+
+  .card:nth-of-type(2) .context {
+    padding-top: 35px;
+    margin-bottom: 162px;
+  }
+
+  .card:nth-of-type(3) .context {
+    padding-top: 9px;
+
+    .title {
+      color: #FFFFFF;
+    }
+
+    ul {
+      .list {
+        color: #FFFFFF;
+      }
+    }
   }
 
   .card {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 5;
+    padding: 0 calc((100% - 1000px) / 2);
 
     .image-wrap {
       width: 480px;
