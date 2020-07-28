@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import styles from './InfoSection.module.scss'
 import PropTypes from 'prop-types'
 import useTranslation from 'src/scripts/translations/useTranslation'
+import { NewsWall } from 'components/pages/products/Threatvision/Component'
 
 const tabConfig = {
   ce: {
@@ -95,7 +96,7 @@ const InfoSection = () => {
       <div className={styles['tab-box']}>
         <Tab {...tabConfig} />
       </div>
-
+      <NewsWall />
     </div>
   )
 }
