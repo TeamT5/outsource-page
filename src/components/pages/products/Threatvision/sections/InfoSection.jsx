@@ -2,7 +2,8 @@ import React, { useState, useContext } from 'react'
 import styles from './InfoSection.module.scss'
 import PropTypes from 'prop-types'
 import useTranslation from 'src/scripts/translations/useTranslation'
-import { NewsWall } from 'components/pages/products/Threatvision/Component'
+import { NewsWall, CategoryCard } from 'components/pages/products/Threatvision/Component'
+import { XGrid } from '../../../../common/ui-components'
 
 const tabConfig = {
   ce: {
@@ -96,7 +97,18 @@ const InfoSection = () => {
       <div className={styles['tab-box']}>
         <Tab {...tabConfig} />
       </div>
-      <NewsWall />
+      <div className={styles['newswall-container']}>
+        <NewsWall />
+      </div>
+      <div className={styles['category-container']}>
+        <CategoryCard />
+      </div>
+      <div className={styles['xgrid-container-left']}>
+        <XGrid type="dark" />
+      </div>
+      <div className={styles['xgrid-container-right']}>
+        <XGrid type="dark" />
+      </div>
     </div>
   )
 }

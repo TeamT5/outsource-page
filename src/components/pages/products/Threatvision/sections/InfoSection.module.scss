@@ -131,6 +131,39 @@ $info-section-height:3030px;
     left: calc((100% - 1000px) / 2);
     z-index: 5;
   }
+
+  .newswall-container {
+    position: absolute;
+    z-index: 5;
+    margin: 0 calc((100% - 1000px) / 2);
+    top: 474px;
+    width: 1000px;
+  }
+
+  .category-container {
+    position: absolute;
+    width: 1000px;
+    z-index: 5;
+    margin: 0 calc((100% - 1000px) / 2);
+    top: 1524px;
+    padding-top: 42px;
+  }
+
+  .xgrid-container-left {
+    position: absolute;
+    top: 652px;
+    left: 0;
+    width: 530px;
+    height: 230px;
+  }
+
+  .xgrid-container-right {
+    position: absolute;
+    top: 976px;
+    right: 0;
+    width: 518px;
+    height: 465px;
+  }
 }
 
 
