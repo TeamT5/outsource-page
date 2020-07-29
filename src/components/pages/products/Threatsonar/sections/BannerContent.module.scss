@@ -135,12 +135,17 @@ $title-font:100px;
     .title-wrap {
       left: 112px;
       top: 276px;
-      .title-img {
-        margin-bottom: 20px;
-      }
 
+      .title-img {
+        width: 480px;
+        margin-bottom: 20px;
+
+      }
       .title-box {
         padding-left: 4rem;
+      }
+      .subtitle{
+        padding-left: 1rem;
       }
     }
     .img-wrap {
@@ -156,26 +161,6 @@ $title-font:100px;
 
 @media screen and (max-width: 1024px) {
   .container {
-    .title-wrap {
-      left: 126px;
-      top: 276px;
-      max-width: 540px;
-      .title-img {
-        width: 480px;
-      }
-      .title-box {
-        padding-left: 4rem;
-      }
-      .title-box {
-        padding-left: 1.5rem;
-      }
-    }
-    
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,22 +169,53 @@ $title-font:100px;
       max-width: 516px;
       width: 100%;
       position: static;
+      text-align: center;
+
       .title-img {
         width: 95%;
         margin: 0 auto 30px;
         display: block;
       }
       .title-box {
-        padding-left: 0;
+        padding-left: 1.5rem;
         .title{
           text-align: center;
+          font-size: 28px;
         }
+
         .subtitle {
           font-size: 21px;
           line-height: 1.5;
           text-align: left;
-          padding-left: 1rem;
           margin-top: 0.7rem;
+        }
+      }
+    }
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+    .title-wrap {
+      max-width: 296px;
+      .title-box{
+        padding: 0;
+        .title{
+          font-size: 16px;
+          padding: 0;
+        }
+        .subtitle{
+          text-align: center;
+          font-size: 14px;
+          padding: 0;
+        }
+        .light-height {
+          bottom: 9px;
+        }
+        .subtitle-span{
+          display: inline;
         }
       }
     }
@@ -224,9 +240,7 @@ $title-font:100px;
           font-size: 14px;
           padding: 0;
         }
-        .light-height {
-          bottom: 9px;
-        }
+
         .subtitle-span{
           display: inline;
         }
