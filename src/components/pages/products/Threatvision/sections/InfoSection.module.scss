@@ -190,11 +190,91 @@ $info-section-height:3030px;
 // }
 
 @media screen and (max-width: 1440px) {
-  .container {}
+  .container {
+    .xgrid-container-left {
+      width: 244px;
+      height: 230px;
+    }
+
+    .xgrid-container-right {
+      width: 198px;
+    }
+  }
 }
 
 @media screen and (max-width: 1280px) {
-  .container {}
+  .container {
+    height: 2983px;
+
+    .tab-box {
+      width: 800px;
+      left: calc((100% - 800px) / 2);
+    }
+  }
+
+  .tab-container {
+    .tab-wrap {
+      width: 800px;
+      justify-content: flex-start;
+
+      .tab {
+        width: 284px;
+        font-size: 20px;
+      }
+
+      .tab-long {
+        width: 399px;
+      }
+    }
+
+    .tab-content-ce,
+    .tab-content-apac {
+      width: 100%;
+
+      .title {
+        padding: 30px 20px 20px 20px;
+      }
+    }
+
+    .tab-content-ce {
+      .context {
+        .img-box {
+          width: 196px;
+          height: 272px;
+          padding: 30px 18px 50px 18px;
+
+          .card-title {
+            font-family: Helvetica;
+            font-size: 20px;
+          }
+
+          img {
+            max-width: 120px;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .tab-content-apac {
+      .context {
+        .img-box {
+          width: 260px;
+          height: 272px;
+          padding: 30px 44px;
+
+          .card-title {
+            font-size: 20px;
+          }
+
+          img {
+            max-width: 140px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
