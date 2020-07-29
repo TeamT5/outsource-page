@@ -10,18 +10,15 @@ $info-section-height: 3030px;
     width: 840px;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
 
     .tab {
-      width: 349px;
-      height: 70px;
+      padding: 25px 40px 21px 40px;
       box-sizing: border-box;
       background: #c8bdb8;
       border-style: none;
       border-radius: 12px 12px 0 0;
       font-family: Helvetica;
       text-align: center;
-      line-height: 70px;
       font-size: 24px;
       color: #4c433f;
       letter-spacing: 0;
@@ -122,7 +119,7 @@ $info-section-height: 3030px;
   .tab-box {
     width: 1000px;
     position: absolute;
-    top: -70px;
+    top: -74px;
     left: calc((100% - 1000px) / 2);
     z-index: 5;
   }
@@ -145,17 +142,17 @@ $info-section-height: 3030px;
 
   .xgrid-container-left {
     position: absolute;
-    top: 652px;
-    left: 0;
+    top: 22%;
+    left: auto;
     width: 530px;
     height: 230px;
   }
 
   .xgrid-container-right {
     position: absolute;
-    top: 976px;
+    top: 31%;
     right: 0;
-    width: 518px;
+    width: 23%;
     height: 465px;
   }
 }
@@ -203,6 +200,7 @@ $info-section-height: 3030px;
     .tab-box {
       width: 800px;
       left: calc((100% - 800px) / 2);
+
     }
   }
 
@@ -444,18 +442,19 @@ $info-section-height: 3030px;
     .tab-box {
       width: 375px;
       left: calc((100% - 375px) / 2);
+      top: -3.9%;
     }
 
     .category-container {
       height: 1918px;
-      top: 1727px;
+      top: 1588px;
     }
 
     .newswall-container {
       position: absolute;
       z-index: 2;
       margin: 0 calc((100% - 375px) / 2);
-      top: 751px;
+      top: 790px;
       width: 375px;
     }
 
