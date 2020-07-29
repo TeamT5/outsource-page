@@ -101,3 +101,51 @@
     }
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .container {
+    .card {
+      padding: 0 calc((100% - 800px) / 2);
+
+      .image-wrap {
+        width: 360px;
+        height: 300px;
+      }
+
+      .context {
+        width: 356px;
+
+        .title {
+          font-size: 32px;
+          color: #4C433F;
+        }
+      }
+    }
+
+    .card:nth-of-type(1) .context {
+      padding-top: 0;
+      margin-bottom: 158px;
+    }
+
+    .card:nth-of-type(2) .context {
+      padding-top: 0;
+      margin-bottom: 232px;
+    }
+
+    .card:nth-of-type(3) .context {
+      padding-top: 0;
+    }
+
+    .card:nth-of-type(3) .image-wrap {
+      padding-top: 48px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {}
+}
+
+@media screen and (max-width: 768px) {
+  .container {}
+}
