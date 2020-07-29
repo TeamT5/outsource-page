@@ -74,9 +74,7 @@ const PlanSection = () => {
           </h3>
           <div className={styles["slogan-title-highlight"]}></div>
         </div>
-        <p className={styles["slogan-context"]}>
-          {t("solution.sonar.why.slogan.context")}
-        </p>
+        <p className={styles["slogan-context"]} dangerouslySetInnerHTML={{ __html: t("solution.sonar.why.slogan.context") }}></p>
       </div>
       <div className={styles["border-bottom"]}></div>
       <div className={styles["bottom"]}>{Card}</div>

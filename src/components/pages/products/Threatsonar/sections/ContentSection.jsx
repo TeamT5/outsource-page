@@ -64,12 +64,10 @@ const ContentSection = () => {
               />
               <div className={styles['content']}>
                 {getItem && getItem.title && (
-                  <h4 className={styles['title']}>
-                    {t(Object.values(functionItem)[0].title)}
-                  </h4>
+                  <h4 className={styles['title']} dangerouslySetInnerHTML={{ __html: t(Object.values(functionItem)[0].title) }}></h4>
                 )}
                 {getItem && getItem.context && (
-                  <p className={styles['text']}>{t(getItem.context)}</p>
+                  <p className={styles['text']} dangerouslySetInnerHTML={{ __html: t(getItem.context) }}></p>
                 )}
               </div>
             </div>
