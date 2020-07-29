@@ -31,7 +31,7 @@
       "title": "Our Leadership",
       "content": {
         "title": "Sung-ting Tsai (TT)",
-        "context": "As the founder and CEO of TeamT5, Sung-ting Tsai (TT) has more than 16 years of experience in the security industry. With solid technical background and strong understanding of cyber threats, TT has been leading the team to develop unique and effective threat hunting technologies and solutions.<p>With great passion for cyber security, TT has also volunteered himself as a core member in the HITCON community, and was one of the founding members and the first chairman of HITCON. Moreover, TT is an internationally recognized expert on cyber threat intelligence and advanced information security technology. He frequently publishes his latest research at the world’s top information security conferences, including Black Hat, Code Blue, Kaspersky Security Analyst Summit, etc."
+        "context": "As the founder and CEO of TeamT5, Sung-ting Tsai (TT) has more than 16 years of experience in the security industry. With solid technical background and strong understanding of cyber threats, TT has been leading the team to develop unique and effective threat hunting technologies and solutions.<s>With great passion for cyber security, TT has also volunteered himself as a core member in the HITCON community, and was one of the founding members and the first chairman of HITCON. Moreover, TT is an internationally recognized expert on cyber threat intelligence and advanced information security technology. He frequently publishes his latest research at the world’s top information security conferences, including Black Hat, Code Blue, Kaspersky Security Analyst Summit, etc."
       }
     },
     "our-cyber-threat-experts": {
@@ -54,7 +54,7 @@
         "context": "Get ahead of your adversaries with the most effective APT hunting solution and MDR platform."
       },
       "intro": {
-        "context": "APT attacks are far more prevalent and sophisticated than ever. <br> But, how can you recognize a silent and unnoticed sneak attack?<p>ThreatSonar provides an advanced threat hunting solution to help discover threats in a post-compromised environment."
+        "context": "APT attacks are far more prevalent and sophisticated than ever. <br> But, how can you recognize a silent and unnoticed sneak attack?<s>ThreatSonar provides an advanced threat hunting solution to help discover threats in a post-compromised environment."
       },
       "function": {
         "ca-title": "Compromise Assessment",
@@ -147,12 +147,12 @@
       },
       "newswall": {
         "title": "Have you heard of ...",
-        "news-1": "Over 78M data breach of a medical insurance giant?",
-        "news-2": "The average cost of a data breach is $3.92 million while the average time to identify a breach is over 200 days.",
-        "news-3": "A $60M SWIFT attack in a TW’s bank hacking incident?",
-        "news-4": "The cyber robbery in Bangladesh bank of $81M?",
-        "news-5": "Steal confidential info, such as COVID-19 vaccine, and exposed people in danger?",
-        "news-6": "Hackers attack every 39 seconds, on average 2,244 times a day."
+        "news-1": "Over <span class='sign'>78M</span> data breach of a medical insurance giant?",
+        "news-2": "The average cost of a data breach is <span class='sign'>$3.92 million</span> while the average time to identify a breach is over 200 days.",
+        "news-3": "A <span class='sign'> $60M</span> SWIFT attack in a TW’s  bank hacking incident?",
+        "news-4": "The cyber robbery in Bangladesh bank of <span class='sign'> $81M</span>?",
+        "news-5": "Steal confidential info, such as <span class='sign'>COVID-19</span> vaccine, and exposed people in danger?",
+        "news-6": "Hackers attack every <span class='sign'>39</span> seconds, on average <span class='sign'>2,244</span> times a day."
       },
       "category": {
         "enterprises-title": "Enterprises",

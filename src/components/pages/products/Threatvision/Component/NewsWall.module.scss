@@ -3,6 +3,8 @@
   width: 100%;
   font-family: Helvetica;
   color: #4c433f;
+  font-size: 24px;
+  position: relative;
 
   .title {
     font-size: 48px;
@@ -35,23 +37,53 @@
     }
 
     .dialog {
-      box-sizing: border-box;
-      white-space: pre-wrap;
-      display: inline-block;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
       box-sizing: border-box;
       background: #ffffff;
       border: 4px solid #4c433f;
       border-radius: 70px;
-      padding: 30px 80px;
+      padding: 30px;
       margin-bottom: 20px;
-      height: 140px;
     }
+  }
+
+  :global(.sign) {
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    margin: 0 4px;
+
+    &::after {
+      display: block;
+      z-index: -1;
+      bottom: 2px;
+      left: 0;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      background: #FFD36A;
+    }
+  }
+
+  .bg-arrow {
+    position: absolute;
+    width: 44px;
+    height: 100%;
+    top: 5%;
+    z-index: -1;
+    left: 16%;
+    background-position: bottom center;
+    background-size: cover;
+    background-image: url(/images/arrow_to_bottom.svg);
   }
 }
 
 @media screen and (max-width: 1440px) {
-  .container {
-  }
+  .container {}
 }
 
 @media screen and (max-width: 1280px) {
@@ -87,19 +119,10 @@
         margin-right: 304px;
       }
 
-      .dialog {
-        white-space: pre-wrap;
-        display: inline-block;
-        box-sizing: border-box;
-        background: #ffffff;
-        border: 4px solid #4c433f;
-        border-radius: 70px;
-        padding: 30px 80px;
-        margin-bottom: 20px;
-        height: 140px;
-        font-size: 24px;
-        color: #4c433f;
-      }
+    }
+
+    .bg-arrow {
+      height: 98%;
     }
   }
 }
@@ -147,6 +170,14 @@
         font-size: 20px;
         padding: 30px 50px;
       }
+
+
+
+
+    }
+
+    .bg-arrow {
+      height: 90%;
     }
   }
 }
@@ -195,10 +226,15 @@
         border: 2px solid #4c433f;
         border-radius: 62px;
         font-size: 16px;
-        height: 105px;
         margin-right: 0;
         padding: 14px 60px;
       }
+
+
+    }
+
+    .bg-arrow {
+      height: 117%;
     }
   }
 }

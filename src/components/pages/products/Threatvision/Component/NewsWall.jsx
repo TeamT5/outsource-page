@@ -21,6 +21,7 @@ const NewsWall = () => {
       <div className={[styles['dialog-box']]}>
         {newsWallConfig && newsWallConfig.news && newsWallConfig.news.map((dialog, index) => (<div key={index} className={[styles['dialog']]} dangerouslySetInnerHTML={{ __html: `${t(dialog)}` }} />))}
       </div>
+      <div className={[styles['bg-arrow']]} />
     </div>
   )
 }
