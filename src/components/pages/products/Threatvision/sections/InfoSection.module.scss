@@ -10,9 +10,11 @@ $info-section-height: 3030px;
     width: 840px;
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
 
     .tab {
-      padding: 25px 40px 21px 40px;
+      width: 349px;
+      height: 70px;
       box-sizing: border-box;
       background: #c8bdb8;
       border-style: none;
@@ -58,12 +60,12 @@ $info-section-height: 3030px;
         background: #ffffff;
         border-radius: 6px;
         width: 242px;
-        height: 300px;
         box-sizing: border-box;
         text-align: center;
-        padding: 30px;
+        padding: 30px 30px 20px 30px;
 
         .card-title {
+          margin: 0;
           font-size: 20px;
           color: #4c433f;
           text-align: center;
@@ -85,8 +87,7 @@ $info-section-height: 3030px;
 
       .img-box {
         width: 242px;
-        height: 300px;
-        padding: 30px;
+        padding: 30 30px 20px 30px;
       }
     }
   }
@@ -119,7 +120,7 @@ $info-section-height: 3030px;
   .tab-box {
     width: 1000px;
     position: absolute;
-    top: -74px;
+    top: -70px;
     left: calc((100% - 1000px) / 2);
     z-index: 5;
   }
@@ -142,17 +143,17 @@ $info-section-height: 3030px;
 
   .xgrid-container-left {
     position: absolute;
-    top: 22%;
-    left: auto;
+    top: 652px;
+    left: 0;
     width: 530px;
     height: 230px;
   }
 
   .xgrid-container-right {
     position: absolute;
-    top: 31%;
+    top: 976px;
     right: 0;
-    width: 23%;
+    width: 518px;
     height: 465px;
   }
 }
@@ -200,7 +201,6 @@ $info-section-height: 3030px;
     .tab-box {
       width: 800px;
       left: calc((100% - 800px) / 2);
-
     }
   }
 
@@ -253,7 +253,7 @@ $info-section-height: 3030px;
         .img-box {
           width: 260px;
           height: 272px;
-          padding: 30px 44px;
+          padding: 30px 18px 50px 18px;
 
           .card-title {
             font-size: 20px;
@@ -442,19 +442,18 @@ $info-section-height: 3030px;
     .tab-box {
       width: 375px;
       left: calc((100% - 375px) / 2);
-      top: -3.9%;
     }
 
     .category-container {
       height: 1918px;
-      top: 1588px;
+      top: 1727px;
     }
 
     .newswall-container {
       position: absolute;
       z-index: 2;
       margin: 0 calc((100% - 375px) / 2);
-      top: 790px;
+      top: 751px;
       width: 375px;
     }
 
