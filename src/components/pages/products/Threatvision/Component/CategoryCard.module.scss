@@ -189,10 +189,28 @@
 
 @media screen and (max-width: 768px) {
   .container {
+    .card:nth-of-type(1) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
     .card {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0 30px;
+      .image-wrap {
+        width: 288px;
+        height: 240px;
+      }
       .context {
+        width: 375px;
         .title {
           font-size: 24px;
+        }
+        ul {
+          .list {
+            font-size: 18px;
+            line-height: 24px;
+          }
         }
       }
     }
