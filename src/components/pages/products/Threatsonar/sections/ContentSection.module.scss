@@ -143,27 +143,37 @@
 
 @media screen and (max-width: 768px) {
     .container {
-
         .card-reverse:nth-of-type(1),
         .card-reverse:nth-of-type(3) {
             &::before {
                 height: 580px;
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
             }
         }
-
+        .card-reverse:nth-of-type(1){
+            &::before {
+            top: -100px;
+            }
+        }
+        .card-reverse:nth-of-type(3){
+            &::before {
+                top: 1000px;
+                clip-path: polygon(0 0, 100% 6%, 100% 94%, 0% 100%);
+            }
+        }
         .card,
         .card-reverse {
-            width: 315px;
-            margin-bottom: 60px;
+            // max-width: 315px;
+            width: 100%;
             flex-direction: column-reverse;
             justify-content: flex-start;
-
+            padding: 0 2rem;
             img {
                 max-width: 276px;
             }
 
             .content {
-                width: 314px;
+                width: 100%;
                 margin-bottom: 20px;
 
                 .title {
@@ -174,6 +184,12 @@
                     font-size: 16px;
                 }
             }
+        }
+        .card{
+            margin-bottom: 100px;
+        }
+        .card-reverse{
+            margin-bottom: 180px;
         }
     }
 }

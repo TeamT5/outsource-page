@@ -13,16 +13,16 @@
     color: #FFF;
     background-color: #24231F;
     position: relative;
-
+    padding-bottom: 102px;
     .top {
         width: 730px;
-        margin: 0 auto 144px auto;
+        margin: 0 auto;
         padding-top: 50px;
         text-align: center;
 
         .title {
-            // margin-bottom: 123px;
             font-size: 60px;
+            margin: 0;
         }
         .border{
             height: 123px;
@@ -30,7 +30,7 @@
             border-width: 0px 3px 0px 0px;
             border-image: url('/images/white-border.svg') 6 4 11 3 repeat round;
             width: 0;
-            margin: 0 auto;
+            margin: 0 auto 10px;
         }
         .slogan-title-wrap {
             text-align: center;
@@ -87,7 +87,14 @@
             // }
         }
     }
-
+    .border-bottom{
+        height: 124px;
+        border-style: solid;
+        border-width: 0px 3px 0px 0px;
+        border-image: url('/images/white-border.svg') 6 4 11 3 repeat round;
+        width: 0;
+        margin: 10px auto;
+    }
     .bottom {
         width: 1000px;
         display: flex;
@@ -180,14 +187,8 @@
 
 @media screen and (max-width: 1280px) {
     .container {
-        padding-bottom: 102px;
-
         .top {
-            margin: 0 auto 130px auto;
-
-            // .title {
-                // margin-bottom: 119px;
-            // }
+            margin: 0 auto 130px;
             .border{
                 height: 119px;
             }
@@ -281,18 +282,17 @@
 
 @media screen and (max-width: 768px) {
     .container {
-        padding-bottom: 102px;
-
+        padding: 0 2rem 102px;
         .top {
-            width: 295px;
-            margin-bottom: 100px;
+            width: 100%;
+            margin-bottom: 0;
 
             .title {
-                // margin-bottom: 90px;
                 font-size: 30px;
             }
             .border{
                 height: 90px;
+                margin: 1rem auto;
             }
             .slogan-title-wrap {
                 .slogan-title {
@@ -335,7 +335,7 @@
                 .context {
                     width: 100%;
                     margin-left: 0;
-
+                    padding: 0 1rem;
                     .title {
                         font-size: 18px;
                         margin-bottom: 7px;
@@ -343,9 +343,7 @@
                     }
 
                     .lists {
-                        width: 220px;
-                        padding-left: 20%;
-                        list-style: inside;
+                        width: 100%;
                         font-size: 16px;
                     }
                 }

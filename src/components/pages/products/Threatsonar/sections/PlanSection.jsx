@@ -5,75 +5,57 @@ import { XGrid } from "../../../../common/ui-components";
 
 const whys = [
   {
-    intelCorrelation: {
-      title: "solution.sonar.why.intel-correlation.title",
-      traits: [
-        "solution.sonar.why.intel-correlation.trait-1",
-        "solution.sonar.why.intel-correlation.trait-2",
-      ],
-      img: "/images/ThreatSonar/why_IntelligenceCorelation.svg",
-    },
+    title: "solution.sonar.why.intel.correlation.title",
+    traits: [
+      "solution.sonar.why.intel.correlation.trait-1",
+      "solution.sonar.why.intel.correlation.trait-2",
+    ],
+    img: "/images/ThreatSonar/why_IntelligenceCorelation.svg",
   },
   {
-    crossPlatform: {
-      title: "solution.sonar.why.cross-platform.title",
-      traits: ["solution.sonar.why.cross-platform.trait-1"],
-      img: "/images/ThreatSonar/why_Cross-platformOperation.svg",
-    },
+    title: "solution.sonar.why.cross-platform.title",
+    traits: ["solution.sonar.why.cross-platform.trait-1"],
+    img: "/images/ThreatSonar/why_Cross-platformOperation.svg",
   },
   {
-    multiScenarios: {
-      title: "solution.sonar.why.multi-scenarios.title",
-      traits: [
-        "solution.sonar.why.multi-scenarios.trait-1",
-        "solution.sonar.why.multi-scenarios.trait-2",
-        "solution.sonar.why.multi-scenarios.trait-3",
-        "solution.sonar.why.multi-scenarios.trait-4",
-      ],
-      img: "/images/ThreatSonar/why_Multi-Scenarios.svg",
-    },
+    title: "solution.sonar.why.multi-scenarios.title",
+    traits: [
+      "solution.sonar.why.multi-scenarios.trait-1",
+      "solution.sonar.why.multi-scenarios.trait-2",
+      "solution.sonar.why.multi-scenarios.trait-3",
+      "solution.sonar.why.multi-scenarios.trait-4",
+    ],
+    img: "/images/ThreatSonar/why_Multi-Scenarios.svg",
   },
-
   {
-    forensicAnalysis: {
-      title: "solution.sonar.why.forensic-analysis.title",
-      traits: [
-        "solution.sonar.why.forensic-analysis.trait-1",
-        "solution.sonar.why.forensic-analysis.trait-2",
-      ],
-      img: "/images/ThreatSonar/why_ForensicAnalysis.svg",
-    },
+    title: "solution.sonar.why.forensic-analysis.title",
+    traits: [
+      "solution.sonar.why.forensic-analysis.trait-1",
+      "solution.sonar.why.forensic-analysis.trait-2",
+    ],
+    img: "/images/ThreatSonar/why_ForensicAnalysis.svg",
   },
 ];
 
 const PlanSection = () => {
   const { t } = useTranslation();
-
   const Card = useMemo(() => {
-    if (typeof whys !== "object" && !whys.length > 0) {
-      return null;
-    }
-    return whys.reduce((array, current, index) => {
-      const whyValues =
-        Object.values(current).length > 0 ? Object.values(current)[0] : null;
-      return [
-        ...array,
-        <div key={index} className={styles["card"]}>
-          <div className={styles["img-wrap"]}>
-            <img src={whyValues.img} />
-          </div>
-          <div className={styles["context"]}>
-            <h4 className={styles["title"]}>{t(whyValues.title)}</h4>
-            <ul className={styles["lists"]}>
-              {whyValues.traits &&
-                whyValues.traits.map((item, idx) => {
-                  return <li key={idx}>{t(item)}</li>;
-                })}
-            </ul>
-          </div>
-        </div>,
-      ];
-    }, []);
+    return whys.map((why, index) => (
+      <div key={index} className={styles["card"]}>
+        <div className={styles["img-wrap"]}>
+          <img src={why.img} />
+        </div>
+        <div className={styles["context"]}>
+          <h4 className={styles["title"]}>{t(why.title)}</h4>
+          <ul className={styles["lists"]}>
+            {why.traits &&
+              why.traits.map((item, idx) => {
+                return <li key={idx}>{t(item)}</li>;
+              })}
+          </ul>
+        </div>
+      </div>
+    ));
   }, [whys, t]);
   return (
     <div className={styles["container"]}>
@@ -96,6 +78,7 @@ const PlanSection = () => {
           {t("solution.sonar.why.slogan.context")}
         </p>
       </div>
+      <div className={styles["border-bottom"]}></div>
       <div className={styles["bottom"]}>{Card}</div>
     </div>
   );
