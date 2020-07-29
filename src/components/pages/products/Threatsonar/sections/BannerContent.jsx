@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./BannerContent.module.scss";
+import useTranslation from "src/scripts/translations/useTranslation";
 
 const BannerContent = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles["container"]}>
       <div className={styles["title-wrap"]}>
@@ -10,14 +13,14 @@ const BannerContent = () => {
           src="/images/ThreatSonar/ts_logo.svg"
         />
         <div className={styles["title-box"]}>
-          <p className={styles["title"]}>An Engine to Hunt down Intruders</p>
+          <p className={styles["title"]}>{t("solution.sonar.title.title")}</p>
           <div className={styles["light-height"]}></div>
-          <p className={styles["subtitle"]}>
-            Get ahead of your adversaries with the most
-            <span className={styles["subtitle-span"]}>
-              effective APT hunting solution and MDR platform.
-            </span>
-          </p>
+          <p
+            className={styles["subtitle"]}
+            dangerouslySetInnerHTML={{
+              __html: t("solution.sonar.title.context"),
+            }}
+          ></p>
         </div>
       </div>
       <div className={styles["img-wrap"]}>

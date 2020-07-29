@@ -39,33 +39,35 @@ const whys = [
 
 const PlanSection = () => {
   const { t } = useTranslation();
-  const Card = useMemo(() => {
-    return whys.map((why, index) => (
-      <div key={index} className={styles["card"]}>
-        <div className={styles["img-wrap"]}>
-          <img src={why.img} />
+  const Card = useMemo(
+    () =>
+      whys.map((why, index) => (
+        <div key={index} className={styles["card"]}>
+          <div className={styles["img-wrap"]}>
+            <img src={why.img} />
+          </div>
+          <div className={styles["context"]}>
+            <h4 className={styles["title"]}>{t(why.title)}</h4>
+            <ul className={styles["lists"]}>
+              {why.traits &&
+                why.traits.map((item, idx) => {
+                  return <li key={idx}>{t(item)}</li>;
+                })}
+            </ul>
+          </div>
         </div>
-        <div className={styles["context"]}>
-          <h4 className={styles["title"]}>{t(why.title)}</h4>
-          <ul className={styles["lists"]}>
-            {why.traits &&
-              why.traits.map((item, idx) => {
-                return <li key={idx}>{t(item)}</li>;
-              })}
-          </ul>
-        </div>
-      </div>
-    ));
-  }, [whys, t]);
+      )),
+    [whys, t]
+  );
   return (
     <div className={styles["container"]}>
-      <div className={styles["rect1"]}>
-        <XGrid type="white" />
-      </div>
-      <div className={styles["rect2"]}>
-        <XGrid type="white" />
-      </div>
       <div className={styles["top"]}>
+        <div className={styles["rect1"]}>
+          <XGrid type="white" />
+        </div>
+        <div className={styles["rect2"]}>
+          <XGrid type="white" />
+        </div>
         <h2 className={styles["title"]}>{t("solution.sonar.why.title")}</h2>
         <div className={styles["border"]}></div>
         <div className={styles["slogan-title-wrap"]}>
@@ -74,7 +76,12 @@ const PlanSection = () => {
           </h3>
           <div className={styles["slogan-title-highlight"]}></div>
         </div>
-        <p className={styles["slogan-context"]} dangerouslySetInnerHTML={{ __html: t("solution.sonar.why.slogan.context") }}></p>
+        <p
+          className={styles["slogan-context"]}
+          dangerouslySetInnerHTML={{
+            __html: t("solution.sonar.why.slogan.context"),
+          }}
+        ></p>
       </div>
       <div className={styles["border-bottom"]}></div>
       <div className={styles["bottom"]}>{Card}</div>
