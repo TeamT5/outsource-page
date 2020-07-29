@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './BannerContent.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
 
+
 const BannerContent = () => {
   const { t } = useTranslation()
-
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <div className={styles['container']}>
       <div className={styles['title-wrap']}>
@@ -35,9 +36,13 @@ const BannerContent = () => {
         <img className={styles['mask']} />
       </div>
       <div className={styles['bubble']}>
-        <p>Contact Us</p>
+        <p onClick={() => { setIsOpen(true) }}>Contact Us</p>
       </div>
-    </div>
+      {isOpen && (<div className={styles['demo-mask']} >
+        <img src="/images/form_demo.png" onClick={() => { setIsOpen(false) }} />
+      </div>)
+      }
+    </div >
   )
 }
 

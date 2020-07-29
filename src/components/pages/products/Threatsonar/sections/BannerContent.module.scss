@@ -1,9 +1,30 @@
-@import 'styles/general.scss';
+@import "styles/general.scss";
 
-$title-font:100px;
+// demo form
+
+.demo-mask {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  img {
+    cursor: pointer;
+    position: absolute;
+    z-index: 20;
+    width: 780px;
+    height: 800px;
+  }
+}
+
+$title-font: 100px;
 
 .container,
-.container>* {
+.container > * {
   box-sizing: border-box;
 }
 
@@ -15,12 +36,11 @@ $title-font:100px;
   width: 100%;
   height: 800px;
   box-sizing: border-box;
-  background-image: url('/images/ThreatSonar/soanr_hero_bg.png');
+  background-image: url("/images/ThreatSonar/soanr_hero_bg.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   z-index: 2;
-
 
   .title-wrap {
     position: absolute;
@@ -32,7 +52,7 @@ $title-font:100px;
     .title-img {
       width: 570px;
       height: auto;
-      margin-bottom:2.5rem;
+      margin-bottom: 2.5rem;
     }
 
     .title-box {
@@ -54,18 +74,18 @@ $title-font:100px;
         bottom: 14px;
         width: 100%;
         height: 21px;
-        background-color: rgba(174,30,52,0.6);
+        background-color: rgba(174, 30, 52, 0.6);
       }
 
       .subtitle {
         margin-top: 0.5rem;
         font-size: 20px;
-        color: #FFFFFF;
+        color: #ffffff;
         line-height: 32px;
         padding-left: 10px;
         text-align: left;
       }
-      .subtitle-span{
+      .subtitle-span {
         display: block;
       }
     }
@@ -95,10 +115,9 @@ $title-font:100px;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, .35);
+      background: rgba(0, 0, 0, 0.35);
     }
   }
-
 
   .bubble {
     display: flex;
@@ -113,12 +132,12 @@ $title-font:100px;
     background-color: $sonar-red;
     color: white;
     z-index: 3;
-
+    cursor: pointer;
     p {
       transform: rotate(-90deg);
       white-space: nowrap;
       font-size: 20px;
-      color: #FFFFFF;
+      color: #ffffff;
     }
   }
 }
@@ -140,12 +159,11 @@ $title-font:100px;
       .title-img {
         width: 480px;
         margin-bottom: 20px;
-
       }
       .title-box {
         padding-left: 4rem;
       }
-      .subtitle{
+      .subtitle {
         padding-left: 1rem;
       }
     }
@@ -179,7 +197,7 @@ $title-font:100px;
       }
       .title-box {
         padding-left: 1.5rem;
-        .title{
+        .title {
           text-align: center;
           font-size: 28px;
         }
@@ -192,22 +210,27 @@ $title-font:100px;
         }
       }
     }
-    
   }
 }
 
 @media screen and (max-width: 768px) {
+  .demo-mask {
+    img {
+      width: 768px;
+      height: auto;
+    }
+  }
   .container {
     padding: 0 2rem;
     .title-wrap {
       max-width: 296px;
-      .title-box{
+      .title-box {
         padding: 0;
-        .title{
+        .title {
           font-size: 16px;
           padding: 0;
         }
-        .subtitle{
+        .subtitle {
           text-align: center;
           font-size: 14px;
           padding: 0;
@@ -215,7 +238,7 @@ $title-font:100px;
         .light-height {
           bottom: 9px;
         }
-        .subtitle-span{
+        .subtitle-span {
           display: inline;
         }
       }
@@ -231,24 +254,24 @@ $title-font:100px;
   .container {
     .title-wrap {
       max-width: none;
-      .title-box{
-        .title{
+      .title-box {
+        .title {
           font-size: 16px;
           padding: 0;
         }
-        .subtitle{
+        .subtitle {
           text-align: center;
           font-size: 14px;
           padding: 0;
         }
 
-        .subtitle-span{
+        .subtitle-span {
           display: inline;
         }
       }
     }
     .img-wrap {
-      .left-hero{
+      .left-hero {
         left: -280px;
       }
       .right-hero {
