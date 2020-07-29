@@ -282,8 +282,16 @@ $info-section-height:3030px;
     height: 2710px;
 
     .tab-box {
-      width: 620px;
-      left: calc((100% - 620px) / 2);
+      width: 800px;
+      left: calc((100% - 800px) / 2);
+    }
+
+    .newswall-container {
+      position: absolute;
+      z-index: 2;
+      margin: 0 calc((100% - 800px) / 2);
+      top: 460px;
+      width: 800px;
     }
   }
 
@@ -355,9 +363,18 @@ $info-section-height:3030px;
         }
       }
     }
+
+
   }
+
 }
 
 @media screen and (max-width: 768px) {
-  .container {}
+  .container {
+    height: 2710px;
+
+    .category-container {
+      height: 1320px;
+    }
+  }
 }

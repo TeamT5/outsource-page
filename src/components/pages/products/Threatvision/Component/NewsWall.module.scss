@@ -36,6 +36,7 @@
 
 
     .dialog {
+      box-sizing: border-box;
       white-space: pre-wrap;
       display: inline-block;
       box-sizing: border-box;
@@ -45,8 +46,6 @@
       padding: 30px 80px;
       margin-bottom: 20px;
       height: 140px;
-      font-size: 24px;
-      color: #4C433F;
     }
   }
 }
@@ -107,7 +106,52 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .container {}
+  .container {
+    .title {
+      font-size: 30px;
+    }
+
+    .dialog-box {
+      height: 942px;
+
+      div:nth-of-type(1) {
+        margin-left: 20px;
+      }
+
+      div:nth-of-type(2) {
+        position: relative;
+        margin-left: -70px;
+      }
+
+      div:nth-of-type(3) {
+        position: relative;
+        margin-left: -16px;
+      }
+
+      div:nth-of-type(4) {
+        margin-left: 106px;
+        margin-right: 0;
+      }
+
+      div:nth-of-type(5) {
+        position: relative;
+        margin-left: -16px;
+      }
+
+      div:nth-of-type(6) {
+        position: relative;
+        margin-left: -16px;
+      }
+
+
+      .dialog {
+        height: 120px;
+        font-size: 20px;
+        padding: 30px 50px;
+      }
+    }
+
+  }
 }
 
 @media screen and (max-width: 768px) {

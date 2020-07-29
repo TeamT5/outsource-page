@@ -143,9 +143,27 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .container {}
+  .container {
+    .card:nth-of-type(1) .context {
+      padding-top: 0;
+      margin-bottom: 175px;
+    }
+
+    .card:nth-of-type(2) .context {
+      padding-top: 0;
+      margin-bottom: 153px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .container {}
+  .container {
+    .card {
+      .context {
+        .title {
+          font-size: 24px;
+        }
+      }
+    }
+  }
 }
