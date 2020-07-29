@@ -274,14 +274,17 @@ $info-section-height: 3030px;
 @media screen and (max-width: 1024px) {
   .container {
     height: 2710px;
+
     .category-container {
       padding-top: 0;
       top: 1392px;
     }
+
     .xgrid-container-left {
       width: 179px;
       height: 231px;
     }
+
     .xgrid-container-right {
       display: none;
     }
@@ -328,6 +331,7 @@ $info-section-height: 3030px;
     .tab-content-ce {
       width: 620px;
       margin: 0 auto;
+
       .context {
         flex-wrap: wrap;
 
@@ -356,6 +360,7 @@ $info-section-height: 3030px;
     .tab-content-apac {
       width: 620px;
       margin: 0 auto;
+
       .context {
         .img-box {
           width: 200px;
@@ -380,26 +385,32 @@ $info-section-height: 3030px;
   .tab-container {
     .tab-wrap {
       width: 375px;
+
       .tab {
         width: 160px;
       }
+
       .tab-long {
         width: 210px;
       }
     }
+
     .tab-content-ce,
     .tab-content-apac {
       width: 375px;
       margin: 0 auto;
+
       .title {
         padding: 30px 21px 37px 25px;
         font-size: 16px;
         line-height: 24px;
       }
+
       .context {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .img-box {
           width: 315px;
           height: 130px;
@@ -408,23 +419,28 @@ $info-section-height: 3030px;
           display: flex;
           align-items: center;
           justify-content: flex-start;
+
           img {
             max-width: 100px;
             margin-right: 5px;
             height: auto;
           }
+
           .card-title {
             font-size: 18px;
           }
         }
+
         > :not(:last-child) {
           margin-bottom: 10px;
         }
       }
     }
   }
+
   .container {
-    height: 3656px;
+    height: 3300px;
+
     .tab-box {
       width: 375px;
       left: calc((100% - 375px) / 2);
