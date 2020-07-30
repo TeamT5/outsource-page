@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState, useRef } from 'react'
 import BaseLayout from '../../../layout/BaseLayout'
 import Head from 'next/head'
 import { BannerContent, ContentSection, PlanSection } from './sections'
@@ -10,6 +10,14 @@ import { LocaleContext } from 'src/scripts/translations/LocaleContext'
 const Threatsonar = () => {
   const { t } = useTranslation()
   const localContext = useContext(LocaleContext)
+  const [isOpen, setIsOpen] = useState(false)
+  const windowWidthRef = useRef({ current: null })
+
+  useEffect(() => {
+    if (window.innerWidth) {
+      windowWidthRef.current = window.innerWidth
+    }
+  }, [])
   return (
     <BaseLayout>
       <Head>
@@ -39,6 +47,12 @@ const Threatsonar = () => {
         />
         <ContentSection />
         <PlanSection />
+        <div className={styles['bubble']}>
+          <p onClick={() => { setIsOpen(true) }}>Contact Us</p>
+        </div>
+        {isOpen && (<div className={windowWidthRef.current !== null && windowWidthRef.current > 375 ? styles['demo-mask'] : `${styles['demo-mask']} ${styles['demo-mask-mobile']}`} >
+          <img src={windowWidthRef.current !== null && windowWidthRef.current > 375 ? '/images/form_demo.png' : '/images/form_demo_mobile.png'} onClick={() => { setIsOpen(false) }} />
+        </div>)}
       </div>
     </BaseLayout>
   )

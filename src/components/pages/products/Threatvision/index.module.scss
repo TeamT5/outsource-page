@@ -1,7 +1,71 @@
+@import 'styles/general.scss';
+
 .context {
   width: 100%;
   overflow: hidden;
   background-color: #ffffff;
   color: #ffffff;
   box-sizing: border-box;
+}
+
+.demo-mask {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  img {
+    cursor: pointer;
+    position: absolute;
+    z-index: 20;
+    width: 780px;
+    height: 800px;
+  }
+
+  &.demo-mask-mobile {
+    img {
+      width: 375px;
+      height: auto;
+    }
+  }
+}
+
+.bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 1130px;
+  width: 40px;
+  height: 130px;
+  border-radius: 4px 0 0 4px;
+  background-color: $vision-yello;
+  color: white;
+  z-index: 3;
+  cursor: pointer;
+
+  p {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    font-size: 20px;
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width:1440px) {
+  .bubble {
+    top: 650px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .bubble {
+    top: 569px;
+  }
 }

@@ -19,9 +19,6 @@ const BannerContent = () => {
         <img className={styles['right-down-hero']} src="/images/ThreatVision/vision_hero_right_down.png" />
         <img className={styles['mask']} />
       </div>
-      {/* <div className={styles['bubble']}>
-        <p>Contact Us</p>
-      </div> */}
     </div>
   )
 }
