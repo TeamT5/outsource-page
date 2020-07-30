@@ -218,12 +218,9 @@ $title-font: 100px;
       }
     }
   }
-}
-
-@media screen and (max-width: 375px) {
   .container {
     .title-wrap {
-      max-width: none;
+      max-width: 275px;
 
       .title-box {
         .title {

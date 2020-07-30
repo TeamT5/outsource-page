@@ -9,70 +9,20 @@
   font-size: 16px;
   color: #4C433F;
 }
-
-.card-with-photo-container {
+.card-container,.card-with-photo-container{
   display: flex;
   width: 1000px;
   margin: 0 auto;
-
   .left-side {
     flex: 1.2 3 0;
-
-    .leadership-text {
-      margin: 0;
-      font-size: 24px;
-    }
-  }
-
-  .right-side {
-    flex: 3 1.2 0;
-
-    .leadership-head {
-      font-weight: bold;
-      margin: 0;
-      font-size: 16px;
-      padding-bottom: 4px;
-      border-bottom: 2px solid #C8BDB8;
-      margin-left: calc(250px + 7px);
-    }
-
-    .article-context {
-      letter-spacing: .1px;
-      text-align: left;
-      line-height: 1.5;
-    }
-
-    img {
-      max-width: 250px;
-      height: auto;
-      float: left;
-      margin: 7px 12px 7px 0;
-    }
-  }
-}
-
-.card-container {
-  display: flex;
-  width: 1000px;
-  margin: 0 auto;
-
-  & :not(:last-child) {
-    margin-bottom: 60px
-  }
-
-  .left-side {
-    flex: 1.2 3 0;
-
     .leadership-text {
       margin: 0;
       font-size: 24px;
       color: #4C433F;
     }
   }
-
   .right-side {
     flex: 3 1.2 0;
-
     .leadership-head {
       font-size: 16px;
       font-weight: bold;
@@ -82,7 +32,6 @@
     }
 
     .article-context {
-      letter-spacing: .1px;
       text-align: left;
       line-height: 1.5;
     }
@@ -95,49 +44,45 @@
     }
   }
 }
+.card-with-photo-container {
+  .right-side {
+    .leadership-head {
+      margin-left: calc(250px + 7px);
+    }
+  }
+}
+
+.card-container {
+  & :not(:last-child) {
+    margin-bottom: 60px
+  }
+  .leadership-text {
+    color: #4C433F;
+  }
+}
 
 @media screen and (max-width: 1440px) {
-  .container {
-    padding-bottom: 120px;
-  }
-
-
-  .card-with-photo-container,
-  .card-container {
-    width: 1000px;
-  }
-
   .card-with-photo-container {
     margin-bottom: 80px;
-
-  }
-
-  .card-container {
-    & :not(:last-child) {
-      margin-bottom: 60px
-    }
   }
 }
 
 @media screen and (max-width: 1280px) {
   .container {
     padding-top: 30px;
-    padding-bottom: 120px;
   }
 
   .card-with-photo-container,
   .card-container {
+    flex-direction: column;
     width: 800px;
-
     & :not(:last-child) {
       margin-bottom: 60px
     }
   }
 
   .card-with-photo-container {
-    flex-direction: column;
     margin-bottom: 60px;
-
     .left-side {
       flex: 1 4 0;
       margin-bottom: 47px;
@@ -149,8 +94,6 @@
   }
 
   .card-container {
-    flex-direction: column;
-
     .left-side {
       flex: 1 12.5 0;
       margin-bottom: 40px;

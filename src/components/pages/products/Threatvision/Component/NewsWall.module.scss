@@ -5,30 +5,43 @@
   color: #4c433f;
   font-size: 24px;
   position: relative;
-
   .title {
     font-size: 48px;
+    margin-bottom: 4rem;
   }
 
   .dialog-box {
-    height: 942px;
-
+    .dialog {
+      box-sizing: border-box;
+      background: #ffffff;
+      border: 4px solid #4c433f;
+      border-radius: 70px;
+      padding: 30px 60px;
+      margin-bottom: 20px;
+    }
+    div:nth-of-type(1){
+      max-width: 510px;
+    }
     div:nth-of-type(2) {
       margin-left: 128px;
+      padding-right: 130px;
     }
 
     div:nth-of-type(3) {
       margin-right: 418px;
+      padding-right:80px;
     }
 
     div:nth-of-type(4) {
       margin-left: 190px;
       margin-right: 220px;
+      padding-right: 170px;
     }
 
     div:nth-of-type(5) {
       margin-left: 260px;
       margin-right: 50px;
+
     }
 
     div:nth-of-type(6) {
@@ -36,23 +49,14 @@
       margin-right: 390px;
     }
 
-    .dialog {
-      box-sizing: border-box;
-      background: #ffffff;
-      border: 4px solid #4c433f;
-      border-radius: 70px;
-      padding: 30px;
-      margin-bottom: 20px;
-    }
   }
 
   :global(.sign) {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 36px;
     position: relative;
     z-index: 1;
     margin: 0 4px;
-
+    padding: 0 4px;
     &::after {
       display: block;
       z-index: -1;
@@ -61,18 +65,18 @@
       content: "";
       position: absolute;
       width: 100%;
-      height: 8px;
+      height: 14px;
       background: #ffd36a;
     }
   }
 
   .bg-arrow {
     position: absolute;
-    width: 44px;
+    width: 50px;
     height: 100%;
-    top: 6%;
+    top: 7%;
     z-index: -1;
-    left: 8%;
+    left: 7.5%;
     background-position: bottom center;
     background-size: cover;
     background-image: url(/images/arrow_to_bottom.svg);
@@ -91,8 +95,6 @@
 @media screen and (max-width: 1280px) {
   .container {
     .dialog-box {
-      height: 942px;
-
       div:nth-of-type(1) {
         margin-left: -25px;
         position: relative;
@@ -100,6 +102,7 @@
 
       div:nth-of-type(2) {
         margin-left: 128px;
+        padding-right: 50px;
       }
 
       div:nth-of-type(3) {
@@ -108,22 +111,23 @@
 
       div:nth-of-type(4) {
         margin-left: 221px;
-        margin-right: 274px;
+        margin-right: 200px;
+        padding-right: 50px;
       }
 
       div:nth-of-type(5) {
-        margin-left: 301px;
-        margin-right: 34px;
+        margin-left: 244px;
+        margin-right: 0;
       }
 
       div:nth-of-type(6) {
-        margin-left: 13.6%;
-        margin-right: 304px;
+        margin-left: 80px;
+        margin-right: 260px;
       }
     }
 
     .bg-arrow {
-      height: 98%;
+      height: 100%;
       left: 14%;
     }
   }
@@ -136,35 +140,39 @@
     }
 
     .dialog-box {
-      height: 942px;
-
       div:nth-of-type(1) {
-        margin-left: 20px;
+        margin-left: -6px;
+        padding-left: 100px;
       }
 
       div:nth-of-type(2) {
-        position: relative;
         margin-left: -50px;
+        padding-left: 62px;
+        padding-right: 68px;
       }
 
       div:nth-of-type(3) {
-        position: relative;
         margin-left: -16px;
+        margin-right: 232px;
+        padding-left: 68px;
       }
 
       div:nth-of-type(4) {
-        margin-left: 106px;
-        margin-right: 0;
+        margin-left: 70px;
+        margin-right: 130px;
+        padding-left: 76px;
       }
 
       div:nth-of-type(5) {
-        position: relative;
         margin-left: -16px;
+        margin-right: 24px;
+        padding-left: 84px;
       }
 
       div:nth-of-type(6) {
-        position: relative;
         margin-left: -16px;
+        margin-right: 140px;
+        padding-left: 80px;
       }
 
       .dialog {
@@ -172,9 +180,11 @@
         padding: 30px 50px;
       }
     }
-
+    :global(.sign) {
+      font-size: 28px;
+    }
     .bg-arrow {
-      height: 90%;
+      height: 103%;
       top: 5%;
       left: 2%;
     }
@@ -189,36 +199,40 @@
     }
 
     .dialog-box {
-      height: 732px;
-
       div:nth-of-type(1) {
         margin-left: 30px;
-        margin-right: 0;
+        margin-right: 44px;
+        padding-left: 50px;
       }
 
       div:nth-of-type(2) {
         margin-left: 10px;
         margin-right: 0;
+        padding-left: 50px;
       }
 
       div:nth-of-type(3) {
         margin-left: 30px;
-        margin-right: 0;
+        margin-right: 45px;
+        padding-left: 40px;
       }
-
       div:nth-of-type(4) {
         margin-left: 10px;
-        margin-right: 0;
+        margin-right: 100px;
+        padding-left: 46px;
+    
       }
-
       div:nth-of-type(5) {
         margin-left: 15px;
         margin-right: 0;
+        padding-left: 48px;
+        padding-right: 94px;
       }
 
       div:nth-of-type(6) {
         margin-left: 20px;
-        margin-right: 0;
+        margin-right: 20px;
+        padding-left: 50px;
       }
 
       .dialog {
@@ -231,9 +245,12 @@
     }
 
     .bg-arrow {
-      height: 90%;
+      height:105%;
       left: 5%;
       top: 6%;
+    }
+    :global(.sign) {
+      font-size: 24px;
     }
   }
 }

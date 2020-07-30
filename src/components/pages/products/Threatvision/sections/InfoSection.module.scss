@@ -1,20 +1,18 @@
 @import "styles/general.scss";
 
-$info-section-height: 3030px;
-
 .tab-container {
   width: 100%;
   box-sizing: border-box;
 
   .tab-wrap {
-    width: 840px;
+    max-width: 840px;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
-
+    position: absolute;
+    bottom: 100%;
+    z-index: 2;
     .tab {
-      width: 349px;
-      height: 70px;
       box-sizing: border-box;
       background: #c8bdb8;
       border-style: none;
@@ -25,7 +23,9 @@ $info-section-height: 3030px;
       color: #4c433f;
       letter-spacing: 0;
       cursor: pointer;
-
+      padding: 25px 40px;
+      margin-right: 2px;
+      white-space: nowrap;
       &:focus {
         outline: none;
       }
@@ -34,19 +34,16 @@ $info-section-height: 3030px;
         background-color: #f5f2e9;
       }
     }
-
-    .tab-long {
-      width: 486px;
-    }
   }
-
+  
   .tab-content-ce,
   .tab-content-apac {
     width: 100%;
 
     .title {
       box-sizing: border-box;
-      padding: 23px 220px 17px 20px;
+      padding: 23px 260px 17px 20px;
+      margin: 0;
       font-size: 18px;
       line-height: 1.5;
       color: #4c433f;
@@ -69,25 +66,14 @@ $info-section-height: 3030px;
           font-size: 20px;
           color: #4c433f;
           text-align: center;
-          line-height: 32px;
+          line-height: 1.2;
         }
 
         img {
           max-width: 180px;
+          margin-bottom: 30px;
           height: auto;
         }
-      }
-    }
-  }
-
-  .tab-content-ce {
-    .context {
-      display: flex;
-      justify-content: space-between;
-
-      .img-box {
-        width: 242px;
-        padding: 30 30px 20px 30px;
       }
     }
   }
@@ -98,9 +84,8 @@ $info-section-height: 3030px;
       justify-content: space-between;
 
       .img-box {
-        width: 320px;
-        height: 300px;
-        padding: 30px 70px;
+        width: 32%;
+        padding: 30px 15px;
       }
     }
   }
@@ -109,113 +94,89 @@ $info-section-height: 3030px;
 .container {
   font-family: Helvetica;
   position: relative;
-  width: 100%;
-  height: $info-section-height;
-  margin: 0 auto;
   color: white;
   background-color: #f5f2e9;
   font-size: 16px;
   color: #4c433f;
 
   .tab-box {
-    width: 1000px;
-    position: absolute;
-    top: -70px;
-    left: calc((100% - 1000px) / 2);
-    z-index: 5;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
   }
 
   .newswall-container {
-    position: absolute;
+    position: relative;
     z-index: 2;
-    margin: 0 calc((100% - 1000px) / 2);
-    top: 474px;
-    width: 1000px;
+    margin: 0 auto;
+    max-width: 1000px;
   }
 
   .category-container {
-    position: absolute;
+    position: relative;
+    top: -40px;
     width: 100%;
-    top: 1524px;
-    padding-top: 42px;
     z-index: 1;
   }
 
   .xgrid-container-left {
     position: absolute;
-    top: 652px;
-    left: 0;
+    top: 600px;
+    left: -260px;
     width: 530px;
     height: 230px;
   }
 
   .xgrid-container-right {
     position: absolute;
-    top: 976px;
-    right: 0;
+    top: 918px;
+    right: -244px;
     width: 518px;
     height: 465px;
   }
 }
-
-// .bubble {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: absolute;
-//   right: 0;
-//   bottom: 20px;
-//   width: 40px;
-//   height: 130px;
-//   border-radius: 4px 0 0 4px;
-//   background-color: $sonar-red;
-//   color: white;
-//   z-index: 3;
-
-//   p {
-//     transform: rotate(-90deg);
-//     white-space: nowrap;
-//     font-size: 20px;
-//     color: #FFFFFF;
-//   }
-// }
-// }
 
 @media screen and (max-width: 1440px) {
   .container {
     .xgrid-container-left {
       width: 244px;
       height: 230px;
+      left: -60px;
     }
 
     .xgrid-container-right {
       width: 198px;
+      right: 0;
     }
   }
 }
 
 @media screen and (max-width: 1280px) {
   .container {
-    height: 2983px;
-
     .tab-box {
-      width: 800px;
-      left: calc((100% - 800px) / 2);
+      max-width: 800px;
     }
+    .xgrid-container-left {
+      left: -40px;
+    }
+
+    .xgrid-container-right {
+      right: -126px;
+    }
+    .category-container{
+      top: -14px;
+    }
+  }
+  .newswall-container {
+    padding: 0 24px 0 100px;
   }
 
   .tab-container {
     .tab-wrap {
-      width: 800px;
-      justify-content: flex-start;
-
+      max-width: 800px;
       .tab {
-        width: 284px;
         font-size: 20px;
-      }
-
-      .tab-long {
-        width: 399px;
       }
     }
 
@@ -251,10 +212,7 @@ $info-section-height: 3030px;
     .tab-content-apac {
       .context {
         .img-box {
-          width: 260px;
-          height: 272px;
-          padding: 30px 18px 50px 18px;
-
+          padding: 30px 18px ;
           .card-title {
             font-size: 20px;
           }
@@ -266,21 +224,17 @@ $info-section-height: 3030px;
         }
       }
     }
+
   }
 }
 
 @media screen and (max-width: 1024px) {
   .container {
-    height: 2710px;
-
-    .category-container {
-      padding-top: 0;
-      top: 1392px;
-    }
 
     .xgrid-container-left {
       width: 179px;
       height: 231px;
+      left: -88px;
     }
 
     .xgrid-container-right {
@@ -288,42 +242,23 @@ $info-section-height: 3030px;
     }
 
     .tab-box {
-      width: 682px;
-      left: calc((100% - 682px) / 2);
+      max-width: 682px;
     }
 
     .newswall-container {
-      position: absolute;
-      height: 937px;
-      z-index: 2;
-      margin: 0 calc((100% - 620px) / 2);
-      top: 460px;
-      width: 620px;
+      padding: 0 10px 40px 64px;
     }
   }
 
   .tab-container {
-    .tab-wrap {
-      width: 682px;
-      justify-content: flex-start;
-
-      .tab {
-        width: 284px;
-        font-size: 20px;
-      }
-
-      .tab-long {
-        width: 399px;
-      }
-    }
-
     .tab-content-ce,
     .tab-content-apac {
-      width: 620px;
-
+      max-width: 620px;
+      width: 100%;
       .title {
         padding: 30px 10px 44px 0;
       }
+
     }
 
     .tab-content-ce {
@@ -335,21 +270,20 @@ $info-section-height: 3030px;
 
         .img-box {
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
-          width: 300px;
-          height: 130px;
+          width: 48%;
           margin-bottom: 20px;
-
+          padding: 15px;
+          height: auto;
           .card-title {
             font-size: 20px;
-            margin-left: 5px;
+            text-align: left;
           }
 
           img {
             max-width: 100px;
-            margin-right: 5px;
-            height: auto;
+            margin: 0 10px 0 0;
           }
         }
       }
@@ -361,9 +295,7 @@ $info-section-height: 3030px;
 
       .context {
         .img-box {
-          width: 200px;
-          height: 282px;
-          padding: 30px 30px 40px 30px;
+          padding: 30px 15px;
 
           .card-title {
             font-size: 20px;
@@ -382,24 +314,23 @@ $info-section-height: 3030px;
 @media screen and (max-width: 768px) {
   .tab-container {
     .tab-wrap {
-      width: 375px;
-
-      .tab {
-        width: 160px;
-      }
-
-      .tab-long {
-        width: 210px;
+      .tab{
+        white-space: break-spaces;
+        text-align: left;
+        padding: 18px 20px;
+        span{
+          display: block;
+        }
       }
     }
-
     .tab-content-ce,
     .tab-content-apac {
-      width: 375px;
+      max-width: 375px;
+      width: 100%;
       margin: 0 auto;
 
       .title {
-        padding: 30px 21px 37px 25px;
+        padding: 30px 20px;
         font-size: 16px;
         line-height: 24px;
       }
@@ -408,24 +339,25 @@ $info-section-height: 3030px;
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        padding: 20px;
         .img-box {
-          width: 315px;
-          height: 130px;
+          width: 100%;
           text-align: left;
-          padding: 15px 0 15px 15px;
           display: flex;
           align-items: center;
           justify-content: flex-start;
-
+          padding:30px 20px;
           img {
             max-width: 100px;
-            margin-right: 5px;
+            margin-right: 15px;
+            margin-bottom: 0;
             height: auto;
           }
 
           .card-title {
             font-size: 18px;
+            font-weight: bold;
+            text-align: left;
           }
         }
 
@@ -437,25 +369,16 @@ $info-section-height: 3030px;
   }
 
   .container {
-    height: 3300px;
-
     .tab-box {
-      width: 375px;
-      left: calc((100% - 375px) / 2);
-      top: -2.1%;
+      max-width: none;
     }
-
+    
     .category-container {
-      height: 1918px;
-      top: 1600px;
+      top: 86px;
     }
 
     .newswall-container {
-      position: absolute;
-      z-index: 2;
-      margin: 0 calc((100% - 375px) / 2);
-      top: 751px;
-      width: 375px;
+      padding: 0 10px 0 0;
     }
 
     .xgrid-container-left,

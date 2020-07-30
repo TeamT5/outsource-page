@@ -54,7 +54,7 @@
         "context": "Get ahead of your adversaries with the most effective APT hunting solution and MDR platform."
       },
       "intro": {
-        "context": "APT attacks are far more prevalent and sophisticated than ever. <br> But, how can you recognize a silent and unnoticed sneak attack?<s>ThreatSonar provides an advanced threat hunting solution to help discover threats in a post-compromised environment."
+        "context": "APT attacks are far more prevalent and sophisticated than ever. <br/>But, how can you recognize a silent and unnoticed sneak attack?<s>ThreatSonar provides an advanced threat hunting solution to help discover threats in a post-compromised environment."
       },
       "function": {
         "ca-title": "Compromise Assessment",
@@ -63,7 +63,6 @@
         "ir-context": "Intelligence-driven and auto-investigation to find out hidden infections with similar TTPs, ThreatSonar is an effective tool designed for incident response execution.",
         "mdr-title": "MDR platform",
         "mdr-context": "Conducting regular risk assessment for endpoints with ThreatSonar, our frontline expertise provides you with greater detection and response capabilities."
-
       },
       "why": {
         "title": "Why ThrearSonar?",
