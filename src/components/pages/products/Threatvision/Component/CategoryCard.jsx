@@ -21,11 +21,18 @@ const planCardConfig = [{
 }]
 
 const CategoryCard = () => {
-  const { t } = useTranslation(useContext)
+  const { t, locale } = useTranslation(useContext)
+  const renderClassName = (contentItem) => {
+    if (locale === 'tw') {
+      return styles['card']
+    } else {
+      return `${styles['card']} ${styles['card-en']}`
+    }
+  }
   return (
     <div className={styles['container']}>
       {planCardConfig && planCardConfig.map((card, index) => (
-        <div key={index} className={styles['card']}>
+        <div key={index} className={renderClassName(locale)}>
           <div className={styles['image-wrap']}>
             <img src={card.image} />
           </div>
