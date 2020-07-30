@@ -86,8 +86,8 @@ const Tab = (props) => {
 }
 
 Tab.propTypes = {
-  ce: PropTypes.string,
-  apac: PropTypes.string,
+  ce: PropTypes.object,
+  apac: PropTypes.object,
 }
 
 
