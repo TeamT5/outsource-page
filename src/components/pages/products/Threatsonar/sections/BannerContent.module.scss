@@ -12,6 +12,7 @@
   left: 0;
   top: 0;
   background: rgba(0, 0, 0, 0.5);
+
   img {
     cursor: pointer;
     position: absolute;
@@ -19,12 +20,19 @@
     width: 780px;
     height: 800px;
   }
+
+  &.demo-mask-mobile {
+    img {
+      width: 375px;
+      height: auto;
+    }
+  }
 }
 
 $title-font: 100px;
 
 .container,
-.container > * {
+.container>* {
   box-sizing: border-box;
 }
 
@@ -85,6 +93,7 @@ $title-font: 100px;
         padding-left: 10px;
         text-align: left;
       }
+
       .subtitle-span {
         display: block;
       }
@@ -133,6 +142,7 @@ $title-font: 100px;
     color: white;
     z-index: 3;
     cursor: pointer;
+
     p {
       transform: rotate(-90deg);
       white-space: nowrap;
@@ -160,17 +170,21 @@ $title-font: 100px;
         width: 480px;
         margin-bottom: 20px;
       }
+
       .title-box {
         padding-left: 4rem;
       }
+
       .subtitle {
         padding-left: 1rem;
       }
     }
+
     .img-wrap {
       .left-hero {
         left: -235px;
       }
+
       .right-hero {
         right: -200px;
       }
@@ -184,6 +198,7 @@ $title-font: 100px;
     justify-content: center;
     align-items: center;
     padding: 0 3rem;
+
     .title-wrap {
       max-width: 516px;
       width: 100%;
@@ -195,8 +210,10 @@ $title-font: 100px;
         margin: 0 auto 30px;
         display: block;
       }
+
       .title-box {
         padding-left: 1.5rem;
+
         .title {
           text-align: center;
           font-size: 28px;
@@ -220,29 +237,37 @@ $title-font: 100px;
       height: auto;
     }
   }
+
   .container {
     padding: 0 2rem;
+
     .title-wrap {
       max-width: 296px;
+
       .title-box {
         padding: 0;
+
         .title {
           font-size: 16px;
           padding: 0;
         }
+
         .subtitle {
           text-align: center;
           font-size: 14px;
           padding: 0;
         }
+
         .light-height {
           bottom: 9px;
         }
+
         .subtitle-span {
           display: inline;
         }
       }
     }
+
     .img-wrap {
       .right-hero {
         right: -400px;
@@ -250,15 +275,18 @@ $title-font: 100px;
     }
   }
 }
+
 @media screen and (max-width: 375px) {
   .container {
     .title-wrap {
       max-width: none;
+
       .title-box {
         .title {
           font-size: 16px;
           padding: 0;
         }
+
         .subtitle {
           text-align: center;
           font-size: 14px;
@@ -270,10 +298,12 @@ $title-font: 100px;
         }
       }
     }
+
     .img-wrap {
       .left-hero {
         left: -280px;
       }
+
       .right-hero {
         right: -555px;
       }

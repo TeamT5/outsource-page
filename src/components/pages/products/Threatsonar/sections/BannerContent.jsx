@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styles from './BannerContent.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
 
@@ -6,6 +6,13 @@ import useTranslation from 'src/scripts/translations/useTranslation'
 const BannerContent = () => {
   const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
+  const windowWidthRef = useRef({ current: null })
+
+  useEffect(() => {
+    if (window.innerWidth) {
+      windowWidthRef.current = window.innerWidth
+    }
+  }, [])
   return (
     <div className={styles['container']}>
       <div className={styles['title-wrap']}>
@@ -38,8 +45,8 @@ const BannerContent = () => {
       <div className={styles['bubble']}>
         <p onClick={() => { setIsOpen(true) }}>Contact Us</p>
       </div>
-      {isOpen && (<div className={styles['demo-mask']} >
-        <img src="/images/form_demo.png" onClick={() => { setIsOpen(false) }} />
+      {isOpen && (<div className={windowWidthRef.current !== null && windowWidthRef.current > 375 ? styles['demo-mask'] : `${styles['demo-mask']} ${styles['demo-mask-mobile']}`} >
+        <img src={windowWidthRef.current !== null && windowWidthRef.current > 375 ? '/images/form_demo.png' : '/images/form_demo_mobile.png'} onClick={() => { setIsOpen(false) }} />
       </div>)
       }
     </div >
