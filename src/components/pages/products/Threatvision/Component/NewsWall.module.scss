@@ -70,9 +70,9 @@
     position: absolute;
     width: 44px;
     height: 100%;
-    top: 5%;
+    top: 6%;
     z-index: -1;
-    left: 16%;
+    left: 8%;
     background-position: bottom center;
     background-size: cover;
     background-image: url(/images/arrow_to_bottom.svg);
@@ -81,6 +81,10 @@
 
 @media screen and (max-width: 1440px) {
   .container {
+    .bg-arrow {
+      top: 6%;
+      height: 100%;
+    }
   }
 }
 
@@ -113,13 +117,14 @@
       }
 
       div:nth-of-type(6) {
-        margin-left: 141px;
+        margin-left: 13.6%;
         margin-right: 304px;
       }
     }
 
     .bg-arrow {
       height: 98%;
+      left: 14%;
     }
   }
 }
@@ -170,6 +175,8 @@
 
     .bg-arrow {
       height: 90%;
+      top: 5%;
+      left: 2%;
     }
   }
 }
@@ -224,7 +231,9 @@
     }
 
     .bg-arrow {
-      height: 118%;
+      height: 90%;
+      left: 5%;
+      top: 6%;
     }
   }
 }
