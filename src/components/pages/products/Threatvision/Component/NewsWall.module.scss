@@ -58,11 +58,11 @@
       z-index: -1;
       bottom: 2px;
       left: 0;
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 8px;
-      background: #FFD36A;
+      background: #ffd36a;
     }
   }
 
@@ -80,7 +80,8 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .container {}
+  .container {
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -115,7 +116,6 @@
         margin-left: 141px;
         margin-right: 304px;
       }
-
     }
 
     .bg-arrow {
@@ -166,10 +166,6 @@
         font-size: 20px;
         padding: 30px 50px;
       }
-
-
-
-
     }
 
     .bg-arrow {
@@ -225,12 +221,10 @@
         margin-right: 0;
         padding: 14px 60px;
       }
-
-
     }
 
     .bg-arrow {
-      height: 90%;
+      height: 118%;
     }
   }
 }

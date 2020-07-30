@@ -31,7 +31,6 @@
     margin: 10% 0;
   }
 
-
   .card:nth-of-type(3) {
     margin-top: -2%;
     padding-bottom: 5%;
@@ -39,7 +38,7 @@
     &::before {
       top: -14%;
       background: #645a53;
-      clip-path: polygon(0 0%, 100% 9%, 100% 89%, 0% 100%);
+      clip-path: polygon(0 0%, 100% 9%, 100% 100%, 0% 100%);
     }
   }
 
@@ -107,13 +106,13 @@
           list-style-position: inside;
 
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             display: inline-block;
             width: 6px;
             height: 6px;
             left: -1rem;
-            top: .5rem;
+            top: 0.5rem;
             background-color: #4c433f;
             border-radius: 50%;
           }
@@ -229,7 +228,6 @@
       margin: 160px 0;
     }
 
-
     .card:nth-of-type(3) {
       padding-top: 4%;
 
@@ -249,7 +247,6 @@
 
 @media screen and (max-width: 768px) {
   .container {
-
     .card {
       padding: 0 30px;
       flex-direction: column-reverse;
@@ -277,12 +274,11 @@
     }
 
     .card.card-en {
-
       &:nth-of-type(3) {
         padding-top: 4%;
 
         .image-wrap {
-          padding-top: 0
+          padding-top: 0;
         }
 
         &::before {
