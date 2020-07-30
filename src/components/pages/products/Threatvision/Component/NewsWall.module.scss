@@ -69,7 +69,7 @@
   .bg-arrow {
     position: absolute;
     width: 44px;
-    height: 100%;
+    height: 90%;
     top: 6%;
     z-index: -1;
     left: 8%;
@@ -79,11 +79,24 @@
   }
 }
 
+.container-en {
+  .bg-arrow {
+    top: 6%;
+    height: 90%;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .container {
     .bg-arrow {
       top: 6%;
-      height: 100%;
+      height: 80%;
+    }
+  }
+  .container.container-en {
+    .bg-arrow {
+      top: 6%;
+      height: 90%;
     }
   }
 }

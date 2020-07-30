@@ -92,8 +92,16 @@ Tab.propTypes = {
 
 
 const InfoSection = () => {
+  const { locale } = useTranslation(useContext)
+  const renderClassName = (locale) => {
+    if (locale === 'tw') {
+      return styles['container']
+    } else {
+      return `${styles['container']} ${styles['container-en']}`
+    }
+  }
   return (
-    <div className={styles['container']}>
+    <div className={renderClassName(locale)}>
       <div className={styles['tab-box']}>
         <Tab {...tabConfig} />
       </div>

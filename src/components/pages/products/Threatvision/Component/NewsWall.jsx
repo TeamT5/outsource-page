@@ -14,9 +14,16 @@ const newsWallConfig = {
 
 
 const NewsWall = () => {
-  const { t } = useTranslation(useContext)
+  const { t, locale } = useTranslation(useContext)
+  const renderClassName = (locale) => {
+    if (locale === 'tw') {
+      return styles['container']
+    } else {
+      return `${styles['container']} ${styles['container-en']}`
+    }
+  }
   return (
-    <div className={styles['container']}>
+    <div className={renderClassName(locale)}>
       <h3 className={[styles['title']]} dangerouslySetInnerHTML={{ __html: `${t(newsWallConfig.title)}` }} />
       <div className={[styles['dialog-box']]}>
         {newsWallConfig && newsWallConfig.news && newsWallConfig.news.map((dialog, index) => (<div key={index} className={[styles['dialog']]} dangerouslySetInnerHTML={{ __html: `${t(dialog)}` }} />))}

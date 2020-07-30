@@ -22,7 +22,7 @@ const planCardConfig = [{
 
 const CategoryCard = () => {
   const { t, locale } = useTranslation(useContext)
-  const renderClassName = (contentItem) => {
+  const renderClassName = (locale) => {
     if (locale === 'tw') {
       return styles['card']
     } else {
