@@ -27,22 +27,14 @@ const content = [
     reverse: false,
   },
 ];
-
+const renderClassName = (contentItem) => {
+  if (contentItem.reverse) {
+    return `${styles["card-reverse"]} ${styles["card"]}`;
+  }
+  return `${styles["card"]}`;
+};
 const ContentSection = () => {
-  const { t, locale } = useTranslation();
-  const renderClassName = (contentItem) => {
-    if (locale === "tw") {
-      if (contentItem.reverse) {
-        return `${styles["card-reverse"]} ${styles["card"]}`;
-      }
-      return styles["card"];
-    } else {
-      if (contentItem.reverse) {
-        return `${styles["card-reverse"]} ${styles["card"]} ${styles["card-en"]}`;
-      }
-      return `${styles["card"]} ${styles["card-en"]}`;
-    }
-  };
+  const { t } = useTranslation();
   return (
     <div className={styles["container"]}>
       {content.map((contentItem, index) => {

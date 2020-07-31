@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import styles from "./InfoSection.module.scss";
-import PropTypes from "prop-types";
 import useTranslation from "src/scripts/translations/useTranslation";
 import {
   NewsWall,
@@ -54,9 +53,57 @@ const imagesConfig = {
   ],
 };
 
-const Tab = (props) => {
-  const { t, locale } = useTranslation();
+const Tab = () => {
+  const { t } = useTranslation();
   const [tabIndex, setTabIndex] = useState(0);
+  const renderTabContent = () => {
+    if (tabIndex === 0) {
+      return (
+        <div className={styles["tab-content-ce"]}>
+          <p
+            className={styles["title"]}
+            dangerouslySetInnerHTML={{ __html: `${t(tabConfig.ce.context)}` }}
+          />
+          <div className={styles["context"]}>
+            {imagesConfig.ce.map((card, index) => {
+              return (
+                <div className={styles["img-box"]} key={index}>
+                  <img src={card.img} />
+                  <p
+                    className={styles["card-title"]}
+                    dangerouslySetInnerHTML={{ __html: `${t(card.title)}` }}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div className={styles["tab-content-apac"]}>
+        <p
+          className={styles["title"]}
+          dangerouslySetInnerHTML={{
+            __html: `${t(tabConfig.apac.context)}`,
+          }}
+        />
+        <div className={styles["context"]}>
+          {imagesConfig.apac.map((card, index) => {
+            return (
+              <div className={styles["img-box"]} key={index}>
+                <img src={card.img} />
+                <p
+                  className={styles["card-title"]}
+                  dangerouslySetInnerHTML={{ __html: `${t(card.title)}` }}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
   return (
     <div className={styles["tab-container"]}>
       <div className={styles["tab-wrap"]}>
@@ -83,62 +130,12 @@ const Tab = (props) => {
           }
         />
       </div>
-      {tabIndex === 0 ? (
-        <div className={styles["tab-content-ce"]}>
-          <p
-            className={styles["title"]}
-            dangerouslySetInnerHTML={{ __html: `${t(tabConfig.ce.context)}` }}
-          />
-          <div className={styles["context"]}>
-            {imagesConfig.ce.map((card, index) => {
-              return (
-                <div className={styles["img-box"]} key={index}>
-                  <img src={card.img} />
-                  <p
-                    className={styles["card-title"]}
-                    dangerouslySetInnerHTML={{ __html: `${t(card.title)}` }}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      ) : (
-        <div className={styles["tab-content-apac"]}>
-          <p
-            className={styles["title"]}
-            dangerouslySetInnerHTML={{
-              __html: `${t(tabConfig.apac.context)}`,
-            }}
-          />
-          <div className={styles["context"]}>
-            {imagesConfig.apac.map((card, index) => {
-              return (
-                <div className={styles["img-box"]} key={index}>
-                  <img src={card.img} />
-                  <p
-                    className={styles["card-title"]}
-                    dangerouslySetInnerHTML={{ __html: `${t(card.title)}` }}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
+      {renderTabContent()}
     </div>
   );
 };
 
 const InfoSection = () => {
-  const { locale } = useTranslation(useContext);
-  const renderClassName = (locale) => {
-    if (locale === "tw") {
-      return styles["container"];
-    } else {
-      return `${styles["container"]} ${styles["container-en"]}`;
-    }
-  };
   return (
     <div className={styles["container"]}>
       <div className={styles["tab-box"]}>

@@ -2,10 +2,16 @@
   box-sizing: border-box;
   font-family: Helvetica;
   background-color: #ffffff;
-  .card:nth-of-type(1),
-  .card:nth-of-type(3) {
+}
+.card{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  padding: 10px calc((100% - 1000px) / 2) 0;
+  &:nth-of-type(1),
+  &:nth-of-type(3){
     flex-direction: row-reverse;
-
     &::before {
       background-color: #f0eff0;
       position: absolute;
@@ -17,8 +23,7 @@
       height: 565px;
     }
   }
-
-  .card:nth-of-type(1) {
+  &:nth-of-type(1) {
     &::before {
       background: #ece8e0;
       clip-path: polygon(0 0, 100% 0, 100% 73%, 0% 100%);
@@ -27,15 +32,13 @@
       padding-top: 78px;
     }
   }
-
-  .card:nth-of-type(2) {
+  &:nth-of-type(2) {
     margin: 11% 0 6%;
     .context {
       padding-top: 35px;
     }
   }
-
-  .card:nth-of-type(3) {
+  &:nth-of-type(3) {
     padding-bottom: 0;
     padding-top: 2%;
     &::before {
@@ -45,15 +48,12 @@
     }
     .context {
       padding-top: 9px;
-  
       .title {
         color: #ffffff;
       }
-  
       ul {
         .list {
           color: #ffffff;
-  
           &::before {
             background-color: #ffffff;
           }
@@ -61,105 +61,91 @@
       }
     }
   }
+  .image-wrap {
+    max-width: 480px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 
-  .card {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    z-index: 5;
-    padding: 10px calc((100% - 1000px) / 2) 0;
-
-    .image-wrap {
-      max-width: 480px;
-      img {
-        width: 100%;
-        height: auto;
-      }
+  .context {
+    width: 456px;
+    .title {
+      font-size: 32px;
+      color: #4c433f;
     }
 
+    ul {
+      padding-left: 0;
+      list-style: none;
+      padding-left: 1rem;
+
+      .list {
+        position: relative;
+        font-size: 20px;
+        line-height: 1.5;
+        color: #4c433f;
+        list-style-position: inside;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          left: -1rem;
+          top: 0.5rem;
+          background-color: #4c433f;
+          border-radius: 50%;
+        }
+      }
+
+      .list:not(:last-child) {
+        margin-bottom: 14px;
+      }
+    }
+    .tags {
+      font-size: 16px;
+      color: #f5ab1a;
+      line-height: 28px;
+      padding-left: 1rem;
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .card {
+    padding: 0 calc((100% - 800px) / 2);
+    .image-wrap {
+      max-width: 360px;
+    }
     .context {
-      width: 456px;
+      width: 356px;
+      padding-top: 0;
+
       .title {
         font-size: 32px;
         color: #4c433f;
       }
 
       ul {
-        padding-left: 0;
-        list-style: none;
-        padding-left: 1rem;
-
         .list {
-          position: relative;
           font-size: 20px;
-          line-height: 1.5;
-          color: #4c433f;
+          line-height: 28px;
           list-style-position: inside;
-
-          &::before {
-            content: "";
-            position: absolute;
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            left: -1rem;
-            top: 0.5rem;
-            background-color: #4c433f;
-            border-radius: 50%;
-          }
-        }
-
-        .list:not(:last-child) {
-          margin-bottom: 14px;
-        }
-      }
-
-      .tags {
-        font-size: 16px;
-        color: #f5ab1a;
-        line-height: 28px;
-        padding-left: 1rem;
-        display: inline-block;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .container {
-    .card {
-      padding: 0 calc((100% - 800px) / 2);
-
-      .image-wrap {
-        max-width: 360px;
-      }
-
-      .context {
-        width: 356px;
-        padding-top: 0;
-
-        .title {
-          font-size: 32px;
-          color: #4c433f;
-        }
-
-        ul {
-          .list {
-            font-size: 20px;
-            line-height: 28px;
-            list-style-position: inside;
-          }
         }
       }
     }
-    .card:nth-of-type(1),.card:nth-of-type(3){
+    &:nth-of-type(1),
+    &:nth-of-type(3){
       &::before{
         height: 500px;
       }
     }
-    .card:nth-of-type(1) {
+    &:nth-of-type(1) {
       padding-top: 5%;
-
       &::before {
         top: -30px;
         clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
@@ -169,7 +155,7 @@
       }
     }
 
-    .card:nth-of-type(2) {
+    &:nth-of-type(2) {
       margin: 76px 0 84px;
       padding-top: 2%;
       .context{
@@ -179,7 +165,7 @@
         }
       }
     }
-    .card:nth-of-type(3){
+    &:nth-of-type(3){
       padding-bottom: 68px;
       &::before{
         top: -17%;
@@ -190,13 +176,10 @@
         padding-top: 48px;
       }
     }
-
-
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
     .card {
       padding: 0 74px;
 
@@ -216,9 +199,7 @@
           }
         }
       }
-    }
-
-    .card:nth-of-type(1) {
+    &:nth-of-type(1) {
       margin-bottom: 175px;
       padding-top: 90px;
 
@@ -227,11 +208,11 @@
       }
     }
 
-    .card:nth-of-type(2) {
+    &:nth-of-type(2) {
       margin: 160px 0;
     }
 
-    .card:nth-of-type(3) {
+    &:nth-of-type(3) {
       padding-top: 4%;
 
       &::before {
@@ -239,8 +220,8 @@
       }
     }
 
-    .card:nth-of-type(1),
-    .card:nth-of-type(2) {
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
       .context {
         padding-top: 0;
       }
@@ -249,7 +230,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .container {
     .card {
       padding: 0 30px;
       flex-direction: column-reverse;
@@ -276,9 +256,8 @@
           }
         }
       }
-    }
 
-    .card:nth-of-type(1) {
+    &:nth-of-type(1) {
       align-items: center;
       padding-top: 0;
       flex-direction: column-reverse;
@@ -290,12 +269,12 @@
       }
     }
 
-    .card:nth-of-type(2) {
+    &:nth-of-type(2) {
       margin: 0;
       padding: 0 30px 80px;
     }
 
-    .card:nth-of-type(3) {
+    &:nth-of-type(3) {
       align-items: center;
       flex-direction: column-reverse;
       padding-top: 15px;

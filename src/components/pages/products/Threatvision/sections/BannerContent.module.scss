@@ -1,8 +1,5 @@
 @import 'styles/general.scss';
 
-$title-font:100px;
-
-
 
 .container {
   font-family: Helvetica;
@@ -17,211 +14,187 @@ $title-font:100px;
   background-position: center top;
   background-size: cover;
   z-index: 2;
+}
 
+.title-wrap {
+  position: absolute;
+  z-index: 3;
+  right: 280px;
+  top: 269px;
 
-  .title-wrap {
-    position: absolute;
-    z-index: 3;
-    right: 280px;
-    top: 269px;
-
-    .title-img {
-      width: 560px;
-      height: auto;
-      margin-bottom: 31px;
-    }
-
-    .title-box {
-      width: 516px;
-      text-align: center;
-      padding-left: 64px;
-
-      .title {
-        position: relative;
-        z-index: 3;
-        font-size: 28px;
-        margin: 0;
-        font-weight: bold;
-      }
-
-      .light-height {
-        position: relative;
-        bottom: 14px;
-        width: 100%;
-        height: 21px;
-        background-color: #f5ab1a99;
-      }
-    }
+  .title-img {
+    width: 560px;
+    height: auto;
+    margin-bottom: 31px;
   }
 
-  .img-wrap {
-    .left-hero {
-      position: absolute;
-      top: -524px;
-      left: -435px;
-      max-width: 1140px;
-      height: auto;
+  .title-box {
+    width: 516px;
+    text-align: center;
+    padding-left: 64px;
+
+    .title {
+      position: relative;
+      z-index: 3;
+      font-size: 28px;
+      margin: 0;
+      font-weight: bold;
     }
 
-    .right-up-hero {
-      top: -118px;
-      right: -90px;
-      position: absolute;
-      max-width: 548px;
-      height: auto;
-    }
-
-    .right-down-hero {
-      right: -310px;
-      bottom: -160px;
-      position: absolute;
-      max-width: 596px;
-      height: auto;
-    }
-
-    .mask {
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: 0;
+    .light-height {
+      position: relative;
+      bottom: 14px;
       width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, .35);
+      height: 21px;
+      background-color: #f5ab1a99;
     }
   }
 }
 
+.left-hero {
+  position: absolute;
+  top: -524px;
+  left: -435px;
+  max-width: 1140px;
+  height: auto;
+}
+
+.right-up-hero {
+  top: -118px;
+  right: -90px;
+  position: absolute;
+  max-width: 548px;
+  height: auto;
+}
+.right-down-hero {
+  right: -310px;
+  bottom: -160px;
+  position: absolute;
+  max-width: 596px;
+  height: auto;
+}
+.mask {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .35);
+}
+
 @media screen and (max-width: 1440px) {
-  .container {
-    .title-wrap {
-      right: 140px;
+  .title-wrap {
+    right: 140px;
+  }
+  .left-hero {
+    left: -801px;
+    top: -560px;
+    max-width: 1200px;
+  }
+  .right-down-hero{
+    right: -140px;
+    bottom: -164px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .title-wrap {
+    right: 112px;
+
+    .title-img {
+      width: 480px;
     }
 
-    .img-wrap {
-      .left-hero {
-        left: -801px;
-        top: -560px;
-        max-width: 1200px;
+    .title-box {
+      width: 440px;
+      padding-left: 56px;
+
+      .title {
+        font-size: 24px;
       }
-      .right-down-hero{
-        right: -140px;
-        bottom: -164px;
+
+      .light-height {
+        bottom: 16px;
       }
     }
   }
 
-  @media screen and (max-width: 1280px) {
-    .container {
-      .title-wrap {
-        right: 112px;
+  .left-hero {
+    left: -1030px;
+    top: -586px;
+  }
+  .right-up-hero{
+    top: -150px;
+    right: -115px;
+  }
+  .right-down-hero{
+    right: -174px;
+    bottom: -120px;
+  }
+}
 
-        .title-img {
-          width: 480px;
-        }
+@media screen and (max-width: 1024px) {
+  .title-wrap {
+    right: 75px;
 
-        .title-box {
-          width: 440px;
-          padding-left: 56px;
+    .title-img {
+      width: 320px;
+    }
 
-          .title {
-            font-size: 24px;
-          }
+    .title-box {
+      width: 325px;
+      padding-left: 0;
 
-          .light-height {
-            bottom: 16px;
-          }
-        }
+      .title {
+        font-size: 18px;
       }
 
-      .img-wrap {
-        .left-hero {
-          left: -1030px;
-          top: -586px;
-        }
-        .right-up-hero{
-          top: -150px;
-          right: -115px;
-        }
-        .right-down-hero{
-          right: -174px;
-          bottom: -120px;
-        }
+      .light-height {
+        bottom: 14px;
+      }
+    }
+  }
+  .right-up-hero{
+    right: -120px;
+  }
+  .right-down-hero{
+    right: -190px;
+    bottom: -108px;
+  }
+  .left-hero {
+    left: -1141px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-wrap {
+    right: 50%;
+    transform: translate(50%, 0);
+
+    .title-img {
+      width: 280px;
+    }
+
+    .title-box {
+      width: 290px;
+      padding-left: 0;
+
+      .title {
+        font-size: 16px;
+      }
+
+      .light-height {
+        bottom: 12px;
       }
     }
   }
 
-  @media screen and (max-width: 1024px) {
-    .container {
-      .title-wrap {
-        right: 75px;
-
-        .title-img {
-          width: 320px;
-        }
-
-        .title-box {
-          width: 325px;
-          padding-left: 0;
-
-          .title {
-            font-size: 18px;
-          }
-
-          .light-height {
-            bottom: 14px;
-          }
-        }
-      }
-
-      .img-wrap {
-        .right-up-hero{
-          right: -120px;
-        }
-        .right-down-hero{
-          right: -190px;
-          bottom: -108px;
-        }
-        .left-hero {
-          left: -1141px;
-        }
-      }
-    }
+  .right-down-hero {
+    display: none;
   }
 
-  @media screen and (max-width: 768px) {
-    .container {
-      .title-wrap {
-        right: 50%;
-        transform: translate(50%, 0);
-
-        .title-img {
-          width: 280px;
-        }
-
-        .title-box {
-          width: 290px;
-          padding-left: 0;
-
-          .title {
-            font-size: 16px;
-          }
-
-          .light-height {
-            bottom: 12px;
-          }
-        }
-      }
-
-      .img-wrap {
-        .right-down-hero {
-          display: none;
-        }
-
-        .right-up-hero {
-          top: -150px;
-          right: -210px;
-        }
-      }
-    }
+  .right-up-hero {
+    top: -150px;
+    right: -210px;
   }
 }

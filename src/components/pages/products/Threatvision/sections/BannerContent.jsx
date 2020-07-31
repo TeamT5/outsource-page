@@ -21,21 +21,19 @@ const BannerContent = () => {
           <div className={styles["light-height"]}></div>
         </div>
       </div>
-      <div className={styles["img-wrap"]}>
-        <img
-          className={styles["left-hero"]}
-          src="/images/ThreatVision/vision_hero_left.png"
-        />
-        <img
-          className={styles["right-up-hero"]}
-          src="/images/ThreatVision/vision_hero_right_up.png"
-        />
-        <img
-          className={styles["right-down-hero"]}
-          src="/images/ThreatVision/vision_hero_right_down.png"
-        />
-        <img className={styles["mask"]} />
-      </div>
+      <img
+        className={styles["left-hero"]}
+        src="/images/ThreatVision/vision_hero_left.png"
+      />
+      <img
+        className={styles["right-up-hero"]}
+        src="/images/ThreatVision/vision_hero_right_up.png"
+      />
+      <img
+        className={styles["right-down-hero"]}
+        src="/images/ThreatVision/vision_hero_right_down.png"
+      />
+      <img className={styles["mask"]} />
     </div>
   );
 };

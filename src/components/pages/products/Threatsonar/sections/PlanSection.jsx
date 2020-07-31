@@ -39,36 +39,31 @@ const whys = [
 
 const PlanSection = () => {
   const { t } = useTranslation();
-  const Card = useMemo(
-    () =>
-      whys.map((why, index) => (
-        <div key={index} className={styles["card"]}>
-          <div className={styles["img-wrap"]}>
-            <img src={why.img} />
-          </div>
-          <div className={styles["context"]}>
-            <h4
-              className={styles["title"]}
+  const Card = whys.map((why, index) => (
+    <div key={index} className={styles["card"]}>
+      <div className={styles["img-wrap"]}>
+        <img src={why.img} />
+      </div>
+      <div className={styles["context"]}>
+        <h4
+          className={styles["title"]}
+          dangerouslySetInnerHTML={{
+            __html: t(why.title),
+          }}
+        />
+        <ul className={styles["lists"]}>
+          {why.traits.map((item, idx) => (
+            <li
+              key={idx}
               dangerouslySetInnerHTML={{
-                __html: t(why.title),
+                __html: t(item),
               }}
             />
-            <ul className={styles["lists"]}>
-              {why.traits &&
-                why.traits.map((item, idx) => (
-                  <li
-                    key={idx}
-                    dangerouslySetInnerHTML={{
-                      __html: t(item),
-                    }}
-                  />
-                ))}
-            </ul>
-          </div>
-        </div>
-      )),
-    [whys, t]
-  );
+          ))}
+        </ul>
+      </div>
+    </div>
+  ));
   return (
     <div className={styles["container"]}>
       <div className={styles["top"]}>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import styles from "./NewsWall.module.scss";
 import useTranslation from "src/scripts/translations/useTranslation";
 
@@ -15,22 +15,20 @@ const newsWallConfig = {
 };
 
 const NewsWall = () => {
-  const { t } = useTranslation(useContext);
+  const { t } = useTranslation();
   return (
     <div className={styles["container"]}>
       <h3
         className={[styles["title"]]}
         dangerouslySetInnerHTML={{ __html: `${t(newsWallConfig.title)}` }}
       />
-      <div className={[styles["dialog-box"]]}>
-        {newsWallConfig.news.map((dialog, index) => (
-          <div
-            key={index}
-            className={[styles["dialog"]]}
-            dangerouslySetInnerHTML={{ __html: `${t(dialog)}` }}
-          />
-        ))}
-      </div>
+      {newsWallConfig.news.map((dialog, index) => (
+        <div
+          key={index}
+          className={[styles["dialog"]]}
+          dangerouslySetInnerHTML={{ __html: `${t(dialog)}` }}
+        />
+      ))}
       <div className={[styles["bg-arrow"]]} />
     </div>
   );
