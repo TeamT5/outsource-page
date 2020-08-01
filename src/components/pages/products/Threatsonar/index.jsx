@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState, useRef } from 'react'
 import BaseLayout from '../../../layout/BaseLayout'
 import Head from 'next/head'
-import { BannerContent, ContentSection, PlanSection } from './sections'
+import { BannerContent, ContentSection, PlanSection, Bubble } from './sections'
 import styles from './index.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
 import { LocaleContext } from 'src/scripts/translations/LocaleContext'
-
 
 const Threatsonar = () => {
   const { t } = useTranslation()
@@ -47,9 +46,7 @@ const Threatsonar = () => {
         />
         <ContentSection />
         <PlanSection />
-        <div className={styles['bubble']}>
-          <p onClick={() => { setIsOpen(true) }}>Contact Us</p>
-        </div>
+        <Bubble setIsOpen={setIsOpen} />
         {isOpen && (<div className={windowWidthRef.current !== null && windowWidthRef.current > 375 ? styles['demo-mask'] : `${styles['demo-mask']} ${styles['demo-mask-mobile']}`} >
           <img src={windowWidthRef.current !== null && windowWidthRef.current > 375 ? '/images/form_demo.png' : '/images/form_demo_mobile.png'} onClick={() => { setIsOpen(false) }} />
         </div>)}

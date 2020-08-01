@@ -34,38 +34,3 @@
     }
   }
 }
-
-.bubble {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  top: 1130px;
-  width: 40px;
-  height: 130px;
-  border-radius: 4px 0 0 4px;
-  background-color: $vision-yello;
-  color: white;
-  z-index: 3;
-  cursor: pointer;
-
-  p {
-    transform: rotate(-90deg);
-    white-space: nowrap;
-    font-size: 20px;
-    color: white;
-  }
-}
-
-@media screen and (max-width: 1439px) {
-  .bubble {
-    top: 650px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .bubble {
-    top: 569px;
-  }
-}

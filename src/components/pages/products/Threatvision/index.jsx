@@ -4,7 +4,7 @@ import Head from 'next/head'
 import styles from './index.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
 import { LocaleContext } from 'src/scripts/translations/LocaleContext'
-import { BannerContent, InfoSection } from './sections'
+import { BannerContent, InfoSection, Bubble } from './sections'
 
 const Threatvision = () => {
   const { t } = useTranslation()
@@ -42,9 +42,8 @@ const Threatvision = () => {
       <div className={styles['context']}>
         <BannerContent />
         <InfoSection />
-        <div className={styles['bubble']}>
-          <p onClick={() => { setIsOpen(true) }}>Contact Us</p>
-        </div>
+        <Bubble setIsOpen={setIsOpen}/>
+
         {isOpen && (<div className={windowWidthRef.current !== null && windowWidthRef.current > 375 ? styles['demo-mask'] : `${styles['demo-mask']} ${styles['demo-mask-mobile']}`} >
           <img src={windowWidthRef.current !== null && windowWidthRef.current > 375 ? '/images/form_demo.png' : '/images/form_demo_mobile.png'} onClick={() => { setIsOpen(false) }} />
         </div>)

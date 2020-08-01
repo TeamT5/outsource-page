@@ -1,0 +1,37 @@
+@import 'styles/general.scss';
+
+.bubble {
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 130px;
+  border-radius: 4px 0 0 4px;
+  background-color: $sonar-red;
+  color: white;
+  z-index: 3;
+  cursor: pointer;
+
+  p {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    font-size: 20px;
+    color: white;
+  }
+}
+
+
+//@media screen and (max-width: 1439px) {
+//  .bubble {
+//    top: 650px;
+//  }
+//}
+//
+//@media screen and (max-width: 767px) {
+//  .bubble {
+//    top: 569px;
+//  }
+//}
