@@ -69,14 +69,12 @@
     padding: 0px calc((100% - 1000px) / 2) 100px;
   }
 }
+
 .card-reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-
-
-
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .card{
     padding: 40px calc((100% - 800px) / 2) 200px;
     &:nth-of-type(1),
@@ -107,7 +105,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .card{
     padding: 40px calc((100% - 620px) / 2) 80px;
 
@@ -150,7 +148,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .card{
     width: 100%;
     flex-direction: column-reverse;
@@ -195,5 +193,4 @@
       }
     }
   }
-        
 }

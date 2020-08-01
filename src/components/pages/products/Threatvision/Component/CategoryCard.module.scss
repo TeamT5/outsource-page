@@ -115,7 +115,7 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .card {
     padding: 0 calc((100% - 800px) / 2);
     .image-wrap {
@@ -179,7 +179,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .card {
       padding: 0 74px;
 
@@ -229,12 +229,13 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .card {
       padding: 0 30px;
       flex-direction: column-reverse;
       align-items: center;
       flex-wrap: wrap;
+
       .image-wrap {
         max-width: 288px;
         height: 240px;

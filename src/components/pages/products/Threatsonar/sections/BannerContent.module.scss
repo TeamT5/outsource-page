@@ -98,13 +98,13 @@ $title-font: 100px;
   background: rgba(0, 0, 0, 0.35);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   .title-wrap {
     left: 143px;
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .title-wrap {
     left: 112px;
     top: 276px;
@@ -131,7 +131,7 @@ $title-font: 100px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .container {
     padding: 0 3rem;
   }
@@ -164,7 +164,7 @@ $title-font: 100px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .container {
     padding: 0 2rem;
   }

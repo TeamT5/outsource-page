@@ -1,41 +1,41 @@
-import React from "react";
-import styles from "./BannerContent.module.scss";
-import useTranslation from "src/scripts/translations/useTranslation";
+import React from 'react'
+import styles from './BannerContent.module.scss'
+import useTranslation from 'src/scripts/translations/useTranslation'
 
 const BannerContent = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
-    <div className={styles["container"]}>
-      <div className={styles["title-wrap"]}>
+    <div className={styles['container']}>
+      <div className={styles['title-wrap']}>
         <img
-          className={styles["title-img"]}
+          className={styles['title-img']}
           src="/images/ThreatVision/tv_logo.svg"
         />
-        <div className={styles["title-box"]}>
+        <div className={styles['title-box']}>
           <p
             dangerouslySetInnerHTML={{
-              __html: `${t("solution.vision.title")}`,
+              __html: `${t('solution.vision.title')}`,
             }}
-            className={styles["title"]}
+            className={styles['title']}
           />
-          <div className={styles["light-height"]}></div>
+          <div className={styles['light-height']}></div>
         </div>
       </div>
       <img
-        className={styles["left-hero"]}
+        className={styles['left-hero']}
         src="/images/ThreatVision/vision_hero_left.png"
       />
       <img
-        className={styles["right-up-hero"]}
+        className={styles['right-up-hero']}
         src="/images/ThreatVision/vision_hero_right_up.png"
       />
       <img
-        className={styles["right-down-hero"]}
+        className={styles['right-down-hero']}
         src="/images/ThreatVision/vision_hero_right_down.png"
       />
-      <img className={styles["mask"]} />
+      <img className={styles['mask']} />
     </div>
-  );
-};
+  )
+}
 
-export default BannerContent;
+export default BannerContent

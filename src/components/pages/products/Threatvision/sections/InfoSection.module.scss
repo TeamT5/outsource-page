@@ -3,6 +3,7 @@
 .tab-container {
   box-sizing: border-box;
 }
+
 .tab-wrap {
   max-width: 840px;
   width: 100%;
@@ -11,12 +12,13 @@
   position: absolute;
   bottom: 100%;
   z-index: 2;
+
   .tab {
+    font-family: Helvetica;
     box-sizing: border-box;
     background: #c8bdb8;
     border-style: none;
     border-radius: 12px 12px 0 0;
-    font-family: Helvetica;
     text-align: center;
     font-size: 24px;
     color: #4c433f;
@@ -134,7 +136,7 @@
   height: 465px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   .xgrid-container-left {
     width: 244px;
     height: 230px;
@@ -147,10 +149,11 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .tab-box {
     max-width: 800px;
   }
+
   .xgrid-container-left {
     left: -40px;
   }
@@ -158,14 +161,18 @@
   .xgrid-container-right {
     right: -126px;
   }
+
   .category-container{
     top: -14px;
   }
+
   .newswall-container {
     padding: 0 24px 0 100px;
   }
+
   .tab-wrap {
     max-width: 800px;
+
     .tab {
       font-size: 20px;
     }
@@ -203,7 +210,8 @@
   .tab-content-apac {
     .context {
       .img-box {
-        padding: 30px 18px ;
+        padding: 30px 18px;
+
         .card-title {
           font-size: 20px;
         }
@@ -217,8 +225,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-
+@media screen and (max-width: 1023px) {
   .xgrid-container-left {
     width: 179px;
     height: 231px;
@@ -236,14 +243,17 @@
   .newswall-container {
     padding: 0 10px 40px 64px;
   }
+
   .tab-content-ce,
   .tab-content-apac {
     max-width: 620px;
     width: 100%;
+
     .title {
       padding: 30px 10px 44px 0;
     }
   }
+
   .tab-content-ce {
     width: 620px;
     margin: 0 auto;
@@ -293,18 +303,20 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .tab-container {
     .tab-wrap {
-      .tab{
+      .tab {
         white-space: pre-wrap;
         text-align: left;
         padding: 18px 20px;
-        span{
+
+        span {
           display: block;
         }
       }
     }
+
     .tab-content-ce,
     .tab-content-apac {
       max-width: 375px;
@@ -329,6 +341,7 @@
           align-items: center;
           justify-content: flex-start;
           padding:30px 20px;
+
           img {
             max-width: 100px;
             margin-right: 15px;
@@ -349,10 +362,11 @@
       }
     }
   }
+
   .tab-box {
     max-width: none;
   }
-  
+
   .category-container {
     top: 86px;
   }

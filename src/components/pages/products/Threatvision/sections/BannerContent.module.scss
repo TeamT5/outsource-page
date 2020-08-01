@@ -1,6 +1,5 @@
 @import 'styles/general.scss';
 
-
 .container {
   font-family: Helvetica;
   color: white;
@@ -83,7 +82,7 @@
   background: rgba(0, 0, 0, .35);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   .title-wrap {
     right: 140px;
   }
@@ -97,7 +96,7 @@
     bottom: -164px;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   .title-wrap {
     right: 112px;
 
@@ -133,7 +132,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .title-wrap {
     right: 75px;
 
@@ -166,7 +165,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .title-wrap {
     right: 50%;
     transform: translate(50%, 0);
