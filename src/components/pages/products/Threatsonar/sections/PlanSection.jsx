@@ -5,16 +5,16 @@ import { XGrid } from '../../../../common/ui-components'
 
 const whys = [
   {
-    title: 'solution.sonar.why.intel.correlation.title',
+    title: 'solution.sonar.why.intel-correlation.title',
     traits: [
-      'solution.sonar.why.intel.correlation.trait-1',
-      'solution.sonar.why.intel.correlation.trait-2',
+      'solution.sonar.why.intel-correlation.trait-1',
+      'solution.sonar.why.intel-correlation.trait-2',
     ],
     img: '/images/ThreatSonar/why_IntelligenceCorelation.svg',
   },
   {
     title: 'solution.sonar.why.cross-platform.title',
-    traits: ['solution.sonar.why.cross-platform.trait-1'],
+    traits: ['solution.sonar.why.cross-platform.trait-1', 'solution.sonar.why.cross-platform.trait-2'],
     img: '/images/ThreatSonar/why_Cross-platformOperation.svg',
   },
   {

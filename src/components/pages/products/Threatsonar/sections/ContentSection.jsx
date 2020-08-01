@@ -42,8 +42,8 @@ const ContentSection = () => {
           <div key={index} className={renderClassName(contentItem)}>
             <img src={contentItem.img} />
             <div className={styles['content']}>
-              <h4 className={styles['title']}>{t(contentItem.title)}</h4>
-              <p
+              <h4 className={styles['title']} dangerouslySetInnerHTML={{ __html: t(contentItem.title) }} />
+              <div
                 className={styles['text']}
                 dangerouslySetInnerHTML={{ __html: t(contentItem.context) }}
               />

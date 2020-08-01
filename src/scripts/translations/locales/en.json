@@ -31,7 +31,7 @@
       "title": "Our Leadership",
       "content": {
         "title": "Sung-ting Tsai (TT)",
-        "context": "As the founder and CEO of TeamT5, Sung-ting Tsai (TT) has more than 16 years of experience in the security industry. With solid technical background and strong understanding of cyber threats, TT has been leading the team to develop unique and effective threat hunting technologies and solutions.<s>With great passion for cyber security, TT has also volunteered himself as a core member in the HITCON community, and was one of the founding members and the first chairman of HITCON. Moreover, TT is an internationally recognized expert on cyber threat intelligence and advanced information security technology. He frequently publishes his latest research at the world’s top information security conferences, including Black Hat, Code Blue, Kaspersky Security Analyst Summit, etc."
+        "context": "As the founder and CEO of TeamT5, Sung-ting Tsai (TT) has more than 16 years of experience in the security industry. With solid technical background and strong understanding of cyber threats, TT has been leading the team to develop unique and effective threat hunting technologies and solutions.<p>With great passion for cyber security, TT has also volunteered himself as a core member in the HITCON community, and was one of the founding members and the first chairman of HITCON. Moreover, TT is an internationally recognized expert on cyber threat intelligence and advanced information security technology. He frequently publishes his latest research at the world’s top information security conferences, including Black Hat, Code Blue, Kaspersky Security Analyst Summit, etc."
       }
     },
     "our-cyber-threat-experts": {
@@ -54,7 +54,7 @@
         "context": "Get ahead of your adversaries with the most effective APT hunting solution and MDR platform."
       },
       "intro": {
-        "context": "APT attacks are far more prevalent and sophisticated than ever. <br/>But, how can you recognize a silent and unnoticed sneak attack?<s>ThreatSonar provides an advanced threat hunting solution to help discover threats in a post-compromised environment."
+        "context": "APT attacks are far more prevalent and sophisticated than ever. <br> But, how can you recognize a silent and unnoticed sneak attack?<p>ThreatSonar provides an advanced threat hunting solution to help discover threats in a post-compromised environment.</p>"
       },
       "function": {
         "ca-title": "Compromise Assessment",
@@ -70,12 +70,10 @@
           "title": "We See the Invisibles",
           "context": "Most security solutions are based on prevention, yet attackers still breach in. Empowered by our in-depth threat intelligence with up-to-date knowledge of more than 100+ adversaries, ThreatSonar connects the dots to identify and analyze intruders in a breached environment."
         },
-        "intel": {
-          "correlation": {
-            "title": "Intelligence Correlation",
-            "trait-1": "Heuristic techniques for the unknown",
-            "trait-2": "Yara rules for hidden threats"
-          }
+        "intel-correlation": {
+          "title": "Intelligence Correlation",
+          "trait-1": "Heuristic techniques for the unknown",
+          "trait-2": "Yara rules for hidden threats"
         },
         "cross-platform": {
           "title": "Cross-platform Operation",
