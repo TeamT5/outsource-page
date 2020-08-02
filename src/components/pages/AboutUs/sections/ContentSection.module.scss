@@ -23,23 +23,41 @@
       margin: 0;
       font-size: 24px;
       color: #4C433F;
+      opacity: 0;
+      transform: translateY(-80px);
+
+      &.show {
+        animation: fadeIn .6s .5s forwards;
+      }
     }
   }
+
+
 
   .right-side {
     flex: 3 1.2 0;
 
-    .leadership-head {
-      font-size: 16px;
-      font-weight: bold;
-      margin: 0;
-      padding-bottom: 4px;
-      border-bottom: 2px solid #C8BDB8;
-    }
+    .leadership-content {
+      opacity: 0;
+      transform: translateY(-80px);
 
-    .article-context {
-      text-align: left;
-      line-height: 1.5;
+      &.show {
+        animation: fadeIn .6s 1s forwards;
+      }
+
+      .leadership-head {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 2px;
+        border-bottom: 2px solid #C8BDB8;
+
+      }
+
+      .article-context {
+        text-align: left;
+        line-height: 1.5;
+      }
     }
 
     img {
@@ -49,6 +67,21 @@
       margin: 7px 12px 7px 0;
     }
   }
+
+  @keyframes fadeIn {
+    0% {
+      -webkit-transform: translateY(-80px);
+      transform: translateY(-80px);
+      opacity: 0
+    }
+
+    to {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1
+    }
+  }
+
 }
 
 .card-with-photo-container {
@@ -68,6 +101,7 @@
           100% 100%,
           100% 0%);
       transition: 1s clip-path;
+      transition-delay: 1s;
 
       &.show {
         clip-path: polygon(100% 0%,
@@ -77,9 +111,16 @@
       }
     }
 
-
-    .leadership-head {
+    .leadership-content {
       margin-left: calc(250px + 7px);
+
+      &.show {
+        animation-delay: 1.5s;
+      }
+
+      .leadership-head {
+        width: 100%;
+      }
     }
   }
 }
@@ -89,8 +130,23 @@
     margin-bottom: 60px
   }
 
-  .leadership-text {
-    color: #4C433F;
+  .left-side {
+    .leadership-text {
+      color: #4C433F;
+
+      &.show {
+        animation-delay: 1.8s;
+      }
+    }
+
+  }
+
+  .right-side {
+    .leadership-content {
+      &.show {
+        animation-delay: 2s;
+      }
+    }
   }
 }
 
@@ -200,10 +256,15 @@
         max-width: 180px;
       }
 
-      .leadership-head {
+      .leadership-content {
         margin-left: 0;
         padding-bottom: 6px;
       }
+
+      // .leadership-head {
+      //   margin-left: 0;
+      //   padding-bottom: 6px;
+      // }
     }
   }
 
