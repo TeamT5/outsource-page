@@ -1,4 +1,10 @@
-import React, { useRef, useState, useEffect, createRef } from "react";
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  createRef,
+  useCallback,
+} from "react";
 import styles from "./NewsWall.module.scss";
 import useTranslation from "src/scripts/translations/useTranslation";
 
@@ -16,7 +22,7 @@ const newsWallConfig = {
 
 const NewsWall = () => {
   const { t } = useTranslation();
-  const dialogCardRefs = useRef(newsWallConfig.news.map((_, i) => createRef()));
+  const dialogCardRefs = useRef(newsWallConfig.news.map(() => createRef()));
   const [currentScrollTop, setCurrentScrollTop] = useState({
     offsetHeight: 0,
     clientHeight: 0,
@@ -37,33 +43,41 @@ const NewsWall = () => {
       document.removeEventListener("scroll", getScrollTop);
     };
   }, []);
-  const renderDialogShowClassName = (i) => {
-    if (
-      dialogCardRefs.current[i] &&
-      dialogCardRefs.current[i].current &&
-      !dialogCardRefs.current[i].current.isShow &&
-      currentScrollTop.scrollTop -
-        currentScrollTop.clientHeight -
-        dialogCardRefs.current[i].current.getBoundingClientRect().top >=
-        dialogCardRefs.current[i].current.getBoundingClientRect().top
-    ) {
-      return styles["show"];
-    }
-    return "";
-  };
+  const isShowClass = useCallback(
+    (currentRef) => {
+      if (!currentRef.current) {
+        return "";
+      }
+      if (currentRef.current.className.indexOf("show") > -1) {
+        return styles["show"];
+      }
+      if (
+        currentScrollTop.scrollTop -
+          currentScrollTop.clientHeight / 2 -
+          currentRef.current.getBoundingClientRect().top >=
+        currentRef.current.getBoundingClientRect().top
+      ) {
+        return styles["show"];
+      }
+      return "";
+    },
+    [currentScrollTop]
+  );
   return (
     <div className={styles["container"]}>
       <h3
         className={[styles["title"]]}
         dangerouslySetInnerHTML={{ __html: `${t(newsWallConfig.title)}` }}
       />
-      {dialogCardRefs.current.map((_, index) => (
+      {newsWallConfig.news.map((dialog, index) => (
         <div
           key={index}
-          className={`${styles["dialog"]} ${renderDialogShowClassName(index)}`}
+          className={`${styles["dialog"]} ${isShowClass(
+            dialogCardRefs.current[index]
+          )}`}
           ref={dialogCardRefs.current[index]}
           dangerouslySetInnerHTML={{
-            __html: `${t(newsWallConfig.news[index])}`,
+            __html: `${t(dialog)}`,
           }}
         />
       ))}

@@ -20,28 +20,31 @@
     position: relative;
     padding: 40px calc((100% - 1000px) / 2) 200px;
     margin: 0 auto;
+
     img {
-        max-width: 480px;
-        height: auto;
-        z-index: 1;
+      max-width: 480px;
+      height: auto;
+      z-index: 1;
+      visibility: hidden;
     }
     .content {
-        max-width: 420px;
-        z-index: 1;
-        .title {
-            font-size: 32px;
-            color: #24231F;
-            line-height: 48px;
-            margin-bottom: 0 0 36px 0;
-        }
-
-        .text {
-            font-size: 20px;
-            color: #24231F;
-            line-height: 28px;
-            margin: 0;
-        }
+      max-width: 420px;
+      z-index: 1;
+      visibility: hidden;
+      .title {
+        font-size: 32px;
+        color: #24231F;
+        line-height: 48px;
+        margin-bottom: 0 0 36px 0;
+      }
+      .text {
+        font-size: 20px;
+        color: #24231F;
+        line-height: 28px;
+        margin: 0;
+      }
     }
+
   &:nth-of-type(1),&:nth-of-type(3){
     &::before {
       background-color: #F0EFF0;
@@ -56,17 +59,57 @@
     &::before {
         clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
     }
+    &.show{
+      img {
+        visibility: visible;
+        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      }
+      .content{
+        visibility: visible;
+        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      }
+    }
   }
   &:nth-of-type(2){
     padding: 20px calc((100% - 1000px) / 2) 140px;
+    &.show{
+      img {
+        visibility: visible;
+        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.1s both;
+      }
+      .content{
+        visibility: visible;
+        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.1s both;
+      }
+    }
   }
   &:nth-of-type(3){
     &::before {
       clip-path: polygon(0 0, 100% 25%, 100% 79%, 0% 100%);
     }
+    &.show{
+      img {
+        visibility: visible;
+        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+      }
+      .content{
+        visibility: visible;
+        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+      }
+    }
   }
   &:nth-of-type(4){
     padding: 0px calc((100% - 1000px) / 2) 100px;
+    &.show{
+      img {
+        visibility: visible;
+        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+      }
+      .content{
+        visibility: visible;
+        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+      }
+    }
   }
 }
 
@@ -192,5 +235,24 @@
           font-size: 18px;
       }
     }
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes clip-path-in {
+  0% {
+    clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+  }
+  100% {
+    clip-path: polygon(0% 0%,0% 100%,100% 100%,100% 0%);
   }
 }

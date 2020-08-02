@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import styles from "./InfoSection.module.scss";
 import useTranslation from "src/scripts/translations/useTranslation";
 import {
@@ -56,54 +56,13 @@ const imagesConfig = {
 const Tab = () => {
   const { t } = useTranslation();
   const [tabIndex, setTabIndex] = useState(0);
-  const renderTabContent = () => {
-    if (tabIndex === 0) {
-      return (
-        <div className={styles["tab-content-ce"]}>
-          <p
-            className={styles["title"]}
-            dangerouslySetInnerHTML={{ __html: `${t(tabConfig.ce.context)}` }}
-          />
-          <div className={styles["context"]}>
-            {imagesConfig.ce.map((card, index) => {
-              return (
-                <div className={styles["img-box"]} key={index}>
-                  <img src={card.img} />
-                  <p
-                    className={styles["card-title"]}
-                    dangerouslySetInnerHTML={{ __html: `${t(card.title)}` }}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      );
+  const isShowClass = (thisTabIndex) => {
+    if (tabIndex === thisTabIndex) {
+      return styles["show"];
     }
-    return (
-      <div className={`${styles["tab-content-apac"]}`}>
-        <p
-          className={styles["title"]}
-          dangerouslySetInnerHTML={{
-            __html: `${t(tabConfig.apac.context)}`,
-          }}
-        />
-        <div className={styles["context"]}>
-          {imagesConfig.apac.map((card, index) => {
-            return (
-              <div className={styles["img-box"]} key={index}>
-                <img src={card.img} />
-                <p
-                  className={styles["card-title"]}
-                  dangerouslySetInnerHTML={{ __html: `${t(card.title)}` }}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
+    return "";
   };
+
   return (
     <div className={styles["tab-container"]}>
       <div className={styles["tab-wrap"]}>
@@ -130,7 +89,46 @@ const Tab = () => {
           }
         />
       </div>
-      {renderTabContent()}
+      <div className={`${styles["tab-content-ce"]} ${isShowClass(0)}`}>
+        <p
+          className={styles["title"]}
+          dangerouslySetInnerHTML={{ __html: `${t(tabConfig.ce.context)}` }}
+        />
+        <div className={styles["context"]}>
+          {imagesConfig.ce.map((card, index) => {
+            return (
+              <div className={styles["img-box"]} key={index}>
+                <img src={card.img} />
+                <p
+                  className={styles["card-title"]}
+                  dangerouslySetInnerHTML={{ __html: `${t(card.title)}` }}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className={`${styles["tab-content-apac"]} ${isShowClass(1)}`}>
+        <p
+          className={styles["title"]}
+          dangerouslySetInnerHTML={{
+            __html: `${t(tabConfig.apac.context)}`,
+          }}
+        />
+        <div className={styles["context"]}>
+          {imagesConfig.apac.map((card, index) => {
+            return (
+              <div className={styles["img-box"]} key={index}>
+                <img src={card.img} />
+                <p
+                  className={styles["card-title"]}
+                  dangerouslySetInnerHTML={{ __html: `${t(card.title)}` }}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

@@ -70,13 +70,11 @@
 
   @keyframes fadeIn {
     0% {
-      -webkit-transform: translateY(-80px);
       transform: translateY(-80px);
       opacity: 0
     }
 
     to {
-      -webkit-transform: translateY(0);
       transform: translateY(0);
       opacity: 1
     }
@@ -113,11 +111,6 @@
 
     .leadership-content {
       margin-left: calc(250px + 7px);
-
-      &.show {
-        animation-delay: 1.5s;
-      }
-
       .leadership-head {
         width: 100%;
       }
@@ -133,20 +126,8 @@
   .left-side {
     .leadership-text {
       color: #4C433F;
-
-      &.show {
-        animation-delay: 1.8s;
-      }
     }
 
-  }
-
-  .right-side {
-    .leadership-content {
-      &.show {
-        animation-delay: 2s;
-      }
-    }
   }
 }
 
@@ -260,11 +241,6 @@
         margin-left: 0;
         padding-bottom: 6px;
       }
-
-      // .leadership-head {
-      //   margin-left: 0;
-      //   padding-bottom: 6px;
-      // }
     }
   }
 

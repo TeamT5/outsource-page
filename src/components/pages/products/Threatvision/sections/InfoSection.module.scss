@@ -37,11 +37,17 @@
     }
   }
 }
-
+.tab-content-hidden{
+  opacity: 0;
+}
 .tab-content-ce,
 .tab-content-apac {
   width: 100%;
-
+  display: none;
+  &.show{
+    display: block;
+    animation: fade-in 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
   .title {
     box-sizing: border-box;
     padding: 23px 220px 17px 20px;
