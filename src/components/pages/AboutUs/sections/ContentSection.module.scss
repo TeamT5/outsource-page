@@ -9,20 +9,26 @@
   font-size: 16px;
   color: #4C433F;
 }
-.card-container,.card-with-photo-container{
+
+.card-container,
+.card-with-photo-container {
   display: flex;
   width: 1000px;
   margin: 0 auto;
+
   .left-side {
     flex: 1.2 3 0;
+
     .leadership-text {
       margin: 0;
       font-size: 24px;
       color: #4C433F;
     }
   }
+
   .right-side {
     flex: 3 1.2 0;
+
     .leadership-head {
       font-size: 16px;
       font-weight: bold;
@@ -44,8 +50,34 @@
     }
   }
 }
+
 .card-with-photo-container {
   .right-side {
+    position: relative;
+
+    .mask {
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 7px;
+      background-color: white;
+      clip-path: polygon(0% 0%,
+          0% 100%,
+          100% 100%,
+          100% 0%);
+      transition: 1s clip-path;
+
+      &.show {
+        clip-path: polygon(100% 0%,
+            100% 100%,
+            100% 100%,
+            100% 0%);
+      }
+    }
+
+
     .leadership-head {
       margin-left: calc(250px + 7px);
     }
@@ -56,6 +88,7 @@
   & :not(:last-child) {
     margin-bottom: 60px
   }
+
   .leadership-text {
     color: #4C433F;
   }
@@ -76,6 +109,7 @@
   .card-container {
     flex-direction: column;
     width: 800px;
+
     & :not(:last-child) {
       margin-bottom: 60px
     }
@@ -83,6 +117,7 @@
 
   .card-with-photo-container {
     margin-bottom: 60px;
+
     .left-side {
       flex: 1 4 0;
       margin-bottom: 47px;

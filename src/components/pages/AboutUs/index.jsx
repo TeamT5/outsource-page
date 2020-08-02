@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect, useRef, useCallback } from 'react'
 import BaseLayout from '../../layout/BaseLayout'
 import { BannerContent, ContentSection } from './sections'
 import useTranslation from 'src/scripts/translations/useTranslation'
@@ -8,8 +8,9 @@ import Head from 'next/head'
 
 const AboutUs = () => {
   const { t } = useTranslation()
-  const [section1Loaded, setSection1Loaded] = useState(false)
   const localContext = useContext(LocaleContext)
+
+
   return (
     <BaseLayout loadFinished={true}>
       <Head>
@@ -36,9 +37,6 @@ const AboutUs = () => {
       <div className={styles['context']}>
         <BannerContent
           className={styles['hero-img']}
-          onLoaded={() => {
-            setSection1Loaded(true)
-          }}
         />
         <ContentSection />
       </div>

@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useRef, useEffect, useState } from 'react'
 import styles from './ContentSection.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
+
 
 const content = [
   {
@@ -22,6 +23,22 @@ const content = [
 ]
 const ContentSection = () => {
   const { t } = useTranslation()
+  const cardRef = useRef(null)
+  const [currentScrollTop, setCurrentScrollTop] = useState({ offsetHeight: 0, clientHeight: 0, scrollTop: 0 })
+
+  const getScrollTop = (e) => {
+    const { offsetHeight, clientHeight, scrollTop } = e.target.scrollingElement
+    if (currentScrollTop.scrollTop === scrollTop) { return }
+    setCurrentScrollTop({ offsetHeight, clientHeight, scrollTop })
+  }
+
+  useEffect(() => {
+    document.addEventListener('scroll', getScrollTop)
+    return () => {
+      document.removeEventListener('scroll', getScrollTop)
+    }
+  }, [])
+
   return (
     <div className={styles['container']}>
       <div
@@ -31,6 +48,7 @@ const ContentSection = () => {
           <h5 className={styles['leadership-text']} dangerouslySetInnerHTML={{ __html: t('about-us.our-leadership.title') }} />
         </div>
         <div className={styles['right-side']}>
+          <div ref={cardRef} className={`${styles['mask']} ${cardRef.current && (currentScrollTop.clientHeight + currentScrollTop.scrollTop) >= cardRef.current.getBoundingClientRect().top ? styles['show'] : ''}`}></div>
           <img src="/images/about_us/CEO_TT.jpg" />
           <p className={styles['leadership-head']} dangerouslySetInnerHTML={{ __html: t('about-us.our-leadership.content.title') }} />
           <div className={styles['article-context']} dangerouslySetInnerHTML={{ __html: t('about-us.our-leadership.content.context') }} />
@@ -52,5 +70,8 @@ const ContentSection = () => {
     </div>
   )
 }
+
+ContentSection.displayName = 'ContentSection'
+
 
 export default ContentSection
