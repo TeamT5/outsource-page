@@ -134,7 +134,7 @@
         "ce-context": "Grow your business in a threat-free environment with our intuitive interface. Further analysis is upon request and conducted by our 10+ years’ experience analysts.",
         "ce-trait-1": "Online sandbox",
         "ce-trait-2": "Keyword search engine",
-        "ce-trait-3": "Technical data (hash, domains, IP, etc.)",
+        "ce-trait-3": "Technical data <span>(hash, domains, IP, etc.)</span>",
         "ce-trait-4": "API",
         "apac-title": "APAC centric, World-wide Tracking",
         "apac-context": "Mitigate your risk with our in-depth research on Advanced Persistent Threat (APT) activities and Open Source Intelligence analysis.",

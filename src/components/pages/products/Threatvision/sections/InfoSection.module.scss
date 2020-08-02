@@ -27,6 +27,7 @@
     padding: 25px 40px;
     margin-right: 2px;
     white-space: nowrap;
+    font-weight: bold;
     &:focus {
       outline: none;
     }
@@ -43,7 +44,7 @@
 
   .title {
     box-sizing: border-box;
-    padding: 23px 260px 17px 20px;
+    padding: 23px 220px 17px 20px;
     margin: 0;
     font-size: 18px;
     line-height: 1.5;
@@ -68,6 +69,10 @@
         color: #4c433f;
         text-align: center;
         line-height: 1.2;
+        font-weight: bold;
+        span{
+          font-size: 16px;
+        }
       }
 
       img {
@@ -81,12 +86,9 @@
 
 .tab-content-apac {
   .context {
-    display: flex;
-    justify-content: space-between;
-
     .img-box {
       width: 32%;
-      padding: 30px 15px;
+      padding: 30px 15px 44px;
     }
   }
 }
@@ -210,7 +212,7 @@
   .tab-content-apac {
     .context {
       .img-box {
-        padding: 30px 18px;
+        padding: 30px 18px 20px;
 
         .card-title {
           font-size: 20px;
@@ -255,7 +257,6 @@
   }
 
   .tab-content-ce {
-    width: 620px;
     margin: 0 auto;
 
     .context {
@@ -283,8 +284,7 @@
   }
 
   .tab-content-apac {
-    width: 620px;
-    margin: 0 auto;
+    margin: 0 auto 76px;
 
     .context {
       .img-box {
@@ -378,5 +378,13 @@
   .xgrid-container-left,
   .xgrid-container-right {
     display: none;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
