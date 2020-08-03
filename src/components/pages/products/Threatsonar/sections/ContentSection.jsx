@@ -7,7 +7,6 @@ import React, {
 } from "react";
 import styles from "./ContentSection.module.scss";
 import useTranslation from "src/scripts/translations/useTranslation";
-import { console } from "globalthis/implementation";
 
 const content = [
   {

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
-import styles from './bubble.module.scss'
-
-const Bubble = ({setIsOpen}) => {
-  const GO_TO_TOP_BUTTON_PX_HEIGHT = 84
-  const MARGIN_BOTTOM_PX_LENGTH = 20
-  const [bottom, setBottom] = useState(MARGIN_BOTTOM_PX_LENGTH)
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import styles from "./Bubble.module.scss";
+const GO_TO_TOP_BUTTON_PX_HEIGHT = 84;
+const MARGIN_BOTTOM_PX_LENGTH = 20;
+const Bubble = ({ setIsOpen }) => {
+  const [bottom, setBottom] = useState(MARGIN_BOTTOM_PX_LENGTH);
 
   useEffect(() => {
     /**
@@ -14,30 +13,48 @@ const Bubble = ({setIsOpen}) => {
      * 否則固定在下緣向上 20px
      */
     const handleScroll = (e) => {
-      const footerHeight = document.querySelector('footer').getBoundingClientRect().height
-      const {offsetHeight, clientHeight, scrollTop} = e.target.scrollingElement
-      const distanceOfBottom = offsetHeight - clientHeight - scrollTop
-      const checkHeight = (footerHeight + (GO_TO_TOP_BUTTON_PX_HEIGHT / 2) + MARGIN_BOTTOM_PX_LENGTH)
+      const footerHeight = document
+        .querySelector("footer")
+        .getBoundingClientRect().height;
+      const {
+        offsetHeight,
+        clientHeight,
+        scrollTop,
+      } = e.target.scrollingElement;
+      const distanceOfBottom = offsetHeight - clientHeight - scrollTop;
+      const checkHeight =
+        footerHeight + GO_TO_TOP_BUTTON_PX_HEIGHT / 2 + MARGIN_BOTTOM_PX_LENGTH;
       if (distanceOfBottom <= checkHeight) {
-        setBottom(footerHeight - distanceOfBottom + (GO_TO_TOP_BUTTON_PX_HEIGHT / 2) + MARGIN_BOTTOM_PX_LENGTH)
+        setBottom(
+          footerHeight -
+            distanceOfBottom +
+            GO_TO_TOP_BUTTON_PX_HEIGHT / 2 +
+            MARGIN_BOTTOM_PX_LENGTH
+        );
       } else {
-        setBottom(MARGIN_BOTTOM_PX_LENGTH)
+        setBottom(MARGIN_BOTTOM_PX_LENGTH);
       }
-    }
+    };
 
-      window.addEventListener('scroll', handleScroll, { passive: true })
-      return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div style={{bottom: `${bottom}px`}} className={styles['bubble']}>
-      <p onClick={() => { setIsOpen(true) }}>Contact Us</p>
+    <div style={{ bottom: `${bottom}px` }} className={styles["bubble"]}>
+      <p
+        onClick={() => {
+          setIsOpen(true);
+        }}
+      >
+        Contact Us
+      </p>
     </div>
-  )
-}
+  );
+};
 
 Bubble.propTypes = {
   setIsOpen: PropTypes.func,
-}
+};
 
-export default Bubble
+export default Bubble;
