@@ -24,7 +24,7 @@
       font-size: 24px;
       color: #4C433F;
       opacity: 0;
-      transform: translateY(-80px);
+      transform: translateY(-60px);
 
       &.show {
         animation: fadeIn .6s .5s forwards;
@@ -39,7 +39,7 @@
 
     .leadership-content {
       opacity: 0;
-      transform: translateY(-80px);
+      transform: translateY(-60px);
 
       &.show {
         animation: fadeIn .6s 1s forwards;
@@ -70,7 +70,7 @@
 
   @keyframes fadeIn {
     0% {
-      transform: translateY(-80px);
+      transform: translateY(-60px);
       opacity: 0
     }
 
