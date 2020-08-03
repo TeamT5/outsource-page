@@ -41,11 +41,11 @@
     }
     &.show{
       .image-wrap{
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
   
       }
       .context{
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
       }
     }
   }
@@ -56,11 +56,11 @@
     }
     &.show{
       .image-wrap{
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.8s both;
   
       }
       .context{
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
+        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.8s both;
       }
     }
   }
@@ -74,11 +74,11 @@
     }
     &.show{
       .image-wrap{
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.9s both;
   
       }
       .context{
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
+        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.9s both;
       }
     }
     .context {
