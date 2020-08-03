@@ -44,7 +44,7 @@ module.exports = {
     paths[`/privacy-and-cookies-policy`] = { page: '/privacy-and-cookies-policy' }
     paths[`/products/threatsonar`] = { page: '/products/threatsonar' }
     paths[`/products/threatvision`] = { page: '/products/threatvision' }
-    paths[`/contact-us`] = { page: '/contact-us' }
+    paths[`/about-us`] = { page: '/about-us' }
 
     locales.forEach((locale) => {
       paths[`/${locale}`] = { page: '/[lang]', query: { lang: locale }}
@@ -54,7 +54,7 @@ module.exports = {
       paths[`/${locale}/privacy-and-cookies-policy`] = { page: '/[lang]/privacy-and-cookies-policy', query: { lang: locale }}
       paths[`/${locale}/products/threatsonar`] = { page: '/[lang]/products/threatsonar', query: { lang: locale } }
       paths[`/${locale}/products/threatvision`] = { page: '/[lang]/products/threatvision', query: { lang: locale } }
-      paths[`/${locale}/contact-us`] = { page: '/[lang]/contact-us', query: { lang: locale } }
+      paths[`/${locale}/about-us`] = { page: '/[lang]/about-us', query: { lang: locale } }
     })
 
     return paths;
