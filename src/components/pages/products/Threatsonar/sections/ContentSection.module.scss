@@ -28,9 +28,9 @@
       visibility: hidden;
     }
     .content {
+      visibility: hidden;
       max-width: 420px;
       z-index: 1;
-      visibility: hidden;
       .title {
         font-size: 32px;
         color: #24231F;
@@ -55,61 +55,31 @@
       height: 755px;
     }
   }
+  &.show{
+    img {
+      visibility: visible;
+      animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+    .content{
+      visibility: visible;
+      animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+  }
   &:nth-of-type(1) {
     &::before {
         clip-path: polygon(0 0, 100% 0, 100% 79%, 0% 100%);
     }
-    &.show{
-      img {
-        visibility: visible;
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-      }
-      .content{
-        visibility: visible;
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-      }
-    }
   }
   &:nth-of-type(2){
     padding: 20px calc((100% - 1000px) / 2) 140px;
-    &.show{
-      img {
-        visibility: visible;
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.1s both;
-      }
-      .content{
-        visibility: visible;
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.1s both;
-      }
-    }
   }
   &:nth-of-type(3){
     &::before {
       clip-path: polygon(0 0, 100% 25%, 100% 79%, 0% 100%);
     }
-    &.show{
-      img {
-        visibility: visible;
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
-      }
-      .content{
-        visibility: visible;
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
-      }
-    }
   }
   &:nth-of-type(4){
     padding: 0px calc((100% - 1000px) / 2) 100px;
-    &.show{
-      img {
-        visibility: visible;
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
-      }
-      .content{
-        visibility: visible;
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
-      }
-    }
   }
 }
 

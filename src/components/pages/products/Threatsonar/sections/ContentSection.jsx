@@ -1,12 +1,7 @@
-import React, {
-  useRef,
-  useState,
-  useEffect,
-  createRef,
-  useCallback,
-} from "react";
+import React, { useState } from "react";
 import styles from "./ContentSection.module.scss";
 import useTranslation from "src/scripts/translations/useTranslation";
+import IntersectionVisible from "react-intersection-visible";
 
 const content = [
   {
@@ -41,57 +36,33 @@ const renderClassName = (contentItem) => {
 };
 const ContentSection = () => {
   const { t } = useTranslation();
-  const contentRefs = useRef(content.map(() => createRef()));
-  const [currentScrollTop, setCurrentScrollTop] = useState({
-    offsetHeight: 0,
-    clientHeight: 0,
-    scrollTop: 0,
-  });
-
-  const getScrollTop = (e) => {
-    const { offsetHeight, clientHeight, scrollTop } = e.target.scrollingElement;
-    if (currentScrollTop.scrollTop === scrollTop) {
-      return;
-    }
-    setCurrentScrollTop({ offsetHeight, clientHeight, scrollTop });
-  };
-
-  useEffect(() => {
-    document.addEventListener("scroll", getScrollTop);
-    return () => {
-      document.removeEventListener("scroll", getScrollTop);
-    };
-  }, []);
-  const isShowClass = useCallback(
-    (currentRef) => {
-      if (!currentRef.current) {
-        return "";
-      }
-      if (currentRef.current.className.indexOf("show") > -1) {
-        return styles["show"];
-      }
-      if (
-        currentScrollTop.scrollTop +
-          currentScrollTop.clientHeight -
-          currentRef.current.getBoundingClientRect().top * 3 >=
-        currentRef.current.getBoundingClientRect().top
-      ) {
-        return styles["show"];
-      }
-      return "";
-    },
-    [currentScrollTop]
+  const [scrollToThisElementArr, setScrollToThisElementArr] = useState(
+    content.map(() => false)
   );
+  const onShow = (e, index) => {
+    if (e && !scrollToThisElementArr[index]) {
+      setScrollToThisElementArr((prevState) =>
+        prevState.map((isShow, i) => (i === index ? true : isShow))
+      );
+    }
+  };
+  const renderShowClass = (index) => {
+    if (scrollToThisElementArr[index]) {
+      return styles["show"];
+    }
+    return "";
+  };
   return (
     <div className={styles["container"]}>
       {content.map((contentItem, index) => {
         return (
-          <div
+          <IntersectionVisible
             key={index}
-            className={`${renderClassName(contentItem)} ${isShowClass(
-              contentRefs.current[index]
+            onShow={(e) => onShow(e, index)}
+            className={`${renderClassName(contentItem)} ${renderShowClass(
+              index
             )}`}
-            ref={contentRefs.current[index]}
+            options={{ rootMargin: "-30%" }}
           >
             <img src={contentItem.img} />
             <div className={styles["content"]}>
@@ -106,7 +77,7 @@ const ContentSection = () => {
                 dangerouslySetInnerHTML={{ __html: t(contentItem.context) }}
               />
             </div>
-          </div>
+          </IntersectionVisible>
         );
       })}
     </div>
