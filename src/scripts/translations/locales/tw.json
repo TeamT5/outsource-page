@@ -142,12 +142,12 @@
       },
       "newswall": {
         "title": "您有沒有聽過…",
-        "news-1": "醫療保險龍頭遭駭，上千萬個資外洩",
-        "news-2": "資料外洩處理費高達 392 萬美元，但要花超過 200 天才能找出威脅來源",
-        "news-3": "台灣某銀行 SWIFT 系統遭駭盜轉 18 億台幣",
-        "news-4": "孟加拉央行慘遭網路勒索洗劫 81 萬美元",
-        "news-5": "機密資訊遭竊，暴露個人或企業於危險之中",
-        "news-6": "平均每日發生兩千多起駭客攻擊事件"
+        "news-1": "醫療保險龍頭遭駭，<span class='sign'>上千萬</span>個資外洩",
+        "news-2": "資料外洩處理費高達<span class='sign'>392</span>萬美元，但要花超過 200 天才能找出威脅來源",
+        "news-3": "台灣某銀行 SWIFT 系統遭駭盜轉<span class='sign'>18 億台幣</span>",
+        "news-4": "孟加拉央行慘遭網路勒索洗劫<span class='sign'> 81 萬美元</span>",
+        "news-5": "機密資訊遭竊，暴露<span class='sign'>個人或企業</span>於危險之中",
+        "news-6": "平均<span class='sign'>每日</span>發生<span class='sign'>兩千多起</span>駭客攻擊事件"
       },
       "category": {
         "enterprises-title": "企業",

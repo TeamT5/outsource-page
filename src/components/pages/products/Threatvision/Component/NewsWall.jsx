@@ -1,12 +1,7 @@
-import React, {
-  useRef,
-  useState,
-  useEffect,
-  createRef,
-  useCallback,
-} from "react";
+import React, { useState } from "react";
 import styles from "./NewsWall.module.scss";
 import useTranslation from "src/scripts/translations/useTranslation";
+import IntersectionVisible from "react-intersection-visible";
 
 const newsWallConfig = {
   title: "solution.vision.newswall.title",
@@ -22,47 +17,22 @@ const newsWallConfig = {
 
 const NewsWall = () => {
   const { t } = useTranslation();
-  const dialogCardRefs = useRef(newsWallConfig.news.map(() => createRef()));
-  const [currentScrollTop, setCurrentScrollTop] = useState({
-    offsetHeight: 0,
-    clientHeight: 0,
-    scrollTop: 0,
-  });
-
-  const getScrollTop = (e) => {
-    const { offsetHeight, clientHeight, scrollTop } = e.target.scrollingElement;
-    if (currentScrollTop.scrollTop === scrollTop) {
-      return;
-    }
-    setCurrentScrollTop({ offsetHeight, clientHeight, scrollTop });
-  };
-
-  useEffect(() => {
-    document.addEventListener("scroll", getScrollTop);
-    return () => {
-      document.removeEventListener("scroll", getScrollTop);
-    };
-  }, []);
-  const isShowClass = useCallback(
-    (currentRef) => {
-      if (!currentRef.current) {
-        return "";
-      }
-      if (currentRef.current.className.indexOf("show") > -1) {
-        return styles["show"];
-      }
-      if (
-        currentScrollTop.scrollTop -
-          currentScrollTop.clientHeight / 2 -
-          currentRef.current.getBoundingClientRect().top >=
-        currentRef.current.getBoundingClientRect().top
-      ) {
-        return styles["show"];
-      }
-      return "";
-    },
-    [currentScrollTop]
+  const [scrollToThisElementArr, setScrollToThisElementArr] = useState(
+    newsWallConfig.news.map(() => false)
   );
+  const onShow = (e, index) => {
+    if (e && !scrollToThisElementArr[index]) {
+      setScrollToThisElementArr((prevState) =>
+        prevState.map((isShow, i) => (i === index ? true : isShow))
+      );
+    }
+  };
+  const renderShowClass = (index) => {
+    if (scrollToThisElementArr[index]) {
+      return styles["show"];
+    }
+    return "";
+  };
   return (
     <div className={styles["container"]}>
       <h3
@@ -70,16 +40,18 @@ const NewsWall = () => {
         dangerouslySetInnerHTML={{ __html: `${t(newsWallConfig.title)}` }}
       />
       {newsWallConfig.news.map((dialog, index) => (
-        <div
+        <IntersectionVisible
           key={index}
-          className={`${styles["dialog"]} ${isShowClass(
-            dialogCardRefs.current[index]
-          )}`}
-          ref={dialogCardRefs.current[index]}
-          dangerouslySetInnerHTML={{
-            __html: `${t(dialog)}`,
-          }}
-        />
+          onShow={(e) => onShow(e, index)}
+          className={`${styles["dialog"]} ${renderShowClass(index)}`}
+          options={{ rootMargin: "-30%" }}
+        >
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${t(dialog)}`,
+            }}
+          />
+        </IntersectionVisible>
       ))}
       <div className={[styles["bg-arrow"]]} />
     </div>

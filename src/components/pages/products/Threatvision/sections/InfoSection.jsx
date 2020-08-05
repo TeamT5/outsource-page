@@ -5,7 +5,7 @@ import {
   NewsWall,
   CategoryCard,
 } from "components/pages/products/Threatvision/Component";
-import { XGrid } from "../../../../common/ui-components";
+import { XGrid } from "components/common/ui-components";
 
 const tabConfig = {
   ce: {

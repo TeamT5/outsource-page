@@ -1,13 +1,7 @@
-import React, {
-  useContext,
-  useRef,
-  useState,
-  useEffect,
-  createRef,
-  useCallback,
-} from "react";
+import React, { useContext, useState } from "react";
 import styles from "./CategoryCard.module.scss";
 import useTranslation from "src/scripts/translations/useTranslation";
+import IntersectionVisible from "react-intersection-visible";
 
 const planCardConfig = [
   {
@@ -41,57 +35,31 @@ const planCardConfig = [
 
 const CategoryCard = () => {
   const { t } = useTranslation(useContext);
-  const planCardRefs = useRef(planCardConfig.map(() => createRef()));
-  const [currentScrollTop, setCurrentScrollTop] = useState({
-    offsetHeight: 0,
-    clientHeight: 0,
-    scrollTop: 0,
-  });
-
-  const getScrollTop = (e) => {
-    const { offsetHeight, clientHeight, scrollTop } = e.target.scrollingElement;
-    if (currentScrollTop.scrollTop === scrollTop) {
-      return;
-    }
-    setCurrentScrollTop({ offsetHeight, clientHeight, scrollTop });
-  };
-
-  useEffect(() => {
-    document.addEventListener("scroll", getScrollTop);
-    return () => {
-      document.removeEventListener("scroll", getScrollTop);
-    };
-  }, []);
-  const isShowClass = useCallback(
-    (currentRef) => {
-      if (!currentRef.current) {
-        return "";
-      }
-      if (currentRef.current.className.indexOf("show") > -1) {
-        return styles["show"];
-      }
-      if (
-        currentScrollTop.scrollTop +
-          currentScrollTop.clientHeight -
-          currentRef.current.getBoundingClientRect().top * 3 >=
-        currentRef.current.getBoundingClientRect().top
-      ) {
-        return styles["show"];
-      }
-      return "";
-    },
-    [currentScrollTop]
+  const [scrollToThisElementArr, setScrollToThisElementArr] = useState(
+    planCardConfig.map(() => false)
   );
+  const onShow = (e, index) => {
+    if (e && !scrollToThisElementArr[index]) {
+      setScrollToThisElementArr((prevState) =>
+        prevState.map((isShow, i) => (i === index ? true : isShow))
+      );
+    }
+  };
+  const renderShowClass = (index) => {
+    if (scrollToThisElementArr[index]) {
+      return styles["show"];
+    }
+    return "";
+  };
   return (
     <div className={styles["container"]}>
       {planCardConfig &&
         planCardConfig.map((card, index) => (
-          <div
+          <IntersectionVisible
             key={index}
-            className={`${styles["card"]} ${isShowClass(
-              planCardRefs.current[index]
-            )}`}
-            ref={planCardRefs.current[index]}
+            onShow={(e) => onShow(e, index)}
+            className={`${styles["card"]} ${renderShowClass(index)}`}
+            options={{ rootMargin: "-30%" }}
           >
             <div className={styles["image-wrap"]}>
               <img src={card.image} />
@@ -116,7 +84,7 @@ const CategoryCard = () => {
                 dangerouslySetInnerHTML={{ __html: `${t(card.tags)}` }}
               />
             </div>
-          </div>
+          </IntersectionVisible>
         ))}
     </div>
   );

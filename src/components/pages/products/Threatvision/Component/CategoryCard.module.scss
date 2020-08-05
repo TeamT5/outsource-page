@@ -12,9 +12,12 @@
   &.show{
     .image-wrap{
       visibility: visible;
+      animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
     }
     .context{
       visibility: visible;
+      animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
   }
   &:nth-of-type(1),
@@ -39,29 +42,11 @@
     .context {
       padding-top: 78px;
     }
-    &.show{
-      .image-wrap{
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
-  
-      }
-      .context{
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
-      }
-    }
   }
   &:nth-of-type(2) {
     margin: 11% 0 6%;
     .context {
       padding-top: 35px;
-    }
-    &.show{
-      .image-wrap{
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.8s both;
-  
-      }
-      .context{
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.8s both;
-      }
     }
   }
   &:nth-of-type(3) {
@@ -71,15 +56,6 @@
       top: -14%;
       background: #645a53;
       clip-path: polygon(0 0%, 100% 16%, 100% 100%, 0% 100%);
-    }
-    &.show{
-      .image-wrap{
-        animation: clip-path-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.9s both;
-  
-      }
-      .context{
-        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.9s both;
-      }
     }
     .context {
       padding-top: 9px;

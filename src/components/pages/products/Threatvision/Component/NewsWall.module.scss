@@ -43,49 +43,32 @@
     visibility: hidden;
     &.show {
         visibility: visible;
+        animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     }
     &:nth-of-type(1) {
         max-width: 510px;
-        &.show {
-            animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-        }
     }
     &:nth-of-type(2) {
         margin-left: 128px;
-        &.show {
-            animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 0.1s both;
-        }
     }
 
     &:nth-of-type(3) {
         margin-right: 418px;
-        &.show {
-            animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s both;
-        }
     }
 
     &:nth-of-type(4) {
         margin-left: 190px;
         margin-right: 220px;
-        &.show {
-            animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s both;
-        }
     }
 
     &:nth-of-type(5) {
         margin-left: 260px;
         margin-right: 50px;
-        &.show {
-            animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 0.4s both;
-        }
     }
 
     &:nth-of-type(6) {
         margin-left: 30px;
         margin-right: 390px;
-        &.show {
-            animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s both;
-        }
     }
 }
 
