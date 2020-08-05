@@ -65,14 +65,12 @@
             margin: 7px 12px 7px 0;
         }
     }
-
-
 }
 
 .card-with-photo-container {
+    margin-bottom: 80px;
     .right-side {
         position: relative;
-        margin-bottom: 80px;
         .mask {
             width: 250px;
             height: 250px;
@@ -129,8 +127,6 @@
     }
 
     .card-with-photo-container {
-        margin-bottom: 60px;
-
         .left-side {
             flex: 1 4 0;
             margin-bottom: 47px;
