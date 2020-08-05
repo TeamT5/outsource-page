@@ -5,6 +5,7 @@ import React, {
   useCallback,
   createRef,
 } from 'react'
+import IntersectionVisible from 'react-intersection-visible'
 import styles from './ContentSection.module.scss'
 import useTranslation from 'src/scripts/translations/useTranslation'
 
@@ -29,49 +30,29 @@ const content = [
 
 const ContentSection = () => {
   const { t, locale } = useTranslation()
-  const cardRef = useRef(null)
-  const leadershipRef = useRef(null)
-  const leadershipContentRef = useRef(null)
-  const leadershipRef2 = useRef(null)
-  const contentRef = useRef(content.map(() => createRef()))
-  const [currentScrollTop, setCurrentScrollTop] = useState({
-    offsetHeight: 0,
-    clientHeight: 0,
-    scrollTop: 0,
-  })
+  const [scrollToThisElementArr, setScrollToThisElementArr] = useState(
+    content.map(() => false),
+  )
+  const [scrollToThisElement, setScrollToThisElement] = useState({ leaderShipTitle: false, mask: false, leadershipContent: false, leaderShipHeadBottom: false })
 
-  const getScrollTop = (e) => {
-    const { offsetHeight, clientHeight, scrollTop } = e.target.scrollingElement
-    if (currentScrollTop.scrollTop === scrollTop) {
-      return
+  const onShow = (e, index) => {
+    if (e && typeof index === 'string') {
+      setScrollToThisElement({ ...scrollToThisElement, [index]: true })
+    } else if (e && !scrollToThisElementArr[index]) {
+      setScrollToThisElementArr((prevState) =>
+        prevState.map((isShow, i) => (i === index ? true : isShow)),
+      )
     }
-    setCurrentScrollTop({ offsetHeight, clientHeight, scrollTop })
+  }
+  const renderShowClass = (index) => {
+    if (scrollToThisElement[index]) {
+      return styles['show']
+    } else if (scrollToThisElementArr[index]) {
+      return styles['show']
+    }
+    return ''
   }
 
-  useEffect(() => {
-    document.addEventListener('scroll', getScrollTop)
-    return () => {
-      document.removeEventListener('scroll', getScrollTop)
-    }
-  }, [])
-
-  const isShowClass = useCallback(
-    (currentRef) => {
-      if (!currentRef.current) {
-        return ''
-      }
-      if (currentRef.current.className.indexOf('show') > -1) {
-        return styles['show']
-      }
-      return currentScrollTop.clientHeight
-        + currentScrollTop.scrollTop
-        - currentRef.current.getBoundingClientRect().top
-        >= currentRef.current.getBoundingClientRect().top
-        ? styles['show']
-        : ''
-    },
-    [currentScrollTop],
-  )
 
   const renderClassName = (locale) => {
     if (locale === 'tw') {
@@ -84,28 +65,35 @@ const ContentSection = () => {
   return (
     <div className={styles['container']}>
       <div className={`${styles['card-with-photo-container']}`}>
-        <div className={styles['left-side']}>
+        <IntersectionVisible
+          onShow={(e) => onShow(e, 'leaderShipTitle')}
+          className={`${styles['left-side']}  ${renderShowClass(
+            'leaderShipTitle',
+          )}`}
+          options={{ rootMargin: '-30%' }}
+        >
           <h5
-            ref={leadershipRef}
-            className={`${styles['leadership-text']} ${isShowClass(
-              leadershipRef,
-            )}`}
+            className={`${styles['leadership-text']}`}
             dangerouslySetInnerHTML={{
               __html: t('about-us.our-leadership.title'),
             }}
           />
-        </div>
+        </IntersectionVisible>
         <div className={styles['right-side']}>
-          <div
-            ref={cardRef}
-            className={`${styles['mask']} ${isShowClass(cardRef)}`}
-          />
-          <img src="/images/about_us/CEO_TT.jpg" />
-          <div
-            ref={leadershipContentRef}
-            className={`${styles['leadership-content']} ${isShowClass(
-              leadershipContentRef,
+          <IntersectionVisible
+            onShow={(e) => onShow(e, 'mask')}
+            className={`${styles['mask']}  ${renderShowClass(
+              'mask',
             )}`}
+            options={{ rootMargin: '-30%' }}
+          ></IntersectionVisible>
+          <img src="/images/about_us/CEO_TT.jpg" />
+          <IntersectionVisible
+            onShow={(e) => onShow(e, 'leadershipContent')}
+            className={`${styles['leadership-content']}  ${renderShowClass(
+              'leadershipContent',
+            )}`}
+            options={{ rootMargin: '-30%' }}
           >
             <p
               className={styles['leadership-head']}
@@ -119,29 +107,33 @@ const ContentSection = () => {
                 __html: t('about-us.our-leadership.content.context'),
               }}
             />
-          </div>
+          </IntersectionVisible>
         </div>
       </div>
       <div className={renderClassName(locale)}>
-        <div className={styles['left-side']}>
+        <IntersectionVisible
+          onShow={(e) => onShow(e, 'leaderShipHeadBottom')}
+          className={`${styles['left-side']}  ${renderShowClass(
+            'leaderShipHeadBottom',
+          )}`}
+          options={{ rootMargin: '-30%' }}
+        >
           <h5
-            ref={leadershipRef2}
-            className={`${styles['leadership-text']} ${isShowClass(
-              leadershipRef2,
-            )}`}
+            className={`${styles['leadership-text']} `}
             dangerouslySetInnerHTML={{
               __html: t('about-us.our-cyber-threat-experts.title'),
             }}
           />
-        </div>
+        </IntersectionVisible>
         <div className={styles['right-side']}>
           {content.map((card, index) => (
-            <div
-              className={`${styles['leadership-content']} ${isShowClass(
-                contentRef.current[index],
-              )}`}
-              ref={contentRef.current[index]}
+            <IntersectionVisible
               key={index}
+              onShow={(e) => onShow(e, index)}
+              className={`${styles['leadership-content']}  ${renderShowClass(
+                index,
+              )}`}
+              options={{ rootMargin: '-30%' }}
             >
               <p
                 className={styles['leadership-head']}
@@ -151,7 +143,7 @@ const ContentSection = () => {
                 className={styles['article-context']}
                 dangerouslySetInnerHTML={{ __html: t(card.context) }}
               />
-            </div>
+            </IntersectionVisible>
           ))}
         </div>
       </div>

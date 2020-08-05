@@ -25,8 +25,9 @@
             color: #4c433f;
             opacity: 0;
             transform: translateY(-60px);
-
-            &.show {
+        }
+        &.show {
+            .leadership-text {
                 animation: fadeIn 0.6s 0.5s forwards;
             }
         }
