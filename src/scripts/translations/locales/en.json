@@ -37,7 +37,7 @@
     "our-cyber-threat-experts": {
       "title": "Our Cyber Threat Experts",
       "analyst-title": "Cyber Threat Intelligence Analysts",
-      "analyst-context": "Our threat intelligence analysts have been dedicated to malware research and APT investigation for more than 10 years. With language and cultural advantages, we possess specific expertise in cyber espionage in the Asia-Pacific region. We are also frequent speakers in the world’s top security conferences, including Code Blue/AVTokyo, Troopers, Hack In The Box, FIRST, and etc.",
+      "analyst-context": "Our threat intelligence analysts have been dedicated to malware research and APT investigation for more than 10 years. With language and cultural advantages, we possess specific expertise in cyber espionage in the Asia-Pacific region. We are also frequent speakers in the world’s top security conferences, including Code Blue/AVTokyo, Troopers, Hack In The Box, FIRST, etc.",
       "engine-lab-title": "Engine Lab",
       "engine-lab-context": "We have top tech talents specializing in reverse engineering, low-layer operating system analysis and kernel hacking. With advanced techniques, Engine Lab is key to the development of our proactive threat hunting tool - ThreatSonar. We aim to develop stable and effective threat hunting solutions, and keep enhancing the detection quality of our products.",
       "d39-title": "D39",
@@ -77,7 +77,7 @@
         },
         "cross-platform": {
           "title": "Cross-platform Operation",
-          "trait-1": "from XP to Win 10, both 32/64bit",
+          "trait-1": "From XP to Win 10, both 32/64 bit",
           "trait-2": "Windows, Linux, and MacOS included"
         },
         "multi-scenarios": {
@@ -144,11 +144,11 @@
       },
       "newswall": {
         "title": "Have you heard of ...",
-        "news-1": "Over <span class='sign'>78M</span> data breach of a medical insurance giant?",
+        "news-1": "Over <span class='sign'>78M</span> data breach of a medical insurance giant.",
         "news-2": "The average cost of a data breach is <span class='sign'>$3.92 million</span> while the average time to identify a breach is over 200 days.",
-        "news-3": "A <span class='sign'> $60M</span> SWIFT attack in a TW’s  bank hacking incident?",
-        "news-4": "The cyber robbery in Bangladesh bank of <span class='sign'> $81M</span>?",
-        "news-5": "Steal confidential info, such as <span class='sign'>COVID-19</span> vaccine, and exposed people in danger?",
+        "news-3": "A <span class='sign'> $60M</span> SWIFT attack in a TW’s  bank hacking incident.",
+        "news-4": "The cyber robbery in Bangladesh bank of <span class='sign'> $81M</span>.",
+        "news-5": "Steal confidential info, such as <span class='sign'>COVID-19</span> vaccine, and exposed people in danger.",
         "news-6": "Hackers attack every <span class='sign'>39</span> seconds, on average <span class='sign'>2,244</span> times a day."
       },
       "category": {
@@ -161,9 +161,9 @@
         "financial-service-trait-2": "We have a broad coverage not only in APAC but the whole world",
         "financial-service-tags": "#justintimealert #financialgains #longtermthreat",
         "public-sectors-title": "Public Sectors",
-        "public-sectors-trait-1": "We prepare technical data for your WAF, Firewall, and etc. for instant defense",
+        "public-sectors-trait-1": "We prepare technical data for your WAF, Firewall, etc. for instant defense",
         "public-sectors-trait-2": "We reveal the tactics and techniques used by your existing and hidden enemies for detection and precaution",
-        "public-sectors-tags": "#justintimealert #financialgains #longtermthreat"
+        "public-sectors-tags": "#knowurenemies #realtime #detectanddefense"
       },
       "contact-us": {
         "btn": "Contact Us",
