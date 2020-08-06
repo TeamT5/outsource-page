@@ -165,6 +165,12 @@
 }
 
 @media screen and (max-width: 767px) {
+    .container {
+        .title {
+            font-size: 28px;
+            margin-bottom: 2.5rem;
+        }
+    }
     .dialog {
         border: 2px solid #4c433f;
         font-size: 16px;
@@ -196,20 +202,6 @@
         &:nth-of-type(6) {
             margin-left: 20px;
             margin-right: 20px;
-        }
-    }
-    .bg-arrow {
-        height: 95%;
-        left: 5%;
-        top: 12%;
-    }
-}
-
-@media screen and (max-width: 376px) {
-    .container {
-        .title {
-            font-size: 28px;
-            margin-bottom: 2.5rem;
         }
     }
     .bg-arrow {

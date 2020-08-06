@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styles from "./CategoryCard.module.scss";
 import useTranslation from "src/scripts/translations/useTranslation";
 import IntersectionVisible from "react-intersection-visible";
@@ -34,7 +34,7 @@ const planCardConfig = [
 ];
 
 const CategoryCard = () => {
-  const { t } = useTranslation(useContext);
+  const { t } = useTranslation();
   const [scrollToThisElementArr, setScrollToThisElementArr] = useState(
     planCardConfig.map(() => false)
   );
